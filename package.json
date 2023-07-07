@@ -1,0 +1,19 @@
+{
+  "name": "rellutoolbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Relluem94s/RelluToolbox.git"
+  },
+  "author": "Relluem94",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Relluem94s/RelluToolbox/issues"
+  },
+  "homepage": "https://github.com/Relluem94s/RelluToolbox#readme"
+}
