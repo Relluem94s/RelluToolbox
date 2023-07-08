@@ -1,0 +1,50 @@
+[
+    {
+        "name": "noteShifter",
+        "displayname": "Note Shifter",
+        "icon": "fa-solid fa-music",
+        "description": "Shifts a Note x Steps up or down",
+        "bgclass": "bg-info",
+        "content": "./tools/noteShifter.php"
+    },
+    {
+        "name": "textRotate",
+        "displayname": "Text Rotate",
+        "icon": "fa-solid fa-text-width",
+        "description": "Inverts a Text Front to Back",
+        "bgclass": "bg-primary",
+        "content": "./tools/textRotate.php"
+    },
+    {
+        "name": "passwordGenerator",
+        "displayname": "Password Generator",
+        "icon": "fa-solid fa-key",
+        "description": "Generates Passwords",
+        "bgclass": "bg-secondary",
+        "content": "./tools/passwordGenerator.php"
+    },
+    {
+        "name": "uuidGenerator",
+        "displayname": "UUID Generator",
+        "icon": "fa-solid fa-fingerprint",
+        "description": "Generates a UUID v4",
+        "bgclass": "bg-warning",
+        "content": "./tools/uuidGenerator.php"
+    },
+    {
+        "name": "calculator",
+        "displayname": "Calculator",
+        "icon": "fa-solid fa-calculator",
+        "description": "Opens a Calculator",
+        "bgclass": "bg-success",
+        "content": "./tools/calculator.php"
+    },
+    {
+        "name": "template",
+        "displayname": "template",
+        "icon": "template",
+        "description": "template",
+        "bgclass": "template",
+        "content": "./tools/template.php"
+    }
+]
