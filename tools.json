@@ -4,24 +4,24 @@
         "displayname": "Note Shifter",
         "icon": "fa-solid fa-music",
         "description": "Shifts a Note x Steps up or down",
-        "bgclass": "bg-info",
+        "bgclass": "bg-secondary",
         "content": "./tools/noteShifter.php"
     },
     {
-        "name": "textRotate",
-        "displayname": "Text Rotate",
+        "name": "textReverse",
+        "displayname": "Text Reverse",
         "icon": "fa-solid fa-text-width",
-        "description": "Inverts a Text Front to Back",
-        "bgclass": "bg-primary",
-        "content": "./tools/textRotate.php"
+        "description": "Reverse a Text Front to Back",
+        "bgclass": "bg-secondary",
+        "content": "./tools/textReverse.php"
     },
     {
-        "name": "passwordGenerator",
-        "displayname": "Password Generator",
-        "icon": "fa-solid fa-key",
-        "description": "Generates Passwords",
-        "bgclass": "bg-secondary",
-        "content": "./tools/passwordGenerator.php"
+        "name": "calculator",
+        "displayname": "Calculator",
+        "icon": "fa-solid fa-calculator",
+        "description": "Opens a Calculator",
+        "bgclass": "bg-primary",
+        "content": "./tools/calculator.php"
     },
     {
         "name": "uuidGenerator",
@@ -30,14 +30,6 @@
         "description": "Generates a UUID v4",
         "bgclass": "bg-warning",
         "content": "./tools/uuidGenerator.php"
-    },
-    {
-        "name": "calculator",
-        "displayname": "Calculator",
-        "icon": "fa-solid fa-calculator",
-        "description": "Opens a Calculator",
-        "bgclass": "bg-info",
-        "content": "./tools/calculator.php"
     },
     {
         "name": "base64Encode",
@@ -56,6 +48,14 @@
         "content": "./tools/base64decode.php"
     },
     {
+        "name": "passwordGenerator",
+        "displayname": "Password Generator",
+        "icon": "fa-solid fa-key",
+        "description": "Generates Passwords",
+        "bgclass": "bg-warning",
+        "content": "./tools/passwordGenerator.php"
+    },
+    {
         "name": "decToHex",
         "displayname": "decToHex",
         "icon": "fa-solid fa-arrow-right-arrow-left",
@@ -70,5 +70,29 @@
         "description": "Converts Hexadecimal to Decimal",
         "bgclass": "bg-info",
         "content": "./tools/hexToDec.php"
+    },
+    {
+        "name": "rollTheDice",
+        "displayname": "Roll the Dice",
+        "icon": "fa-solid fa-dice",
+        "description": "Generates Numbers between 1-6",
+        "bgclass": "bg-warning",
+        "content": "./tools/rollTheDice.php"
+    },
+    {
+        "name": "decToBin",
+        "displayname": "decToBin",
+        "icon": "fa-solid fa-arrow-right-arrow-left",
+        "description": "Converts Decimal to Binary",
+        "bgclass": "bg-info",
+        "content": "./tools/decToBin.php"
+    },
+    {
+        "name": "binToDec",
+        "displayname": "binToDec",
+        "icon": "fa-solid fa-arrow-right-arrow-left",
+        "description": "Converts Binary to Decimal",
+        "bgclass": "bg-info",
+        "content": "./tools/binToDec.php"
     }
 ]
