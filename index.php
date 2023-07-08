@@ -1,13 +1,13 @@
 <?php
 
-// noteShifter
-// Note Shifter
-// fa-solid fa-music
-// Shifts a Note x Steps up or down
-// bg-info
-// ...
-
-function getTool(string $name, string $displayname, string $icon, string $description, string $bgclass, string $content):string {
+function getTool(
+	string $name,
+	string $displayname,
+	string $icon,
+	string $description,
+	string $bgclass,
+	string $content
+	):string {
 	return '
 	<div class="col col-sm-4">
 		<div class="info-box ' . $bgclass . '"  data-bs-toggle="modal" data-bs-target="#' . $name . '">
@@ -16,23 +16,23 @@ function getTool(string $name, string $displayname, string $icon, string $descri
 		  		<span class="info-box-text">' . $displayname . '</span>
 		  		<span class="info-box-number">' . $description . '</span>
 		  	</div>
-		  	
 		</div>
 		<div class="modal fade" id="' . $name . '" tabindex="-1" aria-labelledby="' . $name . 'Label" aria-hidden="true">
-	  		<div class="modal-dialog">
-	    			<div class="modal-content">
-	      				<div class="modal-header">
-						<h5 class="modal-title" id="' . $name . 'Label">' . $displayname . '</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-	      				</div>
-	      				<div class="modal-body">
-						' . $content . '
-	      				</div>
-	      				<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-	      				</div>
-	    			</div>
-	  		</div>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header ' . $bgclass . '">
+					<h5 class="modal-title" id="' . $name . 'Label"><i class="' . $icon . '"></i> ' . $displayname . '</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body" id="' . $name . 'Content">
+					<script> $( "#' . $name . 'Content" ).load( "' . $content . '" ); </script>
+					
+					</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>';
 }
@@ -41,7 +41,7 @@ function getTool(string $name, string $displayname, string $icon, string $descri
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,10 +71,23 @@ function getTool(string $name, string $displayname, string $icon, string $descri
 				<div class="content">
 					<div class="container">
 						<div class="row">
+							<h1 class="text-center"><img src="assets/img/rellutoolbox.png"></h1>
+						</div>
+						<div class="row">
 							<?php
-								echo getTool("noteShifter", "Note Shifter", "fa-solid fa-music", "Shifts a Note x Steps up or down", "bg-info", "...");
-								echo getTool("textRotate", "Text Rotate", "fa-solid fa-text-width", "Inverts a Text Front to Back", "bg-primary", "<input type='text'>");
-								echo getTool("passwordGenerator", "Password Generator", "fa-solid fa-key", "Generates Passwords", "bg-secondary", "...");
+								$tools = json_decode(file_get_contents("./tools.json"), true);
+								
+								foreach($tools as $key => $value){
+									echo getTool(
+										$value["name"],
+										$value["displayname"],
+										$value["icon"],
+										$value["description"],
+										$value["bgclass"],
+										$value["content"]
+									);
+								}
+
 							?>
 						</div>
 					</div>
