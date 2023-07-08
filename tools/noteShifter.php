@@ -1,31 +1,23 @@
 <?php
 
 
-$note = "";
-$shift = 0;
-$notes_show = array("C","C#","D","D#","E","F","F#","G","G#","A","A#","B");
+$notes = array("C","C#","D","D#","E","F","F#","G","G#","A","A#","B");
 
 
 
-$notes_select = '<select id="note_input" name="note">';
+$notes_select = '<select id="note_input" oninput="shift()">';
 
-for($i = 0; $i < sizeof($notes_show); $i++){
-  $notes_select .= '<option>'.$notes_show[$i].'</option>';
+for($i = 0; $i < sizeof($notes); $i++){
+  $notes_select .= '<option>'.$notes[$i].'</option>';
 }
 
 $notes_select .= '</select>';
-
-
-
-
-$shift_select = '<input id="note_shift" name="shift" min="-23" max="23" type="number" value="'.$shift.'">';
-
+$shift_select = '<input id="note_shift" min="-24" max="24" type="number" value="0" oninput="shift()">';
 $shift_out = '<input type="text" id="note_output" disabled value="">';
 
-$shift_submit = '<input type="button" onclick="shift()" value="Berechne">';
 
 
-echo $notes_select . "&nbsp;" . $shift_select . "&nbsp;" . $shift_out . "&nbsp;" . $shift_submit;
+echo $notes_select . $shift_select . $shift_out;
 
 ?>
 
@@ -34,47 +26,37 @@ echo $notes_select . "&nbsp;" . $shift_select . "&nbsp;" . $shift_out . "&nbsp;"
 function shift(){
   
 
-var notes_show = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"];
-var notes = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B","C","C#","D","D#","E","F","F#","G","G#","A","A#","B"];
+  var notes = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"];
 
-var isNegative = false;
 
-var note = $('#note_input')[0].value;
-var shift = $('#note_shift')[0].value;
-  
-console.log(note);
-console.log(shift);
+
+  var note = $('#note_input')[0].value;
+  var note_offset = notes.indexOf(note);
+  var shift = parseInt($('#note_shift')[0].value) + note_offset;
+  var shifting = 0;
 
   if(shift < 0){
-    notes_show = notes_show.reverse();
-    notes = notes.reverse();
-    shift = Math.abs(shift);
-    isNegative = true;
-  }
-  
-  for(var i = 0; i < notes.length; i++){
-    if(notes[0] != note){
-      var temp = notes.shift();
-      notes = temp;
-      
-      temp = notes_show.shift();
-      notes_show = temp;
+    if(shift < -12){
+      shifting = 12*2 + shift;
+    }
+    else{
+      shifting = 12 + shift;
     }
   }
-
-
-if(isNegative == true){
-  shift = -1 * Math.abs(shift); //TODO has to be fixed (negative undefined)
-}
-
-
-$('#note_output')[0].value = notes[shift];
-
-
-console.log($('#note_output')[0].value);
-console.log(shift);
-
-
+  else{
+    if(shift >= 24){
+      shifting = shift - 12*2;
+    }
+    else if(shift >= 12){
+      shifting = shift-12;
+    }
+    else{
+      shifting = shift;
+    }
+    
+  }
+ 
+  $('#note_output')[0].value = notes[shifting];
 }
 
 </script>
