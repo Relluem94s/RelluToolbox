@@ -36,8 +36,40 @@
         "displayname": "Calculator",
         "icon": "fa-solid fa-calculator",
         "description": "Opens a Calculator",
-        "bgclass": "bg-success",
+        "bgclass": "bg-info",
         "content": "./tools/calculator.php"
+    },
+    {
+        "name": "base64Encode",
+        "displayname": "base64 Encoder",
+        "icon": "fa-solid fa-arrow-right-to-bracket",
+        "description": "Encodes a String to Base64",
+        "bgclass": "bg-success",
+        "content": "./tools/base64encode.php"
+    },
+    {
+        "name": "base64Decode",
+        "displayname": "base64 Decodeder",
+        "icon": "fa-solid fa-arrow-right-from-bracket",
+        "description": "Decodes a String to Base64",
+        "bgclass": "bg-danger",
+        "content": "./tools/base64decode.php"
+    },
+    {
+        "name": "decToHex",
+        "displayname": "decToHex",
+        "icon": "fa-solid fa-arrow-right-arrow-left",
+        "description": "Converts Decimal to Hexadecimal",
+        "bgclass": "bg-info",
+        "content": "./tools/decToHex.php"
+    },
+    {
+        "name": "hexToDec",
+        "displayname": "hexToDec",
+        "icon": "fa-solid fa-arrow-right-arrow-left",
+        "description": "Converts Hexadecimal to Decimal",
+        "bgclass": "bg-info",
+        "content": "./tools/hexToDec.php"
     },
     {
         "name": "template",
