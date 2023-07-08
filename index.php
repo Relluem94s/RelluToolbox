@@ -1,13 +1,13 @@
 <?php
 
 function getTool(
-	string $name,
-	string $displayname,
-	string $icon,
-	string $description,
-	string $bgclass,
-	string $content
-	):string {
+	$name,
+	$displayname,
+	$icon,
+	$description,
+	$bgclass,
+	$content
+	) {
 	return '
 	<div class="col col-sm-4">
 		<div class="info-box ' . $bgclass . '"  data-bs-toggle="modal" data-bs-target="#' . $name . '">
