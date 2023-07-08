@@ -9,5 +9,10 @@ function format_uuidv4($data){
 }
 
 for($i = 0; $i <= 5; $i++){
-    echo format_uuidv4(random_bytes(16)) . "<br>";
+    echo '<input
+      id="uuid_' . $i . '"
+      type="text"
+      disabled
+      class="form-control"
+      value="' . format_uuidv4(random_bytes(16)) . '">';
 }
