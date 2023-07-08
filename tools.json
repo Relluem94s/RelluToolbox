@@ -70,13 +70,5 @@
         "description": "Converts Hexadecimal to Decimal",
         "bgclass": "bg-info",
         "content": "./tools/hexToDec.php"
-    },
-    {
-        "name": "template",
-        "displayname": "template",
-        "icon": "template",
-        "description": "template",
-        "bgclass": "template",
-        "content": "./tools/template.php"
     }
 ]
