@@ -1,5 +1,5 @@
 <?php
-function format_uuidv4($data){
+function formatUUIDv4($data){
   assert(strlen($data) == 16);
 
   $data[6] = chr(ord($data[6]) & 0x0f | 0x40);
@@ -14,5 +14,5 @@ for($i = 0; $i <= 5; $i++){
       type="text"
       disabled
       class="form-control"
-      value="' . format_uuidv4(random_bytes(16)) . '">';
+      value="' . formatUUIDv4(random_bytes(16)) . '">';
 }
