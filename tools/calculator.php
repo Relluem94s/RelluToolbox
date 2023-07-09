@@ -407,6 +407,7 @@
 
 <form>
     <table class="calc">
+    <caption></caption>
         <tr>
             <th colspan="3">
                 <input class="calculator" type="text" id="val" value="" disabled></input>

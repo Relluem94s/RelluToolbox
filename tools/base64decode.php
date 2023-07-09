@@ -1,2 +1,12 @@
-<input type="text" class="form-control" id="original_encoded_string" oninput="$('#decoded_output_string')[0].value = atob($('#original_encoded_string')[0].value);">
-<input type="text" class="form-control" id="decoded_output_string" disabled>
+<input
+placeholder="Input"
+type="text"
+class="form-control"
+id="original_encoded_string"
+oninput="$('#decoded_output_string')[0].value=atob($('#original_encoded_string')[0].value);">
+<input
+placeholder="Output"
+type="text"
+class="form-control"
+id="decoded_output_string"
+disabled>
