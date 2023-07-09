@@ -71,7 +71,7 @@ function getTool(
 				<div class="content">
 					<div class="container">
 						<div class="row">
-							<h1 class="text-center"><img src="assets/img/rellutoolbox.png"></h1>
+							<h1 class="text-center"><img src="assets/img/rellutoolbox.png" width="60%"></h1>
 						</div>
 						<div class="row">
 							<?php
