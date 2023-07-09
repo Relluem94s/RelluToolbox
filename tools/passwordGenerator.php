@@ -12,4 +12,7 @@ function generatePassword() {
 
 </script>
 
-<input type="text" class="form-control" id="password" disabled> <button class="btn btn-success" onclick="generatePassword()">Generate</button>
+<div class="input-group">
+    <input type="text" class="form-control" id="password" disabled>
+    <button class="btn btn-success" onclick="generatePassword()">Generate</button>
+</div>

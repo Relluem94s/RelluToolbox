@@ -6,5 +6,8 @@
     }
 
 </script>
-<input type="text" disabled id="dice_output">
-<button class="btn btn-warning" onclick="rollDice()">Roll</button>
+
+<div class="input-group">
+    <input type="text" class="form-control" disabled id="dice_output">
+    <button class="btn btn-warning" onclick="rollDice()">Roll</button>
+</div>

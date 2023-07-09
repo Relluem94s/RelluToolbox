@@ -5,19 +5,29 @@ $notes = array("C","C#","D","D#","E","F","F#","G","G#","A","A#","B");
 
 
 
-$notes_select = '<select id="note_input" oninput="shift()">';
+$notes_select = '<select class="form-control" id="note_input" oninput="shift()">';
 
 for($i = 0; $i < sizeof($notes); $i++){
   $notes_select .= '<option>'.$notes[$i].'</option>';
 }
 
 $notes_select .= '</select>';
-$shift_select = '<input id="note_shift" min="-24" max="24" type="number" value="0" oninput="shift()">';
-$shift_out = '<input type="text" id="note_output" disabled value="">';
+$shift_select = '<input class="form-control"
+id="note_shift"
+min="-24"
+max="24"
+type="number"
+value="0"
+oninput="shift()">';
+$shift_out = '<input
+class="form-control"
+type="text"
+id="note_output"
+disabled value="">';
 
 
 
-echo $notes_select . $shift_select . $shift_out;
+echo '<div class="input-group">' . $notes_select . $shift_select . $shift_out . '</div>';
 
 ?>
 
