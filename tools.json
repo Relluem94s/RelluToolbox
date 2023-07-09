@@ -1,35 +1,11 @@
 [
     {
-        "name": "noteShifter",
-        "displayname": "Note Shifter",
-        "icon": "fa-solid fa-music",
-        "description": "Shifts a Note x Steps up or down",
-        "bgclass": "bg-secondary",
-        "content": "./tools/noteShifter.php"
-    },
-    {
-        "name": "textReverse",
-        "displayname": "Text Reverse",
-        "icon": "fa-solid fa-text-width",
-        "description": "Reverse a Text Front to Back",
-        "bgclass": "bg-secondary",
-        "content": "./tools/textReverse.php"
-    },
-    {
         "name": "calculator",
         "displayname": "Calculator",
         "icon": "fa-solid fa-calculator",
         "description": "Opens a Calculator",
         "bgclass": "bg-primary",
         "content": "./tools/calculator.php"
-    },
-    {
-        "name": "uuidGenerator",
-        "displayname": "UUID Generator",
-        "icon": "fa-solid fa-fingerprint",
-        "description": "Generates a UUID v4",
-        "bgclass": "bg-warning",
-        "content": "./tools/uuidGenerator.php"
     },
     {
         "name": "base64Encode",
@@ -48,12 +24,60 @@
         "content": "./tools/base64decode.php"
     },
     {
+        "name": "uuidGenerator",
+        "displayname": "UUID Generator",
+        "icon": "fa-solid fa-fingerprint",
+        "description": "Generates a UUID v4",
+        "bgclass": "bg-warning",
+        "content": "./tools/uuidGenerator.php"
+    },
+    {
+        "name": "noteShifter",
+        "displayname": "Note Shifter",
+        "icon": "fa-solid fa-music",
+        "description": "Shifts a Note x Steps up or down",
+        "bgclass": "bg-secondary",
+        "content": "./tools/noteShifter.php"
+    },
+    {
+        "name": "textReverse",
+        "displayname": "Text Reverse",
+        "icon": "fa-solid fa-text-width",
+        "description": "Reverse a Text Front to Back",
+        "bgclass": "bg-secondary",
+        "content": "./tools/textReverse.php"
+    },
+    {
         "name": "passwordGenerator",
         "displayname": "Password Generator",
         "icon": "fa-solid fa-key",
         "description": "Generates Passwords",
         "bgclass": "bg-warning",
         "content": "./tools/passwordGenerator.php"
+    },
+    {
+        "name": "textLowerCase",
+        "displayname": "Text Lowercase",
+        "icon": "fa-solid fa-text-height",
+        "description": "Reverse a Text Front to Back",
+        "bgclass": "bg-secondary",
+        "content": "./tools/textLowerCase.php"
+    },
+    {
+        "name": "textUpperCase",
+        "displayname": "Text Uppercase",
+        "icon": "fa-solid fa-text-height",
+        "description": "Reverse a Text Front to Back",
+        "bgclass": "bg-secondary",
+        "content": "./tools/textUpperCase.php"
+    },
+    {
+        "name": "rollTheDice",
+        "displayname": "Roll the Dice",
+        "icon": "fa-solid fa-dice",
+        "description": "Generates Numbers between 1-6",
+        "bgclass": "bg-warning",
+        "content": "./tools/rollTheDice.php"
     },
     {
         "name": "decToHex",
@@ -72,12 +96,12 @@
         "content": "./tools/hexToDec.php"
     },
     {
-        "name": "rollTheDice",
-        "displayname": "Roll the Dice",
-        "icon": "fa-solid fa-dice",
-        "description": "Generates Numbers between 1-6",
+        "name": "rollTheDice20",
+        "displayname": "Roll the Dice20",
+        "icon": "fa-solid fa-dice-d20",
+        "description": "Generates Numbers between 1-20",
         "bgclass": "bg-warning",
-        "content": "./tools/rollTheDice.php"
+        "content": "./tools/rollTheDice20.php"
     },
     {
         "name": "decToBin",
@@ -94,13 +118,5 @@
         "description": "Converts Binary to Decimal",
         "bgclass": "bg-info",
         "content": "./tools/binToDec.php"
-    },
-    {
-        "name": "minecraftUUIDFromName",
-        "displayname": "Minecraft UUID Finder",
-        "icon": "fa-solid fa-cube",
-        "description": "gets the UUID from Username",
-        "bgclass": "bg-light",
-        "content": "./tools/minecraftUUIDFromName.php"
     }
 ]
