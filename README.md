@@ -2,7 +2,7 @@
 
 ### a collection of usefull tools
 
-
+## Add JSON into tools.json with Configuration
 ```json
 {
     "name": "template",
@@ -12,4 +12,11 @@
     "bgclass": "template",
     "content": "./tools/template.php"
 }
+```
+
+## Add <toolname>.php into tools/ Folder
+```php
+<?php
+    echo "template";
+?>
 ```
