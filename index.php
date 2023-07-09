@@ -10,7 +10,10 @@ function getTool(
     ) {
     return '
     <div class="col col-sm-4">
-        <div class="info-box ' . $bgclass . '"  data-bs-toggle="modal" data-bs-target="#' . $name . '">
+        <div style="cursor:pointer"
+        class="info-box ' . $bgclass . '"
+        data-bs-toggle="modal"
+        data-bs-target="#' . $name . '">
             <span class="info-box-icon"><i class="' . $icon . '"></i></span>
             <div class="info-box-content">
                   <span class="info-box-text">' . $displayname . '</span>
@@ -77,7 +80,7 @@ function getTool(
                 <div class="content">
                     <div class="container">
                         <div class="row">
-                            <h1 class="text-center">
+                            <h1 class="text-center mt-3 pt-3 mb-3 pb-3">
                                 <img alt="logo" src="assets/img/rellutoolbox.png" width="60%">
                             </h1>
                         </div>
