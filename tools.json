@@ -118,5 +118,13 @@
         "description": "Converts Binary to Decimal",
         "bgclass": "bg-info",
         "content": "./tools/binToDec.php"
+    },
+    {
+        "name": "minecraftCoordinatesToRegionFile",
+        "displayname": "Minecraft Coordinate Calculator",
+        "icon": "fa-solid fa-cube",
+        "description": "Calculates the Region File",
+        "bgclass": "bg-primary",
+        "content": "./tools/minecraftCoordinatesToRegionFile.php"
     }
 ]
