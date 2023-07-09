@@ -94,5 +94,13 @@
         "description": "Converts Binary to Decimal",
         "bgclass": "bg-info",
         "content": "./tools/binToDec.php"
+    },
+    {
+        "name": "minecraftUUIDFromName",
+        "displayname": "Minecraft UUID Finder",
+        "icon": "fa-solid fa-cube",
+        "description": "gets the UUID from Username",
+        "bgclass": "bg-light",
+        "content": "./tools/minecraftUUIDFromName.php"
     }
 ]
