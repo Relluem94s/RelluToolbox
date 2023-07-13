@@ -126,5 +126,21 @@
         "description": "Calculates the Region File",
         "bgclass": "bg-primary",
         "content": "./tools/minecraftCoordinatesToRegionFile.php"
+    },
+    {
+        "name": "jsonPrettyPrint",
+        "displayname": "JSON Pretty Print",
+        "icon": "fa-solid fa-indent",
+        "description": "Pretty Print JSON Strings",
+        "bgclass": "bg-secondary",
+        "content": "./tools/jsonPrettyPrint.php"
+    },
+    {
+        "name": "jsonMinifyPrint",
+        "displayname": "JSON Minify Print",
+        "icon": "fa-solid fa-outdent",
+        "description": "Minify JSON Strings",
+        "bgclass": "bg-secondary",
+        "content": "./tools/jsonMinifyPrint.php"
     }
 ]
