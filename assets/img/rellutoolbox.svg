@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="4.1999998in"
-   height="1.1in"
-   viewBox="0 0 106.68 27.940003"
+   width="2000"
+   height="500"
+   viewBox="-14 -4 1000 250"
    version="1.1"
    id="svg5"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
@@ -17,7 +17,7 @@
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
   <title
-     id="title3195">RelluToolbox Logo</title>
+     id="title1210">RelluToolbox Logo</title>
   <sodipodi:namedview
      id="namedview7"
      pagecolor="#505050"
@@ -25,52 +25,113 @@
      borderopacity="1"
      inkscape:showpageshadow="0"
      inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="0"
+     inkscape:pagecheckerboard="false"
      inkscape:deskcolor="#505050"
-     inkscape:document-units="mm"
+     inkscape:document-units="px"
      showgrid="false"
-     inkscape:zoom="2.587745"
-     inkscape:cx="262.1974"
-     inkscape:cy="105.69048"
-     inkscape:window-width="1444"
-     inkscape:window-height="1236"
-     inkscape:window-x="700"
-     inkscape:window-y="148"
-     inkscape:window-maximized="0"
+     inkscape:zoom="0.5"
+     inkscape:cx="1585"
+     inkscape:cy="551"
+     inkscape:window-width="2560"
+     inkscape:window-height="1364"
+     inkscape:window-x="0"
+     inkscape:window-y="48"
+     inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
      id="defs2" />
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1">
+     inkscape:label="Layer 1 copy"
+     id="g40491"
+     transform="translate(-6.36199,-5.7216749)">
     <text
        xml:space="preserve"
-       style="font-size:25.4px;fill:#000000;stroke-width:0.264583"
-       x="3.1539254"
-       y="22.811487"
-       id="text117"><tspan
+       style="font-size:257.56px;display:none;fill:#000000;stroke-width:2.3908;image-rendering:crisp-edges"
+       x="-23.069628"
+       y="199.01151"
+       id="text40489"><tspan
          sodipodi:role="line"
-         id="tspan115"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:25.4px;font-family:'Agency FB';-inkscape-font-specification:'Agency FB Condensed';stroke-width:0.264583"
-         x="3.1539254"
-         y="22.811487"><tspan
+         id="tspan40487"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:257.56px;font-family:'Agency FB';-inkscape-font-specification:'Agency FB Condensed';stroke-width:2.3908"
+         x="465.88019"
+         y="-139.12436"><tspan
+           style="font-size:257.56px;fill:#797472;fill-opacity:1;stroke-width:2.3908"
+           id="tspan40483">Rellu</tspan><tspan
+           id="tspan40485"
+           style="font-size:257.56px;fill:#48b3b1;fill-opacity:1;stroke-width:2.3908">Toolbox</tspan></tspan></text>
+    <g
+       inkscape:label="Layer 1"
+       inkscape:groupmode="layer"
+       id="layer1"
+       transform="matrix(64.389892,0,0,64.389892,484.4612,-108.66372)">
+      <g
+         aria-label="RelluToolbox"
+         id="text117"
+         style="font-size:4px;display:inline;stroke-width:0.03713;image-rendering:crisp-edges"
+         inkscape:label="text117"
+         transform="translate(0.13882588,0.33926566)">
+        <path
+           d="M -6.3372288,4.7783155 H -6.622385 l -0.5683594,-1.6367187 0.037109,-0.054687 h 0.484375 v -1.125 H -7.3665257 V 4.7783155 H -7.63801 V 1.7216749 h 1.0234375 q 0.095703,0 0.15625,0.060547 0.060547,0.060547 0.060547,0.15625 V 3.098628 q 0,0.2207032 -0.296875,0.2207032 -0.029297,0 -0.085937,-0.00195 -0.056641,-0.00391 -0.082031,-0.00391 0.2636719,0.7304687 0.5253906,1.4648437 z"
            style="fill:#797472;fill-opacity:1"
-           id="tspan277">Rellu</tspan><tspan
-           id="tspan11523"
-           style="fill:#48b3b1;fill-opacity:1">Toolbox</tspan></tspan></text>
+           id="path40493" />
+        <path
+           d="m -4.8997288,4.5576124 q 0,0.2207031 -0.21875,0.2207031 h -0.625 q -0.21875,0 -0.21875,-0.2207031 V 3.098628 q 0,-0.2207031 0.21875,-0.2207031 h 0.625 q 0.21875,0 0.21875,0.2207031 v 0.6835938 l -0.087891,0.091797 h -0.7226563 v 0.6875 h 0.5585938 V 4.2138624 h 0.2519531 z M -5.1516819,3.6669874 V 3.0947218 h -0.5585938 v 0.5722656 z"
+           style="fill:#797472;fill-opacity:1"
+           id="path40495" />
+        <path
+           d="M -4.1985569,4.7783155 H -4.4544163 V 1.7216749 h 0.2558594 z"
+           style="fill:#797472;fill-opacity:1"
+           id="path40497" />
+        <path
+           d="M -3.4856663,4.7783155 H -3.7415257 V 1.7216749 h 0.2558594 z"
+           style="fill:#797472;fill-opacity:1"
+           id="path40499" />
+        <path
+           d="m -1.9563694,4.7783155 h -0.2558594 v -0.052734 q -0.15625,0.021484 -0.3105469,0.041016 -0.1875,0.023437 -0.3105468,0.023437 -0.2109375,0 -0.2109375,-0.2109375 V 2.8779249 h 0.2558593 v 1.6679688 l 0.5761719,-0.015625 V 2.8779249 h 0.2558594 z"
+           style="fill:#797472;fill-opacity:1"
+           id="path40501" />
+        <path
+           d="M -0.4485569,1.9619093 H -0.92121315 V 4.7783155 H -1.1926975 V 1.9619093 H -1.66926 V 1.7216749 h 1.2207031 z"
+           style="fill:#48b3b1;fill-opacity:1"
+           id="path40503" />
+        <path
+           d="m 0.93034935,4.5576124 q 0,0.2207031 -0.22070313,0.2207031 H 0.05730247 q -0.21875,0 -0.21875,-0.2207031 V 3.098628 q 0,-0.2207031 0.21875,-0.2207031 h 0.65234375 q 0.22070313,0 0.22070313,0.2207031 z M 0.67058372,4.5497999 V 3.1064405 H 0.0983181 v 1.4433594 z"
+           style="fill:#48b3b1;fill-opacity:1"
+           id="path40505" />
+        <path
+           d="m 2.4459743,4.5576124 q 0,0.2207031 -0.2207031,0.2207031 H 1.5729275 q -0.21875,0 -0.21875,-0.2207031 V 3.098628 q 0,-0.2207031 0.21875,-0.2207031 h 0.6523437 q 0.2207031,0 0.2207031,0.2207031 z M 2.1862087,4.5497999 V 3.1064405 H 1.6139431 v 1.4433594 z"
+           style="fill:#48b3b1;fill-opacity:1"
+           id="path40507" />
+        <path
+           d="M 3.1412868,4.7783155 H 2.8854275 V 1.7216749 h 0.2558593 z"
+           style="fill:#48b3b1;fill-opacity:1"
+           id="path40509" />
+        <path
+           d="m 4.67449,4.3701124 q 0,0.1757813 -0.1152344,0.2929688 -0.1152344,0.1152343 -0.2890625,0.1152343 h -0.6875 V 1.7216749 h 0.2597656 v 1.2089844 q 0.1542969,-0.019531 0.3085938,-0.039063 0.1953125,-0.025391 0.3066406,-0.025391 0.2167969,0 0.2167969,0.2128906 z M 4.4147243,4.3310499 V 3.1103468 l -0.5722656,0.015625 v 1.4238281 h 0.359375 q 0.2128906,0 0.2128906,-0.21875 z"
+           style="fill:#48b3b1;fill-opacity:1"
+           id="path40511" />
+        <path
+           d="m 6.190115,4.5576124 q 0,0.2207031 -0.2207032,0.2207031 H 5.3170681 q -0.21875,0 -0.21875,-0.2207031 V 3.098628 q 0,-0.2207031 0.21875,-0.2207031 h 0.6523437 q 0.2207032,0 0.2207032,0.2207031 z M 5.9303493,4.5497999 V 3.1064405 H 5.3580837 v 1.4433594 z"
+           style="fill:#48b3b1;fill-opacity:1"
+           id="path40513" />
+        <path
+           d="M 7.6451931,4.7783155 H 7.3815212 L 7.0612087,4.0263624 6.73699,4.7783155 H 6.4811306 V 4.770503 L 6.92449,3.801753 6.5084743,2.8779249 H 6.7721462 L 7.065115,3.5751905 7.3658962,2.8779249 h 0.2519531 v 0.00781 L 7.2018337,3.7939405 Z"
+           style="fill:#48b3b1;fill-opacity:1"
+           id="path40515" />
+      </g>
+    </g>
   </g>
   <metadata
      id="metadata3193">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
-        <dc:title>RelluToolbox Logo</dc:title>
         <dc:creator>
           <cc:Agent>
             <dc:title>Relluem94</dc:title>
           </cc:Agent>
         </dc:creator>
+        <dc:title>RelluToolbox Logo</dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
