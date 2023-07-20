@@ -68,7 +68,7 @@ function getTool(
         <div class="wrapper">
             <!-- Preloader -->
             <div class="preloader" style="display:none;">
-                <img class="animation__shake" src="assets/img/rellutoolbox.png" alt="rellutoolbox" width="600">
+                <img class="animation__shake" src="assets/img/rellutoolbox.svg" alt="rellutoolbox" width="600">
             </div>
 
             
@@ -81,7 +81,7 @@ function getTool(
                     <div class="container">
                         <div class="row">
                             <h1 class="text-center mt-3 pt-3 mb-3 pb-3">
-                                <img alt="logo" src="assets/img/rellutoolbox.png" width="60%">
+                                <img alt="logo" src="assets/img/rellutoolbox.svg" width="60%">
                             </h1>
                         </div>
                         <div class="row">
