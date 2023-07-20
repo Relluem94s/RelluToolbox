@@ -142,5 +142,29 @@
         "description": "Minify JSON Strings",
         "bgclass": "bg-secondary",
         "content": "./tools/jsonMinifyPrint.php"
+    },
+    {
+        "name": "camelCaseToSnakeCase",
+        "displayname": "camelCase to snake_case",
+        "icon": "fa-solid fa-text-height",
+        "description": "Converts Text",
+        "bgclass": "bg-secondary",
+        "content": "./tools/camelCaseToSnakeCase.php"
+    },
+    {
+        "name": "camelCaseToScreamingSnakeCase",
+        "displayname": "camelCase to SCREAMING_SNAKE_CASE",
+        "icon": "fa-solid fa-text-height",
+        "description": "Converts Text",
+        "bgclass": "bg-secondary",
+        "content": "./tools/camelCaseToScreamingSnakeCase.php"
+    },
+    {
+        "name": "snakeCaseToCamelCase",
+        "displayname": "snake_CASE to camelCase",
+        "icon": "fa-solid fa-text-height",
+        "description": "Converts Text",
+        "bgclass": "bg-secondary",
+        "content": "./tools/snakeToCamelCase.php"
     }
 ]
