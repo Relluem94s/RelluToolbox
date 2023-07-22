@@ -1,53 +1,5 @@
 [
     {
-        "name": "calculator",
-        "displayname": "Calculator",
-        "icon": "fa-solid fa-calculator",
-        "description": "Opens a Calculator",
-        "bgclass": "bg-primary",
-        "content": "./tools/calculator.php"
-    },
-    {
-        "name": "decToHex",
-        "displayname": "decToHex",
-        "icon": "fa-solid fa-arrow-right-arrow-left",
-        "description": "Converts Decimal to Hexadecimal",
-        "bgclass": "bg-info",
-        "content": "./tools/decToHex.php"
-    },
-    {
-        "name": "hexToDec",
-        "displayname": "hexToDec",
-        "icon": "fa-solid fa-arrow-right-arrow-left",
-        "description": "Converts Hexadecimal to Decimal",
-        "bgclass": "bg-info",
-        "content": "./tools/hexToDec.php"
-    },
-    {
-        "name": "minecraftCoordinatesToRegionFile",
-        "displayname": "Minecraft Coordinate Calculator",
-        "icon": "fa-solid fa-cube",
-        "description": "Calculates the Region File",
-        "bgclass": "bg-primary",
-        "content": "./tools/minecraftCoordinatesToRegionFile.php"
-    },
-    {
-        "name": "decToBin",
-        "displayname": "decToBin",
-        "icon": "fa-solid fa-arrow-right-arrow-left",
-        "description": "Converts Decimal to Binary",
-        "bgclass": "bg-info",
-        "content": "./tools/decToBin.php"
-    },
-    {
-        "name": "binToDec",
-        "displayname": "binToDec",
-        "icon": "fa-solid fa-arrow-right-arrow-left",
-        "description": "Converts Binary to Decimal",
-        "bgclass": "bg-info",
-        "content": "./tools/binToDec.php"
-    },
-    {
         "name": "uuidGenerator",
         "displayname": "UUID Generator",
         "icon": "fa-solid fa-fingerprint",
@@ -190,5 +142,53 @@
         "description": "Decodes a String to Base64",
         "bgclass": "bg-danger",
         "content": "./tools/base64decode.php"
+    },
+    {
+        "name": "calculator",
+        "displayname": "Calculator",
+        "icon": "fa-solid fa-calculator",
+        "description": "Opens a Calculator",
+        "bgclass": "bg-primary",
+        "content": "./tools/calculator.php"
+    },
+    {
+        "name": "decToHex",
+        "displayname": "decToHex",
+        "icon": "fa-solid fa-arrow-right-arrow-left",
+        "description": "Converts Decimal to Hexadecimal",
+        "bgclass": "bg-info",
+        "content": "./tools/decToHex.php"
+    },
+    {
+        "name": "hexToDec",
+        "displayname": "hexToDec",
+        "icon": "fa-solid fa-arrow-right-arrow-left",
+        "description": "Converts Hexadecimal to Decimal",
+        "bgclass": "bg-info",
+        "content": "./tools/hexToDec.php"
+    },
+    {
+        "name": "minecraftCoordinatesToRegionFile",
+        "displayname": "Minecraft Coordinate Calculator",
+        "icon": "fa-solid fa-cube",
+        "description": "Calculates the Region File",
+        "bgclass": "bg-primary",
+        "content": "./tools/minecraftCoordinatesToRegionFile.php"
+    },
+    {
+        "name": "decToBin",
+        "displayname": "decToBin",
+        "icon": "fa-solid fa-arrow-right-arrow-left",
+        "description": "Converts Decimal to Binary",
+        "bgclass": "bg-info",
+        "content": "./tools/decToBin.php"
+    },
+    {
+        "name": "binToDec",
+        "displayname": "binToDec",
+        "icon": "fa-solid fa-arrow-right-arrow-left",
+        "description": "Converts Binary to Decimal",
+        "bgclass": "bg-info",
+        "content": "./tools/binToDec.php"
     }
 ]
