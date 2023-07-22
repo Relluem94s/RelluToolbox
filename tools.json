@@ -8,20 +8,44 @@
         "content": "./tools/calculator.php"
     },
     {
-        "name": "base64Encode",
-        "displayname": "base64 Encoder",
-        "icon": "fa-solid fa-arrow-right-to-bracket",
-        "description": "Encodes a String to Base64",
-        "bgclass": "bg-success",
-        "content": "./tools/base64encode.php"
+        "name": "decToHex",
+        "displayname": "decToHex",
+        "icon": "fa-solid fa-arrow-right-arrow-left",
+        "description": "Converts Decimal to Hexadecimal",
+        "bgclass": "bg-info",
+        "content": "./tools/decToHex.php"
     },
     {
-        "name": "base64Decode",
-        "displayname": "base64 Decodeder",
-        "icon": "fa-solid fa-arrow-right-from-bracket",
-        "description": "Decodes a String to Base64",
-        "bgclass": "bg-danger",
-        "content": "./tools/base64decode.php"
+        "name": "hexToDec",
+        "displayname": "hexToDec",
+        "icon": "fa-solid fa-arrow-right-arrow-left",
+        "description": "Converts Hexadecimal to Decimal",
+        "bgclass": "bg-info",
+        "content": "./tools/hexToDec.php"
+    },
+    {
+        "name": "minecraftCoordinatesToRegionFile",
+        "displayname": "Minecraft Coordinate Calculator",
+        "icon": "fa-solid fa-cube",
+        "description": "Calculates the Region File",
+        "bgclass": "bg-primary",
+        "content": "./tools/minecraftCoordinatesToRegionFile.php"
+    },
+    {
+        "name": "decToBin",
+        "displayname": "decToBin",
+        "icon": "fa-solid fa-arrow-right-arrow-left",
+        "description": "Converts Decimal to Binary",
+        "bgclass": "bg-info",
+        "content": "./tools/decToBin.php"
+    },
+    {
+        "name": "binToDec",
+        "displayname": "binToDec",
+        "icon": "fa-solid fa-arrow-right-arrow-left",
+        "description": "Converts Binary to Decimal",
+        "bgclass": "bg-info",
+        "content": "./tools/binToDec.php"
     },
     {
         "name": "uuidGenerator",
@@ -80,80 +104,8 @@
         "content": "./tools/rollTheDice.php"
     },
     {
-        "name": "decToHex",
-        "displayname": "decToHex",
-        "icon": "fa-solid fa-arrow-right-arrow-left",
-        "description": "Converts Decimal to Hexadecimal",
-        "bgclass": "bg-info",
-        "content": "./tools/decToHex.php"
-    },
-    {
-        "name": "hexToDec",
-        "displayname": "hexToDec",
-        "icon": "fa-solid fa-arrow-right-arrow-left",
-        "description": "Converts Hexadecimal to Decimal",
-        "bgclass": "bg-info",
-        "content": "./tools/hexToDec.php"
-    },
-    {
-        "name": "rollTheDice20",
-        "displayname": "Roll the Dice20",
-        "icon": "fa-solid fa-dice-d20",
-        "description": "Generates Numbers between 1-20",
-        "bgclass": "bg-warning",
-        "content": "./tools/rollTheDice20.php"
-    },
-    {
-        "name": "decToBin",
-        "displayname": "decToBin",
-        "icon": "fa-solid fa-arrow-right-arrow-left",
-        "description": "Converts Decimal to Binary",
-        "bgclass": "bg-info",
-        "content": "./tools/decToBin.php"
-    },
-    {
-        "name": "binToDec",
-        "displayname": "binToDec",
-        "icon": "fa-solid fa-arrow-right-arrow-left",
-        "description": "Converts Binary to Decimal",
-        "bgclass": "bg-info",
-        "content": "./tools/binToDec.php"
-    },
-    {
-        "name": "minecraftCoordinatesToRegionFile",
-        "displayname": "Minecraft Coordinate Calculator",
-        "icon": "fa-solid fa-cube",
-        "description": "Calculates the Region File",
-        "bgclass": "bg-primary",
-        "content": "./tools/minecraftCoordinatesToRegionFile.php"
-    },
-    {
-        "name": "jsonPrettyPrint",
-        "displayname": "JSON Pretty Print",
-        "icon": "fa-solid fa-indent",
-        "description": "Pretty Print JSON Strings",
-        "bgclass": "bg-secondary",
-        "content": "./tools/jsonPrettyPrint.php"
-    },
-    {
-        "name": "jsonMinifyPrint",
-        "displayname": "JSON Minify Print",
-        "icon": "fa-solid fa-outdent",
-        "description": "Minify JSON Strings",
-        "bgclass": "bg-secondary",
-        "content": "./tools/jsonMinifyPrint.php"
-    },
-    {
-        "name": "camelCaseToSnakeCase",
-        "displayname": "camelCase to snake_case",
-        "icon": "fa-solid fa-arrow-down-up-across-line",
-        "description": "Converts camelCase to snake_case",
-        "bgclass": "bg-secondary",
-        "content": "./tools/camelCaseToSnakeCase.php"
-    },
-    {
         "name": "camelCaseToScreamingSnakeCase",
-        "displayname": "camelCase to SCREAMING_SNAKE_CASE",
+        "displayname": "camelCase to SNAKE_CASE",
         "icon": "fa-solid fa-arrow-down-up-across-line",
         "description": "Converts camelCase to SNAKE_CASE",
         "bgclass": "bg-secondary",
@@ -166,5 +118,77 @@
         "description": "Converts snake_CASE to camelCase",
         "bgclass": "bg-secondary",
         "content": "./tools/snakeToCamelCase.php"
+    },
+    {
+        "name": "rollTheDice20",
+        "displayname": "Roll the Dice20",
+        "icon": "fa-solid fa-dice-d20",
+        "description": "Generates Numbers between 1-20",
+        "bgclass": "bg-warning",
+        "content": "./tools/rollTheDice20.php"
+    },
+    {
+        "name": "camelCaseToSnakeCase",
+        "displayname": "camelCase to snake_case",
+        "icon": "fa-solid fa-arrow-down-up-across-line",
+        "description": "Converts camelCase to snake_case",
+        "bgclass": "bg-secondary",
+        "content": "./tools/camelCaseToSnakeCase.php"
+    },
+    {
+        "name": "charCount",
+        "displayname": "Character Counter",
+        "icon": "fa-solid fa-arrow-up-1-9",
+        "description": "Counts every Character",
+        "bgclass": "bg-secondary",
+        "content": "./tools/charCounter.php"
+    },
+    {
+        "name": "rollTheDice100",
+        "displayname": "Roll the Dice100",
+        "icon": "fa-solid fa-shuffle",
+        "description": "Generates Numbers between 1-100",
+        "bgclass": "bg-warning",
+        "content": "./tools/rollTheDice100.php"
+    },
+    {
+        "name": "jsonPrettyPrint",
+        "displayname": "JSON Prettify",
+        "icon": "fa-solid fa-indent",
+        "description": "Prettify JSON Strings",
+        "bgclass": "bg-secondary",
+        "content": "./tools/jsonPrettyPrint.php"
+    },
+    {
+        "name": "jsonMinifyPrint",
+        "displayname": "JSON Minify",
+        "icon": "fa-solid fa-outdent",
+        "description": "Minify JSON Strings",
+        "bgclass": "bg-secondary",
+        "content": "./tools/jsonMinifyPrint.php"
+    },
+    {
+        "name": "randomColorGenerator",
+        "displayname": "Color Generator",
+        "icon": "fa-solid fa-palette",
+        "description": "Generates a Random Color",
+        "bgclass": "bg-warning",
+        "content": "./tools/randomColorGenerator.php"
+    }, 
+    {
+        "name": "base64Encode",
+        "displayname": "base64 Encoder",
+        "icon": "fa-solid fa-arrow-right-to-bracket",
+        "description": "Encodes a String to Base64",
+        "bgclass": "bg-success",
+        "content": "./tools/base64encode.php"
+    },
+    {
+        "name": "base64Decode",
+        "displayname": "base64 Decodeder",
+        "icon": "fa-solid fa-arrow-right-from-bracket",
+        "description": "Decodes a String to Base64",
+        "bgclass": "bg-danger",
+        "content": "./tools/base64decode.php"
     }
 ]
