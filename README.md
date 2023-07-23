@@ -2,6 +2,8 @@
 
 ### a collection of usefull tools [Toolbox](https://toolbox.rellu.de)
 
+# How to add a new Tool?
+
 ## Add JSON into tools.json with Configuration
 ```json
 {
@@ -14,16 +16,29 @@
 }
 ```
 
-## Add <toolname>.php into tools/ Folder
+like
+
+```json
+{
+    "name": "rollTheDice20",
+    "displayname": "Roll the Dice20",
+    "icon": "fa-solid fa-dice-d20",
+    "description": "Generates Numbers between 1-20",
+    "bgclass": "bg-warning",
+    "content": "./tools/rollTheDice20.php"
+}
+```
+
+## Add `<toolname>.php` into tools/ Folder
 ```php
 <?php
     echo "template";
 ?>
 ```
 
-## Todos
+
+# Todos
 
 1. Comma Seperator (from new Line)
-1. String Length
 1. Text Div
 1. Days since
