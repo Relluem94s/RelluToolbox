@@ -1,15 +1,15 @@
 jQuery(function(){
 
-    darkMode();
+    toggleMode();
 
     $(".toggleMode span").on("click", function(){
         (Cookies.get("mode")) ? Cookies.remove("mode") : Cookies.set("mode", "dark")
-        darkMode();
+        toggleMode();
     });
 
 });
 
-function darkMode(){
+function toggleMode(){
     if(Cookies.get("mode")){
         $("body").addClass("dark-mode");
         $(".dark").hide();
