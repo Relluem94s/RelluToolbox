@@ -190,5 +190,13 @@
         "description": "Converts Binary to Decimal",
         "bgclass": "bg-info",
         "content": "./tools/binToDec.php"
+    },
+    {
+        "name": "calculateTimeSinceDate",
+        "displayname": "Get Time Since",
+        "icon": "fa-solid fa-calendar-days",
+        "description": " Calculates the days since a given date",
+        "bgclass": "bg-primary",
+        "content": "./tools/calculateTimeSinceDate.php"
     }
 ]
