@@ -28,6 +28,7 @@ like
     "content": "./tools/rollTheDice20.php"
 }
 ```
+* important is to use camelCase for the "name". 
 
 ## Add `<toolname>.php` into tools/ Folder
 ```php
@@ -41,4 +42,3 @@ like
 
 1. Comma Seperator (from new Line)
 1. Text Div
-1. Days since
