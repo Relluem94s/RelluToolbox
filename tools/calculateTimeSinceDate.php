@@ -1,31 +1,28 @@
 <label for="inputDate">Enter a date (YYYY-MM-DD):</label>
   <input type="date" id="inputDate" class="form-control">
   <button onclick="calculateTimeSince()" class="form-control btn btn-success">Calculate</button>
-  <p id="result" class="mt-3"></p>
+  <p id="resultDateDiff" class="mt-3"></p>
   <p id="totalDays"></p>
 
   <script>
     function calculateTimeSince() {
-      let inputDateElement = document.getElementById("inputDate");
-      let inputDateValue = inputDateElement.value;
+      let inputDateValue = $("#inputDate").val();
 
       if (!inputDateValue) {
-        alert("Please enter a date.");
+        $("#totalDays").text("Please enter a date.")
         return;
       }
 
       let inputDate = new Date(inputDateValue);
-      let resultElement = document.getElementById("result");
-      let totalDaysElement = document.getElementById("totalDays");
 
       let { years, months, days, totalDays, isFuture } = getTimeSince(inputDate);
       
       if (isFuture) {
-        resultElement.textContent = "The date is in the future!";
-        totalDaysElement.textContent = "";
+        $("#resultDateDiff").text("The date is in the future!");
+        $("#totalDays").text("");
       } else {
-        resultElement.textContent = `Before ${years} years, ${months} months, and ${days} days`;
-        totalDaysElement.textContent = `Total days elapsed: ${totalDays}`;
+        $("#resultDateDiff").text(`Before ${years} years, ${months} months, and ${days} days`);
+        $("#totalDays").text(`Total days elapsed: ${totalDays}`);
       }
     }
 
