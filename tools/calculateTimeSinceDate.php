@@ -33,20 +33,17 @@
       let now = new Date();
       let timeDiff = now - date;
 
-      if (timeDiff < 0) {
-        let seconds = Math.floor(timeDiff / 1000);
-        let minutes = Math.floor(seconds / 60);
-        let hours = Math.floor(minutes / 60);
-        let days = Math.floor(hours / 24);
-        let isFuture = true;
-
-        return { years: 0, months: 0, days, totalDays: 0, isFuture };
-      }
-
+      
       let seconds = Math.floor(timeDiff / 1000);
       let minutes = Math.floor(seconds / 60);
       let hours = Math.floor(minutes / 60);
       let days = Math.floor(hours / 24);
+      
+      if (timeDiff < 0) {
+        let isFuture = true;
+        return { years: 0, months: 0, days, totalDays: 0, isFuture };
+      }
+      
       let months = Math.floor(days / 30);
       let years = Math.floor(days / 365);
       let totalDays = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
