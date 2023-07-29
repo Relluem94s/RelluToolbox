@@ -28,7 +28,7 @@ like
     "content": "./tools/rollTheDice20.php"
 }
 ```
-* important is that the "name" has no spaces between the words
+* important is to use camelCase for the "name". 
 
 ## Add `<toolname>.php` into tools/ Folder
 ```php
