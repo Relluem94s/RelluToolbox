@@ -6,19 +6,19 @@
 
   <script>
     function calculateTimeSince() {
-      const inputDateElement = document.getElementById("inputDate");
-      const inputDateValue = inputDateElement.value;
+      let inputDateElement = document.getElementById("inputDate");
+      let inputDateValue = inputDateElement.value;
 
       if (!inputDateValue) {
         alert("Please enter a date.");
         return;
       }
 
-      const inputDate = new Date(inputDateValue);
-      const resultElement = document.getElementById("result");
-      const totalDaysElement = document.getElementById("totalDays");
+      let inputDate = new Date(inputDateValue);
+      let resultElement = document.getElementById("result");
+      let totalDaysElement = document.getElementById("totalDays");
 
-      const { years, months, days, totalDays, isFuture } = getTimeSince(inputDate);
+      let { years, months, days, totalDays, isFuture } = getTimeSince(inputDate);
       
       if (isFuture) {
         resultElement.textContent = "The date is in the future!";
@@ -30,27 +30,27 @@
     }
 
     function getTimeSince(date) {
-      const now = new Date();
-      const timeDiff = now - date;
+      let now = new Date();
+      let timeDiff = now - date;
 
       if (timeDiff < 0) {
-        const seconds = Math.floor(timeDiff / 1000);
-        const minutes = Math.floor(seconds / 60);
-        const hours = Math.floor(minutes / 60);
-        const days = Math.floor(hours / 24);
-        const isFuture = true;
+        let seconds = Math.floor(timeDiff / 1000);
+        let minutes = Math.floor(seconds / 60);
+        let hours = Math.floor(minutes / 60);
+        let days = Math.floor(hours / 24);
+        let isFuture = true;
 
         return { years: 0, months: 0, days, totalDays: 0, isFuture };
       }
 
-      const seconds = Math.floor(timeDiff / 1000);
-      const minutes = Math.floor(seconds / 60);
-      const hours = Math.floor(minutes / 60);
-      const days = Math.floor(hours / 24);
-      const months = Math.floor(days / 30);
-      const years = Math.floor(days / 365);
-      const totalDays = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-      const isFuture = false;
+      let seconds = Math.floor(timeDiff / 1000);
+      let minutes = Math.floor(seconds / 60);
+      let hours = Math.floor(minutes / 60);
+      let days = Math.floor(hours / 24);
+      let months = Math.floor(days / 30);
+      let years = Math.floor(days / 365);
+      let totalDays = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      let isFuture = false;
 
       return { years, months, days: days - months * 30, totalDays, isFuture };
     }
