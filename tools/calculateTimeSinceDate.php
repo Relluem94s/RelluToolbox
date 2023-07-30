@@ -43,7 +43,7 @@
       
 
       let years = Math.floor(days / 365);
-      let months = Math.floor((days / 30) - years * 12);
+      let months = Math.floor((days / 365 * 12) - years * 12);
       days = days - years * 365;
       let totalDays = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
       let isFuture = false;
