@@ -22,7 +22,7 @@ function getRandomNumber(min, max) {
 document.getElementById("roll-button").addEventListener("click", rollDice);
 
 </script>
-<link rel="stylesheet" href="RelluBash-Script-Collection\SjinDice.css">
+<link rel="stylesheet" href="assets\SjinDice.css">
 <div class="input-group">
     <div class="dice">
       <ol class="die-list even-roll" data-roll="1" id="die-1">
