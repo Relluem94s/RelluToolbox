@@ -62,6 +62,7 @@ function getTool(
         <link rel="stylesheet" href="./node_modules/admin-lte/dist/css/adminlte.min.css">
         <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
         <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/Toolbox.css">
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
     </head>
     <body>
@@ -70,10 +71,6 @@ function getTool(
             <div class="preloader" style="display:none;">
                 <img class="animation__shake" src="assets/img/rellutoolbox.svg" alt="rellutoolbox" width="600">
             </div>
-
-            
-            
-            
         
             <div class="content-wrapper" style="min-height: 768px;">
             
@@ -105,5 +102,12 @@ function getTool(
                 </div>
             </div>
         </div>
+        <footer class="bg-dark fixed-bottom"">
+            <div class="container">
+                <div class="btn-group">
+                    <input type="text" class="form-control empty" id="iconified" placeholder="&#xF002;"/>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
