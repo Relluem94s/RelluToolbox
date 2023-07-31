@@ -8,6 +8,8 @@
   justify-items: center;
   padding: 2rem;
   perspective: 600px;
+  padding-bottom:120px;
+  padding-top:120px;
 }
 .die-list {
   display: grid;
@@ -188,3 +190,7 @@ button:hover {
     perspective: 1300px;
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dice_merge

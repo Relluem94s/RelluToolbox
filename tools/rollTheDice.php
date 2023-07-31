@@ -22,10 +22,10 @@ function getRandomNumber(min, max) {
 document.getElementById("roll-button").addEventListener("click", rollDice);
 
 </script>
-<link rel="stylesheet" href="assets\css\SjinDice.css">
-<div class="input-group">
-    <div class="dice">
-      <ol class="die-list even-roll" data-roll="1" id="die-1">
+
+<link rel="stylesheet" href="assets/css/SjinDice.css">
+<div class="dice">
+    <ol class="die-list even-roll" data-roll="1" id="die-1">
         <li class="face-side" data-side="1">
           <span class="eye"></span>
         </li>
@@ -59,7 +59,9 @@ document.getElementById("roll-button").addEventListener("click", rollDice);
           <span class="eye"></span>
           <span class="eye"></span>
         </li>
-      </ol>
+    </ol>
+</div>
+<div class="input-group">
     <input type="text" class="form-control" disabled id="dice_output">
     <button class="btn btn-warning" type="button" id="roll-button">Roll Dice</button>
 </div>
