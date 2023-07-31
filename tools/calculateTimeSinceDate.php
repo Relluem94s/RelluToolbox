@@ -39,22 +39,27 @@
 
     let now = new Date();
     let timeDiff = now - date;
-
-    if (timeDiff < 0) {
-      let isFuture = true;
-      return { years: 0, months: 0, days: 0, totalDays: 0, isFuture };
-    }
-
-    let seconds = (timeDiff / MILLISECONDS_A_SECOND);
-    let minutes = (seconds / SECONDS_A_MINUTE);
-    let hours = (minutes / MINUTES_A_HOUR);
-    let days = (hours / HOUR_A_DAY);
-    let years = Math.floor(days / DAYS_IN_YEAR);
-    let months = Math.floor(days / DAYS_IN_YEAR * MONTH_IN_YEAR - years * MONTH_IN_YEAR);
-    days = Math.ceil(days / DAYS_IN_YEAR / (days / DAYS_IN_YEAR * MONTH_IN_YEAR - years * MONTH_IN_YEAR));
     let totalDays = Math.floor(timeDiff / (MILLISECONDS_A_SECOND * SECONDS_A_MINUTE * MINUTES_A_HOUR * HOUR_A_DAY));
     let isFuture = false;
+    let years = 0;
+    let months = 0;
+    let days = totalDays;
 
+    if (timeDiff < 0) {
+      isFuture = true;
+      return { years: 0, months: 0, days: 0, totalDays: 0, isFuture };
+    }
+    
+    while(days >= DAYS_IN_YEAR){
+        years++;
+        days = days - DAYS_IN_YEAR
+    }
+
+    while (days >= DAYS_IN_YEAR/MONTH_IN_YEAR){
+        months++;
+        days = Math.floor(days - (DAYS_IN_YEAR/MONTH_IN_YEAR))
+    }
+    
     return { years, months, days, totalDays, isFuture };
   }
 </script>
