@@ -1,9 +1,9 @@
-<h1>Weather App</h1>
+<h1>showWeather</h1>
 
 <form id="weatherForm">
     <label for="city">Stadt Eingeben:</label>
     <input type="text" name="city" id="city" required>
-    <button type="button" id="getWeatherButton">Get Weather</button>
+    <button type="button" id="getWeatherButton">Wetter</button>
 </form>
 
 <div id="weatherInfo">
@@ -23,7 +23,7 @@ function fetchWeatherData() {
             updateTemperatureColor();
         })
         .catch(error => {
-            console.error('Error fetching weather data:', error);
+            console.error('Fehler beim Abrufen der Wetterdaten:', error);
         });
 }
 
