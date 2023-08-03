@@ -144,6 +144,14 @@
         "content": "./tools/base64decode.php"
     },
     {
+        "name": "showWeather",
+        "displayname": "showWeather",
+        "icon": "fa-solid fa-cloud-sun",
+        "description": "Shows the Weather",
+        "bgclass": "bg-warning",
+        "content": "./tools/showWeather.php"
+    },
+    {
         "name": "calculator",
         "displayname": "Calculator",
         "icon": "fa-solid fa-calculator",
