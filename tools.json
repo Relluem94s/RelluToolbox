@@ -145,7 +145,7 @@
     },
     {
         "name": "stockApp",
-        "displayname": "stockApp",
+        "displayname": "Stock portfolio tracker",
         "icon": "fa-solid fa-money-bill-trend-up",
         "description": "Shows your Stock",
         "bgclass": "bg-warning",
