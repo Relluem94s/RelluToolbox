@@ -28,7 +28,11 @@ like
     "content": "./tools/rollTheDice20.php"
 }
 ```
-* important is to use camelCase for the "name". 
+* important is to use camelCase for the "name".
+* If you need a php script that is called by your tool add a folder like `./tools/rollTheDice20/`
+* Additional CSS Files can be stored in  `./assets/css/`
+* Additional JS Files can be stored in  `./assets/js/`
+* Additional Images can be stored in  `./assets/img/`
 
 ## Add `<toolname>.php` into tools/ Folder
 ```php
