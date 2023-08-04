@@ -1,4 +1,3 @@
-
 <div class="container mt-5">
     <h1 class="mb-4">Aktien Portfolio Tracker</h1>
 
@@ -28,8 +27,7 @@
         const symbol = document.getElementById('symbol').value;
         const quantity = parseInt(document.getElementById('quantity').value);
         const portfolioList = document.getElementById('portfolioList');
-        // we can Change the path 
-        fetch(`tools/getStockData.php?symbol=${symbol}`)
+        fetch(`tools/stockApp/getStockData.php?symbol=${symbol}`)
             .then(response => response.json())
             .then(data => {
                 if (data.error) {
@@ -41,7 +39,12 @@
 
                 const stockItem = document.createElement('div');
                 stockItem.className = 'stock-item';
-                stockItem.innerHTML = `<p><strong class="text-primary">${symbol}</strong> - <strong>Anzahl:</strong> ${quantity} - <strong>Preis:</strong> $${stockPrice.toFixed(2)} - <strong>Summe:</strong> $${totalValue.toFixed(2)}</p>`;
+                stockItem.innerHTML = `<p>
+                <strong class="text-primary">${symbol}</strong> -
+                <strong>Anzahl:</strong> ${quantity} -
+                <strong>Preis:</strong> $${stockPrice.toFixed(2)} -
+                <strong>Summe:</strong> $${totalValue.toFixed(2)}
+                </p>`;
                 portfolioList.appendChild(stockItem);
             })
             .catch(error => {
