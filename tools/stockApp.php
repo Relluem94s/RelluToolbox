@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container">
     <form id="portfolioForm">
         <div class="form-group">
             <label for="symbol">Stock Symbol:</label>
