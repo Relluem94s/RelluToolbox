@@ -144,6 +144,14 @@
         "content": "./tools/base64decode.php"
     },
     {
+        "name": "stockApp",
+        "displayname": "stockApp",
+        "icon": "fa-solid fa-money-bill-trend-up",
+        "description": "Shows your Stock",
+        "bgclass": "bg-warning",
+        "content": "./tools/stockApp.php"
+    },
+    {
         "name": "calculator",
         "displayname": "Calculator",
         "icon": "fa-solid fa-calculator",
