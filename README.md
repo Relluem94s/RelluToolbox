@@ -28,11 +28,6 @@ like
     "content": "./tools/rollTheDice20.php"
 }
 ```
-* important is to use camelCase for the "name".
-* If you need a php script that is called by your tool add a folder like `./tools/rollTheDice20/`
-* Additional CSS Files can be stored in  `./assets/css/`
-* Additional JS Files can be stored in  `./assets/js/`
-* Additional Images can be stored in  `./assets/img/`
 
 ## Add `<toolname>.php` into tools/ Folder
 ```php
@@ -40,6 +35,24 @@ like
     echo "template";
 ?>
 ```
+
+### Good to know
+* important is to use camelCase for the "name".
+* If you need a php script that is called by your tool add a folder like `./tools/rollTheDice20/`
+* Additional CSS Files can be stored in  `./assets/css/`
+* Additional JS Files can be stored in  `./assets/js/`
+* Additional Images can be stored in  `./assets/img/`
+* The Main Language for this Project is English
+
+### Colors
+Color | Class | Use
+---|---|---
+Yellow | bg-warning | Generators
+Blue | bg-primary | Calculators & Tools with API Calls
+Gray | bg-secondary | String Tools
+Light Blue | bg-info | Number Converter
+Green | bg-success | Encoder
+Red | bg-danger | Decoder
 
 
 # Todos
