@@ -1,9 +1,11 @@
 <?php
-// for more API tokens we should build some ENV´s and everyone should have them locally ;)
-$apiKey = '38BVRAQC28B9G63Y';
-$symbol = $_GET['symbol'];
+$env = parse_ini_file("../../prod.env");
 
-$apiUrl = "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=$symbol&interval=5min&apikey=$apiKey";
+$apiKey = $env["STOCK_API_KEY"];
+$symbol =  ( isset( $_GET['symbol'] ) ) ? filter_input(INPUT_GET, 'symbol', FILTER_SANITIZE_STRING) : "TSLA";
+$time_series_5_min = 'Time Series (5min)';
+
+$apiUrl = sprintf($env["STOCK_API_URL"], $symbol, $apiKey);
 
 $response = file_get_contents($apiUrl);
 
@@ -14,11 +16,10 @@ if ($response === false) {
 
 $data = json_decode($response, true);
 
-if ($data && isset($data['Time Series (5min)'])) {
-    $stockPrice = $data['Time Series (5min)'][key($data['Time Series (5min)'])]['1. open'];
+if ($data && isset($data[$time_series_5_min])) {
+    $stockPrice = $data[$time_series_5_min][key($data[$time_series_5_min])]['1. open'];
     $responseArray = array('stockPrice' => $stockPrice);
     echo json_encode($responseArray);
 } else {
-    echo json_encode(array('error' => 'Fehler beim Abrufen der Aktiendaten.'));
+    echo json_encode(array('error' => 'Error fetching stock data.'));
 }
-?>
