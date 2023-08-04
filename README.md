@@ -42,3 +42,14 @@ like
 
 1. Comma Seperator (from new Line)
 1. Text Div
+
+# Deploy
+
+1. ```shell
+   git clone https://github.com/Relluem94/RelluToolbox.git
+   ```
+2. create prod.env in project root
+```ini
+STOCK_API_KEY='<ENTER_API_KEY>'
+STOCK_API_URL='<ENTER_API_URL>&symbol=%s&apikey=%s'
+```
