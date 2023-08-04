@@ -37,7 +37,8 @@ like
 ```
 
 ### Good to know
-* important is to use camelCase for the "name".
+* important is to use camelCase for the `name`.
+* The `displayname` is used as modal title
 * If you need a php script that is called by your tool add a folder like `./tools/rollTheDice20/`
 * Additional CSS Files can be stored in  `./assets/css/`
 * Additional JS Files can be stored in  `./assets/js/`
