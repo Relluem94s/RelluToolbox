@@ -160,6 +160,14 @@
         "content": "./tools/calculator.php"
     },
     {
+        "name": "stockApp",
+        "displayname": "Stock portfolio tracker",
+        "icon": "fa-solid fa-money-bill-trend-up",
+        "description": "Shows your Stock",
+        "bgclass": "bg-primary",
+        "content": "./tools/stockApp.php"
+    },
+    {
         "name": "decToHex",
         "displayname": "decToHex",
         "icon": "fa-solid fa-arrow-right-arrow-left",
@@ -176,12 +184,12 @@
         "content": "./tools/hexToDec.php"
     },
     {
-        "name": "minecraftCoordinatesToRegionFile",
-        "displayname": "Minecraft Coordinate Calculator",
-        "icon": "fa-solid fa-cube",
-        "description": "Calculates the Region File",
+        "name": "calculator",
+        "displayname": "Calculator",
+        "icon": "fa-solid fa-calculator",
+        "description": "Opens a Calculator",
         "bgclass": "bg-primary",
-        "content": "./tools/minecraftCoordinatesToRegionFile.php"
+        "content": "./tools/calculator.php"
     },
     {
         "name": "decToBin",
@@ -198,6 +206,14 @@
         "description": "Converts Binary to Decimal",
         "bgclass": "bg-info",
         "content": "./tools/binToDec.php"
+    },
+    {
+        "name": "minecraftCoordinatesToRegionFile",
+        "displayname": "Minecraft Coordinate Calculator",
+        "icon": "fa-solid fa-cube",
+        "description": "Calculates the Region File",
+        "bgclass": "bg-primary",
+        "content": "./tools/minecraftCoordinatesToRegionFile.php"
     },
     {
         "name": "calculateTimeSinceDate",
