@@ -5,17 +5,6 @@ input.empty {
     text-decoration: inherit;
 }
 
-
-@keyframes border-pulsate {
-    50%  { border-color: rgb(72, 179, 177); }
-    100% { border-color: rgb(255, 255, 255); }
-}
-
-.highlightedSearch {
-    border: 5px solid rgb(255, 255, 255);
-    animation: border-pulsate 2s infinite;
-  }
-
 .hideItems{
     display: none;
 }

@@ -9,7 +9,6 @@ window.onload = (event) => {
         let searchTerm = ($(this).val());
         
         if(searchTerm == null || searchTerm == "" || searchTerm == " "){
-            $(".highlightedSearch").removeClass("highlightedSearch");
             $(".info-box").removeClass("hideItems");
         }
         else{
@@ -18,20 +17,20 @@ window.onload = (event) => {
        
         let resultList = document.querySelectorAll('.info-box[id*="'+searchTerm+'"]');
 
-        resultList.forEach(
+        if(resultList.length > 0){
+          resultList.forEach(
             function(node) {
               let foundItemID = node.id;
               let elem = document.getElementById(foundItemID);
 
               if(elem.id.includes(searchTerm)){
-                elem.classList.add('highlightedSearch');
                 elem.classList.remove('hideItems');
               }
               else{
                 $(".info-box").removeClass("hideItems");
-                elem.classList.remove('highlightedSearch');
               }
             }
           );
+        }
       });
   };
