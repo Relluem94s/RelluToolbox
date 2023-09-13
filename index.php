@@ -12,7 +12,7 @@ function getTool(
     <div class="col col-sm-4">
         <div style="cursor:pointer"
         class="info-box ' . $bgclass . '"
-        id="' . $displayname . '"
+        id="' . str_replace(' ', '', strtolower($displayname)) . '"
         data-bs-toggle="modal"
         data-bs-target="#' . $name . '">
             <span class="info-box-icon"><i class="' . $icon . '"></i></span>
