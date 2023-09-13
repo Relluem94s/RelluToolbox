@@ -1,0 +1,11 @@
+{
+    "name": "relluem94/toolbox",
+    "description": "A Collection of useful Tools",
+    "authors": [
+        {
+            "name": "Relluem94",
+            "email": "github@relluem94.de"
+        }
+    ],
+    "require": {}
+}
