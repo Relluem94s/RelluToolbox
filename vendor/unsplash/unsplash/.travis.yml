@@ -1,0 +1,13 @@
+sudo: false
+language: php
+php:
+  - '7.3'
+  - '7.4'
+cache:
+  directories:
+    - $HOME/.composer/cache
+before_script:
+  - composer install --prefer-source --no-interaction
+  - mkdir -p build/logs
+script:
+  - vendor/bin/phpunit
