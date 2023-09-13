@@ -4,3 +4,11 @@ input.empty {
     font-weight: normal;
     text-decoration: inherit;
 }
+
+.hideItems{
+    display: none;
+}
+
+.searchBar{
+    padding: 5px
+}

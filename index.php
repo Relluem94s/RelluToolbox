@@ -12,6 +12,7 @@ function getTool(
     <div class="col col-sm-4">
         <div style="cursor:pointer"
         class="info-box ' . $bgclass . '"
+        id="' . str_replace(' ', '', strtolower($displayname)) . '"
         data-bs-toggle="modal"
         data-bs-target="#' . $name . '">
             <span class="info-box-icon"><i class="' . $icon . '"></i></span>
@@ -59,6 +60,7 @@ function getTool(
         <script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>
         <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script defer src="./assets/scripts/slothSearch.js"></script>
         <link rel="stylesheet" href="./node_modules/admin-lte/dist/css/adminlte.min.css">
         <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
         <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -102,10 +104,10 @@ function getTool(
                 </div>
             </div>
         </div>
-        <footer class="bg-dark fixed-bottom"">
+        <footer class="bg-dark fixed-bottom searchBar">
             <div class="container">
                 <div class="btn-group">
-                    <input type="text" class="form-control empty" id="iconified" placeholder="&#xF002;"/>
+                    <input id="searchBox" type="text" class="form-control empty" id="iconified" placeholder="&#xF002;"/>
                 </div>
             </div>
         </footer>
