@@ -1,4 +1,4 @@
 *node_modules/*
 prod.env
 vendor/
-compser.lock
+composer.lock
