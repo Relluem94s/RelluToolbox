@@ -1,7 +1,13 @@
 <div class="container">
     <form>
         <div class="input-group mb-4">
-            <input type="text" class="form-control" name="icao" id="icao" required maxlength="4" placeholder="Enter ICAO Code here...">&nbsp;
+            <input 
+                type="text" 
+                class="form-control" 
+                name="icao" id="icao" 
+                required maxlength="4" 
+                placeholder="Enter ICAO Code here...">
+                &nbsp;
             <div class="input-group-append">
                 <button type="button" onclick="getMetarData()"class="btn btn-primary" id="getMetar">Get Metar</button>
             </div>
@@ -13,7 +19,11 @@
     <div id="metarData">
     </div>
     <div>
-        <i>Data provided by <a target="_blank" rel="noopener noreferrer" href="https://www.aviationapi.com/">AviationApi</a></i>
+        <i>Data provided by 
+            <a target="_blank" rel="noopener noreferrer" href="https://www.aviationapi.com/">
+                AviationApi
+            </a>
+        </i>
     </div>
 
 </div>
