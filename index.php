@@ -60,12 +60,22 @@ function getTool(
         <script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>
         <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script defer src="./assets/scripts/slothSearch.js"></script>
+        <script defer src="./assets/scripts/slothSearch.js"></script>     
         <link rel="stylesheet" href="./node_modules/admin-lte/dist/css/adminlte.min.css">
         <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
         <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="./assets/css/Toolbox.css">
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+        <!-- Must be declared after Bootstrap, because Bootstrap kills the toastr styles!  -->
+        <script src="./node_modules/toastr/toastr.js"></script>
+        <script>
+            toastr.options.showMethod = 'slideDown';
+            toastr.options.preventDuplicates = true;
+            toastr.options.progressBar = true;
+            toastr.options.closeButton = true;
+        </script>
+        <link href="./node_modules/toastr/build/toastr.css" rel="stylesheet"/>
+
     </head>
     <body>
         <div class="wrapper">
