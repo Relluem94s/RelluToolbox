@@ -18,7 +18,7 @@
   "homepage": "https://github.com/Relluem94s/RelluToolbox#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.2",
-    "admin-lte": "^4.0.0-alpha2",
+    "admin-lte": "^4.0.0-alpha3",
     "bootstrap": "^5.3.2",
     "jquery": "^3.7.1",
     "toastr": "^2.1.4"
