@@ -47,7 +47,7 @@
             })
             .catch(error => {
                 console.error(error);
-                toastr.error('Error retrieving the Stock data. Please try again later.'); 
+                foliError('Error retrieving the Stock data. Please try again later.'); 
             });
     }
 </script>

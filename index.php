@@ -66,15 +66,9 @@ function getTool(
         <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="./assets/css/Toolbox.css">
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
-        <!-- Must be declared after Bootstrap, because Bootstrap kills the toastr styles!  -->
-        <script src="./node_modules/toastr/toastr.js"></script>
-        <script>
-            toastr.options.showMethod = 'slideDown';
-            toastr.options.preventDuplicates = true;
-            toastr.options.progressBar = true;
-            toastr.options.closeButton = true;
-        </script>
-        <link href="./node_modules/toastr/build/toastr.css" rel="stylesheet"/>
+        <script src="./assets/folitoast/folitoast.js"></script>
+        <link rel="stylesheet" href="./assets/folitoast/folitoast.css">
+
 
     </head>
     <body>

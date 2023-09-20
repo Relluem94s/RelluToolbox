@@ -19,14 +19,14 @@ async function copyToClipboard(){
 
     if(password.value){
         navigator.clipboard.writeText(password.value); 
-        toastr.success('Password copied to clipboard successful!'); 
+        foliSuccess("Password copied successfully to clipboard!");
 
         /* For security reasons clear Clipboard after 10sec */
         await delay(10000);
         navigator.clipboard.writeText("");
     }
     else{
-        toastr.warning('No Password generated yet!'); 
+        foliWarn("No password generated yet!");
     }
 }
 
