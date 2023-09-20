@@ -1,11 +1,10 @@
 <?php
-$env = parse_ini_file("../../prod.env");
 
-$apiKey = $env["STOCK_API_KEY"];
+$apiKey = getenv('STOCK_API_KEY');
 $symbol =  ( isset( $_GET['symbol'] ) ) ? filter_input(INPUT_GET, 'symbol', FILTER_SANITIZE_STRING) : "TSLA";
 $time_series_5_min = 'Time Series (5min)';
 
-$apiUrl = sprintf($env["STOCK_API_URL"], $symbol, $apiKey);
+$apiUrl = sprintf(getenv('STOCK_API_URL'), $symbol, $apiKey);
 
 $response = file_get_contents($apiUrl);
 
