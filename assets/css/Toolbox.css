@@ -12,3 +12,13 @@ input.empty {
 .searchBar{
     padding: 5px
 }
+
+
+.info-box{
+    transition: box-shadow .3s;
+    border: 1px solid #ccc;
+}
+.info-box:hover{
+    box-shadow: 0 0 30px rgba(51, 51, 51, 0.432); 
+    filter: brightness(95%);
+}
