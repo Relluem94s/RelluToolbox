@@ -32,8 +32,10 @@
 
         let icao = document.getElementById("icao").value
 
-        const response = await fetch("https://api.aviationapi.com/v1/weather/metar?apt=" + icao.toUpperCase());
+        const response = await fetch("https://api.aviationapi.com/v1/weather/metar?apt=" + icao.toUpperCase(),{mode: 'no-cors'});
         const data = await response.json();
+
+    console.log(data);
 
         let object = Object.values(data);
 
