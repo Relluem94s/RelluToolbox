@@ -106,13 +106,12 @@ function getTool(
             </div>
         </div>
     </div>
-    <footer class="bg-dark fixed-bottom searchBar">
-        <div class="container">
-            <div class="btn-group">
-                <input id="searchBox" type="text" class="form-control empty" id="iconified" placeholder="&#xF002;" />
-            </div>
+    <div class="floatingActionButton">
+        <div class="searchAnchor">
+            <input type="text" id="searchBox" class="searchBar" placeholder="Search Tools...">
+            <input class="searchSubmit" type="submit">
+            <div class="searchToggle"></div>
         </div>
-    </footer>
+    </div>
 </body>
-
 </html>
