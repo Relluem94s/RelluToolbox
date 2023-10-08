@@ -1,11 +1,18 @@
 <?php
-$env = parse_ini_file("../../prod.env");
 
-$apiKey = $env["STOCK_API_KEY"];
+$loader = require '../../vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__) . "../../");
+$dotenv->load();
+
+$dotenv->required('STOCK_API_KEY');
+$dotenv->required('STOCK_API_URL');
+
+$apiKey = $_ENV['STOCK_API_KEY'];
 $symbol =  ( isset( $_GET['symbol'] ) ) ? filter_input(INPUT_GET, 'symbol', FILTER_SANITIZE_STRING) : "TSLA";
 $time_series_5_min = 'Time Series (5min)';
 
-$apiUrl = sprintf($env["STOCK_API_URL"], $symbol, $apiKey);
+$apiUrl = sprintf($_ENV['STOCK_API_URL'], $symbol, $apiKey);
 
 $response = file_get_contents($apiUrl);
 
