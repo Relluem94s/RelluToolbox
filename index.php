@@ -1,5 +1,5 @@
 <?php
-    
+
 function getTool(
     $name,
     $displayname,
@@ -7,7 +7,7 @@ function getTool(
     $description,
     $bgclass,
     $content
-    ) {
+) {
     return '
     <div class="col col-sm-4">
         <div style="cursor:pointer"
@@ -17,8 +17,8 @@ function getTool(
         data-bs-target="#' . $name . '">
             <span class="info-box-icon"><i class="' . $icon . '"></i></span>
             <div class="info-box-content">
-                  <span class="info-box-text">' . $displayname . '</span>
-                  <span class="info-box-number">' . $description . '</span>
+                  <span class="info-box-number">' . $displayname . '</span>
+                  <span class="info-box-text">' . $description . '</span>
               </div>
         </div>
         <div
@@ -102,18 +102,18 @@ function getTool(
                                     );
                                 }
 
-                            ?>
-                        </div>
+                        ?>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="bg-dark fixed-bottom searchBar">
-            <div class="container">
-                <div class="btn-group">
-                    <input id="searchBox" type="text" class="form-control empty" id="iconified" placeholder="&#xF002;"/>
-                </div>
-            </div>
-        </footer>
-    </body>
+    </div>
+    <div class="floatingActionButton">
+        <div class="searchAnchor">
+            <input type="text" id="searchBox" class="searchBar" placeholder="Search Tools...">
+            <input class="searchSubmit" type="submit">
+            <div class="searchToggle"></div>
+        </div>
+    </div>
+</body>
 </html>
