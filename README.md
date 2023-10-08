@@ -66,8 +66,10 @@ Red | bg-danger | Decoder
 1. ```shell
    git clone https://github.com/Relluem94/RelluToolbox.git
    ```
-2. create prod.env in project root
-```ini
-STOCK_API_KEY='<ENTER_API_KEY>'
-STOCK_API_URL='<ENTER_API_URL>&symbol=%s&apikey=%s'
-```
+1. ```shell
+   npm install
+   ```
+1. ```shell
+   composer install
+   ```
+1. clone `prod.env.example` over to `prod.env` and fill in the values

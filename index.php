@@ -1,5 +1,5 @@
 <?php
-    
+
 function getTool(
     $name,
     $displayname,
@@ -7,17 +7,18 @@ function getTool(
     $description,
     $bgclass,
     $content
-    ) {
+) {
     return '
     <div class="col col-sm-4">
         <div style="cursor:pointer"
         class="info-box ' . $bgclass . '"
+        id="' . str_replace(' ', '', strtolower($displayname)) . '"
         data-bs-toggle="modal"
         data-bs-target="#' . $name . '">
             <span class="info-box-icon"><i class="' . $icon . '"></i></span>
             <div class="info-box-content">
-                  <span class="info-box-text">' . $displayname . '</span>
-                  <span class="info-box-number">' . $description . '</span>
+                  <span class="info-box-number">' . $displayname . '</span>
+                  <span class="info-box-text">' . $description . '</span>
               </div>
         </div>
         <div
@@ -59,14 +60,26 @@ function getTool(
         <script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>
         <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="./node_modules/js-cookie/dist/js.cookie.min.js"></script>
+        <script src="./assets/js/rellu94.js"></script>
+        <script defer src="./assets/scripts/slothSearch.js"></script>     
         <link rel="stylesheet" href="./node_modules/admin-lte/dist/css/adminlte.min.css">
         <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
         <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="./assets/css/Toolbox.css">
+        <link rel="stylesheet" href="./assets/css/rellu94.css">
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+        <script src="./assets/folitoast/folitoast.js"></script>
+        <link rel="stylesheet" href="./assets/folitoast/folitoast.css">
+
+
     </head>
     <body>
         <div class="wrapper">
+            <div class="toggleMode">
+                <span class="dark mode"><i class="fa-solid fa-moon"></i></span>
+                <span class="light mode"><i class="fa-solid fa-sun"></i></span>
+            </div>
             <!-- Preloader -->
             <div class="preloader" style="display:none;">
                 <img class="animation__shake" src="assets/img/rellutoolbox.svg" alt="rellutoolbox" width="600">
@@ -96,18 +109,18 @@ function getTool(
                                     );
                                 }
 
-                            ?>
-                        </div>
+                        ?>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="bg-dark fixed-bottom"">
-            <div class="container">
-                <div class="btn-group">
-                    <input type="text" class="form-control empty" id="iconified" placeholder="&#xF002;"/>
-                </div>
-            </div>
-        </footer>
-    </body>
+    </div>
+    <div class="floatingActionButton">
+        <div class="searchAnchor">
+            <input type="text" id="searchBox" class="searchBar" placeholder="Search Tools...">
+            <input class="searchSubmit" type="submit">
+            <div class="searchToggle"></div>
+        </div>
+    </div>
+</body>
 </html>

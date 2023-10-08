@@ -222,5 +222,13 @@
         "description": " Calculates the days since a given date",
         "bgclass": "bg-primary",
         "content": "./tools/calculateTimeSinceDate.php"
+    },
+    {
+        "name": "getMetar",
+        "displayname": "Get Metar Weather for ICAO Code",
+        "icon": "fa-solid fa-plane",
+        "description": " Current weather for ICAO Code",
+        "bgclass": "bg-primary",
+        "content": "./tools/metarApp.php"
     }
 ]

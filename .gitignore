@@ -1,2 +1,4 @@
 *node_modules/*
-prod.env
+.env
+vendor/
+composer.lock

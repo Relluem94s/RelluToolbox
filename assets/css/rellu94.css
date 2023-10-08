@@ -1,0 +1,35 @@
+body.dark-mode {
+    /* Stil für den Darkmode */
+    background: linear-gradient(109.6deg, rgb(16 16 16) 11.2%, rgb(21 23 24) 51.2%, rgb(28 26 26) 98.6%);
+}
+
+.info-box{
+    transition: transform 0.2s ease-in-out;
+}
+
+.info-box:hover{
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.light{
+    display: none;
+}
+
+.toggleMode{
+    display: flex;
+    margin: 0 7px;
+}
+
+.toggleMode .mode{
+    font-size: 35px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.toggleMode .mode:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
