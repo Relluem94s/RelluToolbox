@@ -17,8 +17,8 @@ function getTool(
         data-bs-target="#' . $name . '">
             <span class="info-box-icon"><i class="' . $icon . '"></i></span>
             <div class="info-box-content">
-                  <span class="info-box-text">' . $displayname . '</span>
-                  <span class="info-box-number">' . $description . '</span>
+                  <span class="info-box-number">' . $displayname . '</span>
+                  <span class="info-box-text">' . $description . '</span>
               </div>
         </div>
         <div
@@ -106,7 +106,6 @@ function getTool(
             </div>
         </div>
     </div>
-
     <div class="floatingActionButton">
         <div class="searchAnchor">
             <input type="text" id="searchBox" class="searchBar" placeholder="Search Tools...">
@@ -114,7 +113,5 @@ function getTool(
             <div class="searchToggle"></div>
         </div>
     </div>
-
 </body>
-
 </html>
