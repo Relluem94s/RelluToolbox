@@ -36,9 +36,40 @@ like
 ?>
 ```
 
+### Good to know
+* important is to use camelCase for the `name`.
+* The `displayname` is used as modal title
+* If you need a php script that is called by your tool add a folder like `./tools/rollTheDice20/`
+* Additional CSS Files can be stored in  `./assets/css/`
+* Additional JS Files can be stored in  `./assets/js/`
+* Additional Images can be stored in  `./assets/img/`
+* The Main Language for this Project is English
+
+### Colors
+Color | Class | Use
+---|---|---
+Yellow | bg-warning | Generators
+Blue | bg-primary | Calculators & Tools with API Calls
+Gray | bg-secondary | String Tools
+Light Blue | bg-info | Number Converter
+Green | bg-success | Encoder
+Red | bg-danger | Decoder
+
 
 # Todos
 
 1. Comma Seperator (from new Line)
 1. Text Div
-1. Days since
+
+# Deploy
+
+1. ```shell
+   git clone https://github.com/Relluem94/RelluToolbox.git
+   ```
+1. ```shell
+   npm install
+   ```
+1. ```shell
+   composer install
+   ```
+1. clone `prod.env.example` over to `prod.env` and fill in the values
