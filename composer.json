@@ -7,5 +7,7 @@
             "email": "github@relluem94.de"
         }
     ],
-    "require": {}
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
 }
