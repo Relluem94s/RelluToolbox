@@ -144,22 +144,6 @@
         "content": "./tools/base64decode.php"
     },
     {
-        "name": "showWeather",
-        "displayname": "showWeather",
-        "icon": "fa-solid fa-cloud-sun",
-        "description": "Shows the Weather",
-        "bgclass": "bg-warning",
-        "content": "./tools/showWeather.php"
-    },
-    {
-        "name": "calculator",
-        "displayname": "Calculator",
-        "icon": "fa-solid fa-calculator",
-        "description": "Opens a Calculator",
-        "bgclass": "bg-primary",
-        "content": "./tools/calculator.php"
-    },
-    {
         "name": "stockApp",
         "displayname": "Stock portfolio tracker",
         "icon": "fa-solid fa-money-bill-trend-up",
@@ -230,5 +214,13 @@
         "description": " Current weather for ICAO Code",
         "bgclass": "bg-primary",
         "content": "./tools/metarApp.php"
+    },
+    {
+        "name": "getWeather",
+        "displayname": "Get Weather",
+        "icon": "fa-solid fa-cloud-sun",
+        "description": "Shows the Weather",
+        "bgclass": "bg-primary",
+        "content": "./tools/getWeather.php"
     }
 ]

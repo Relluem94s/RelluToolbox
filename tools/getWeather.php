@@ -1,22 +1,49 @@
-<?php
-$apiKey = '8d292866760141758dfec6b5529f2ea5';
-$city = $_GET['city'];
-$apiUrl = "http://api.openweathermap.org/data/2.5/weather?q=$city&lang=de&appid=$apiKey&units=metric";
+<form id="weatherForm">
+    <div class="input-group">
+        <input type="text" class="form-control" name="city" id="city" placeholder="Stadt Eingeben" required>
+        <button type="button" class="btn btn-primary" id="getWeatherButton">Wetter</button>
+    </div>
+</form>
 
-$response = file_get_contents($apiUrl);
-$data = json_decode($response, true);
+<div id="weatherInfo">
+</div>
 
-if ($data && $data['cod'] === 200) {
-    $temperature = $data['main']['temp'];
-    $description = $data['weather'][0]['description'];
-    $icon = $data['weather'][0]['icon'];
+<script>
+    document.getElementById('getWeatherButton').addEventListener('click', function() {
+        fetchWeatherData();
+    });
 
-    echo "<h2>Wetter in $city</h2>";
-    echo "<p class='temperature'>Temperatur: $temperature &deg;C</p>";
-    echo "<p>Beschreibung: $description</p>";
-    echo "<img src='http://openweathermap.org/img/w/$icon.png' alt='Weather Icon'>";
-} else {
-    echo "<p>Fehler beim Abrufen der Wetterdaten. Bitte versuche es später erneut.</p>";
+function fetchWeatherData() {
+    const city = document.getElementById('city').value;
+    fetch(`tools//weatherApp/getWeather.php?city=${city}`)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('weatherInfo').innerHTML = "<br><br>" + data;
+            updateTemperatureColor();
+        })
+        .catch(error => {
+            console.error('Fehler beim Abrufen der Wetterdaten:', error);
+        });
 }
 
-?>
+function updateTemperatureColor() {
+    const temperatureElement = document.querySelector('p.temperature');
+    temperatureElement.style.fontWeight = "750";
+
+    const temperatureText = temperatureElement.textContent;
+
+    const normalizedTemperatureText = temperatureText.replace(/[^\d.,-]/g, '').replace(',', '.');
+
+    const temperature = parseFloat(normalizedTemperatureText);
+
+    if (temperature < 0) {
+        temperatureElement.style.color = 'turquoise';
+    } else if (temperature < 10) {
+        temperatureElement.style.color = 'blue';
+    } else if (temperature < 20) {
+        temperatureElement.style.color = 'orange';
+    }else {
+        temperatureElement.style.color = 'red';
+    }
+}
+</script>
