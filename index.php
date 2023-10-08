@@ -60,11 +60,14 @@ function getTool(
         <script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
         <script src="./node_modules/jquery/dist/jquery.min.js"></script>
         <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="./node_modules/js-cookie/dist/js.cookie.min.js"></script>
+        <script src="./assets/js/rellu94.js"></script>
         <script defer src="./assets/scripts/slothSearch.js"></script>     
         <link rel="stylesheet" href="./node_modules/admin-lte/dist/css/adminlte.min.css">
         <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
         <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="./assets/css/Toolbox.css">
+        <link rel="stylesheet" href="./assets/css/rellu94.css">
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
         <script src="./assets/folitoast/folitoast.js"></script>
         <link rel="stylesheet" href="./assets/folitoast/folitoast.css">
@@ -73,6 +76,10 @@ function getTool(
     </head>
     <body>
         <div class="wrapper">
+            <div class="toggleMode">
+                <span class="dark mode"><i class="fa-solid fa-moon"></i></span>
+                <span class="light mode"><i class="fa-solid fa-sun"></i></span>
+            </div>
             <!-- Preloader -->
             <div class="preloader" style="display:none;">
                 <img class="animation__shake" src="assets/img/rellutoolbox.svg" alt="rellutoolbox" width="600">
