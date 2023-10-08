@@ -52,53 +52,55 @@ function getTool(
 
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>RelluToolbox</title>
+        <script src="./node_modules/admin-lte/dist/js/adminlte.min.js"></script>
+        <script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script defer src="./assets/scripts/slothSearch.js"></script>     
+        <link rel="stylesheet" href="./node_modules/admin-lte/dist/css/adminlte.min.css">
+        <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/Toolbox.css">
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+        <script src="./assets/folitoast/folitoast.js"></script>
+        <link rel="stylesheet" href="./assets/folitoast/folitoast.css">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RelluToolbox</title>
-    <script src="./node_modules/admin-lte/dist/js/adminlte.min.js"></script>
-    <script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script defer src="./assets/scripts/slothSearch.js"></script>
-    <link rel="stylesheet" href="./node_modules/admin-lte/dist/css/adminlte.min.css">
-    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/Toolbox.css">
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
-</head>
 
-<body>
-    <div class="wrapper">
-        <!-- Preloader -->
-        <div class="preloader" style="display:none;">
-            <img class="animation__shake" src="assets/img/rellutoolbox.svg" alt="rellutoolbox" width="600">
-        </div>
-
-        <div class="content-wrapper" style="min-height: 768px;">
-
-            <div class="content">
-                <div class="container">
-                    <div class="row">
-                        <h1 class="text-center mt-3 pt-3 mb-3 pb-3">
-                            <img alt="logo" src="assets/img/rellutoolbox.svg" width="60%">
-                        </h1>
-                    </div>
-                    <div class="row">
-                        <?php
-                        $tools = json_decode(file_get_contents("./tools.json"), true);
-
-                        foreach ($tools as $key => $value) {
-                            echo getTool(
-                                $value["name"],
-                                $value["displayname"],
-                                $value["icon"],
-                                $value["description"],
-                                $value["bgclass"],
-                                $value["content"]
-                            );
-                        }
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- Preloader -->
+            <div class="preloader" style="display:none;">
+                <img class="animation__shake" src="assets/img/rellutoolbox.svg" alt="rellutoolbox" width="600">
+            </div>
+        
+            <div class="content-wrapper" style="min-height: 768px;">
+            
+                <div class="content">
+                    <div class="container">
+                        <div class="row">
+                            <h1 class="text-center mt-3 pt-3 mb-3 pb-3">
+                                <img alt="logo" src="assets/img/rellutoolbox.svg" width="60%">
+                            </h1>
+                        </div>
+                        <div class="row">
+                            <?php
+                                $tools = json_decode(file_get_contents("./tools.json"), true);
+                                
+                                foreach($tools as $key => $value){
+                                    echo getTool(
+                                        $value["name"],
+                                        $value["displayname"],
+                                        $value["icon"],
+                                        $value["description"],
+                                        $value["bgclass"],
+                                        $value["content"]
+                                    );
+                                }
 
                         ?>
                     </div>
