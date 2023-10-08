@@ -109,7 +109,7 @@ function getTool(
 
     <div class="floatingActionButton">
         <div class="searchAnchor">
-            <input type="text" id="searchBox" class="searchBar" placeholder="Search Apps...">
+            <input type="text" id="searchBox" class="searchBar" placeholder="Search Tools...">
             <input class="searchSubmit" type="submit">
             <div class="searchToggle"></div>
         </div>
