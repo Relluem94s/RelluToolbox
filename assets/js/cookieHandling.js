@@ -7,7 +7,7 @@ jQuery(function(){
 
     $(".toggleMode span").on("click", function(){
         (Cookies.get("mode")) ? Cookies.remove("mode") : Cookies.set("mode", "dark")
-        toggleMode(Cookies.get("mode"));
+        toggleMode();
     });
 
 });
