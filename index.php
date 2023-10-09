@@ -52,26 +52,28 @@ function getTool(
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>RelluToolbox</title>
-        <script src="./node_modules/admin-lte/dist/js/adminlte.min.js"></script>
-        <script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
-        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="./node_modules/js-cookie/dist/js.cookie.min.js"></script>
-        <script src="./assets/js/rellu94.js"></script>
-        <script defer src="./assets/scripts/slothSearch.js"></script>
-        <link rel="stylesheet" href="./node_modules/admin-lte/dist/css/adminlte.min.css">
-        <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-        <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./assets/css/Toolbox.css">
-        <link rel="stylesheet" href="./assets/css/rellu94.css">
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
-        <script src="./assets/folitoast/folitoast.js"></script>
-        <link rel="stylesheet" href="./assets/folitoast/folitoast.css">
-    </head>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RelluToolbox</title>
+    <script src="./node_modules/admin-lte/dist/js/adminlte.min.js"></script>
+    <script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/js-cookie/dist/js.cookie.min.js"></script>
+    <script src="./assets/js/cookieHandling.js"></script>
+    <script defer src="./assets/scripts/slothSearch.js"></script>
+    <link rel="stylesheet" href="./node_modules/admin-lte/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/Toolbox.css">
+    <link rel="stylesheet" href="./assets/css/rellu94.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+    <script src="./assets/folitoast/folitoast.js"></script>
+    <link rel="stylesheet" href="./assets/folitoast/folitoast.css">
+</head>
+
 <body>
     <div class="wrapper">
         <nav class="navbar fixed-top bg-dark">
@@ -111,6 +113,9 @@ function getTool(
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="cookieBanner fixed-bottom">
+            <h5><i style="color: rgb(67, 162, 160)" class="fa-solid fa-cookie"></i> This pages uses technical cookies. No tracking is done. <button type="button" class="btn btn-primary" onclick="dismissCookieBanner()"><i class="fa-solid fa-eye-slash"></i> Don't show again</button></h5>
         </div>
     </div>
 </body>

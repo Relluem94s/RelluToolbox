@@ -1,10 +1,13 @@
 jQuery(function(){
+    if(Cookies.get("dismissedCookieBanner")){
+        $(".cookieBanner").hide();
+    }
 
     toggleMode();
 
     $(".toggleMode span").on("click", function(){
         (Cookies.get("mode")) ? Cookies.remove("mode") : Cookies.set("mode", "dark")
-        toggleMode();
+        toggleMode(Cookies.get("mode"));
     });
 
 });
@@ -21,4 +24,10 @@ function toggleMode(){
         $(".light").hide();
         $(".dark").css("color", "gray");
     }
+}
+
+
+dismissCookieBanner = () =>{
+    Cookies.set("dismissedCookieBanner", true)
+    $(".cookieBanner").hide();
 }
