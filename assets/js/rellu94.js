@@ -19,5 +19,6 @@ function toggleMode(){
         $("body").removeClass("dark-mode");
         $(".dark").show();
         $(".light").hide();
+        $(".dark").css("color", "gray");
     }
 }

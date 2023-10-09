@@ -130,4 +130,16 @@ input.empty {
     border-radius: 0%;
     transform: rotate(-45deg);
   }
-  
+
+  .navbar{
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 10px;
+  }  
+
+  input.navSearch{
+    width:250px;
+    margin-left: -85px;
+    text-align: center; 
+  }
