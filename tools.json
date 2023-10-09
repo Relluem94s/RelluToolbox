@@ -214,5 +214,13 @@
         "description": " Current weather for ICAO Code",
         "bgclass": "bg-primary",
         "content": "./tools/metarApp.php"
+    },
+    {
+        "name": "getWeather",
+        "displayname": "Get Weather",
+        "icon": "fa-solid fa-cloud-sun",
+        "description": "Shows the Weather",
+        "bgclass": "bg-primary",
+        "content": "./tools/getWeather.php"
     }
 ]
