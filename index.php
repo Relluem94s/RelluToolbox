@@ -52,30 +52,26 @@ function getTool(
 
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RelluToolbox</title>
-    <script src="./node_modules/admin-lte/dist/js/adminlte.min.js"></script>
-    <script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./node_modules/js-cookie/dist/js.cookie.min.js"></script>
-    <script src="./assets/js/rellu94.js"></script>
-    <script defer src="./assets/scripts/slothSearch.js"></script>
-    <link rel="stylesheet" href="./node_modules/admin-lte/dist/css/adminlte.min.css">
-    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/Toolbox.css">
-    <link rel="stylesheet" href="./assets/css/rellu94.css">
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
-    <script src="./assets/folitoast/folitoast.js"></script>
-    <link rel="stylesheet" href="./assets/folitoast/folitoast.css">
-
-
-</head>
-
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>RelluToolbox</title>
+        <script src="./node_modules/admin-lte/dist/js/adminlte.min.js"></script>
+        <script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="./node_modules/js-cookie/dist/js.cookie.min.js"></script>
+        <script src="./assets/js/rellu94.js"></script>
+        <script defer src="./assets/scripts/slothSearch.js"></script>
+        <link rel="stylesheet" href="./node_modules/admin-lte/dist/css/adminlte.min.css">
+        <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./assets/css/Toolbox.css">
+        <link rel="stylesheet" href="./assets/css/rellu94.css">
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+        <script src="./assets/folitoast/folitoast.js"></script>
+        <link rel="stylesheet" href="./assets/folitoast/folitoast.css">
+    </head>
 <body>
     <div class="wrapper">
         <nav class="navbar fixed-top bg-dark">
@@ -90,10 +86,7 @@ function getTool(
                 <span class="light mode"><i class="fa-solid fa-sun"></i></span>
             </div>
         </nav>
-
-
         <div class="content-wrapper" style="min-height: 768px;">
-
             <div class="content">
                 <div class="container" style="margin-top: 80px;">
                     <div class="row">
@@ -120,14 +113,6 @@ function getTool(
             </div>
         </div>
     </div>
-    <!-- <div class="floatingActionButton">
-        <div class="searchAnchor">
-            <input type="text" id="searchBox" class="searchBar" placeholder="Wird zum Cookie Consenter later">
-            <input class="searchSubmit" type="submit">
-            <div class="searchToggle"></div>
-        </div>
-    </div> -->
-
 </body>
 
 </html>
