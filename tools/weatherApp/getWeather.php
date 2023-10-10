@@ -1,8 +1,8 @@
 <?php
 
-$loader = require '../../vendor/autoload.php';
+$loader = require '../../shared/vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__) . "../../");
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__) . "../../shared/config/");
 $dotenv->load();
 
 $dotenv->required('WEATHER_API_KEY');
@@ -28,5 +28,3 @@ if ($data && $data['cod'] === 200) {
 } else {
     echo "<p>Fehler beim Abrufen der Wetterdaten. Bitte versuche es später erneut.</p>";
 }
-
-?>
