@@ -17,23 +17,23 @@ use Shared\Tools;
     <script src="./shared/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./shared/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./shared/node_modules/js-cookie/dist/js.cookie.min.js"></script>
-    <script src="./assets/js/rellu94.js"></script>
-    <script defer src="./assets/scripts/slothSearch.js"></script>
+    <script src="./shared/assets/js/rellu94.js"></script>
+    <script defer src="./shared/assets/scripts/slothSearch.js"></script>
     <link rel="stylesheet" href="./shared/node_modules/admin-lte/dist/css/adminlte.min.css">
     <link rel="stylesheet" href="./shared/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="./shared/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/Toolbox.css">
-    <link rel="stylesheet" href="./assets/css/rellu94.css">
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
-    <script src="./assets/folitoast/folitoast.js"></script>
-    <link rel="stylesheet" href="./assets/folitoast/folitoast.css">
+    <link rel="stylesheet" href="./shared/assets/css/Toolbox.css">
+    <link rel="stylesheet" href="./shared/assets/css/rellu94.css">
+    <link rel="icon" type="image/x-icon" href="./shared/assets/img/favicon.png">
+    <script src="./shared/assets/folitoast/folitoast.js"></script>
+    <link rel="stylesheet" href="./shared/assets/folitoast/folitoast.css">
 </head>
 
 <body>
     <div class="wrapper">
         <nav class="navbar fixed-top bg-dark">
             <a class="navbar-brand" href="#">
-                <img src="assets/img/rellutoolbox.svg" alt="Logo" height="30" class="d-inline-block align-text-top">
+                <img src="./shared/assets/img/rellutoolbox.svg" alt="Logo" height="30" class="d-inline-block align-text-top">
             </a>
             <form class="d-flex" role="search">
                 <input class="form-control navSearch" id="searchBox" type="search" placeholder="Search" aria-label="Search">
