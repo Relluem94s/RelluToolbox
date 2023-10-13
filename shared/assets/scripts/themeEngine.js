@@ -1,11 +1,7 @@
 /**
  * ThemeEngine v2023-10-13
  * @author: folivora97
- * @param {*} event 
  */
-
-
-
 window.addEventListener('load', function(){
     var navBarColor = "#48b3b1"; //Default Rellu Teal Color
     var backgroundColor = "#fff"; //Default Background White
