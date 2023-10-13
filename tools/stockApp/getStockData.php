@@ -1,15 +1,15 @@
 <?php
 
-$loader = require '../../vendor/autoload.php';
+$loader = require '../../shared/vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__) . "../../");
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__) . "../../shared/config/");
 $dotenv->load();
 
 $dotenv->required('STOCK_API_KEY');
 $dotenv->required('STOCK_API_URL');
 
 $apiKey = $_ENV['STOCK_API_KEY'];
-$symbol =  ( isset( $_GET['symbol'] ) ) ? filter_input(INPUT_GET, 'symbol', FILTER_SANITIZE_STRING) : "TSLA";
+$symbol =  (isset($_GET['symbol'])) ? filter_input(INPUT_GET, 'symbol', FILTER_SANITIZE_STRING) : "TSLA";
 $time_series_5_min = 'Time Series (5min)';
 
 $apiUrl = sprintf($_ENV['STOCK_API_URL'], $symbol, $apiKey);

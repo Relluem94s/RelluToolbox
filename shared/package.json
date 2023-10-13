@@ -2,9 +2,9 @@
   "name": "rellu-toolbox",
   "version": "1.0.0",
   "description": "A Collection of useful Tools",
-  "main": "index.php",
+  "main": "../index.php",
   "scripts": {
-    "test": "php --server localhost:8080 --docroot ."
+    "test": "php --server localhost:8080 --docroot ../"
   },
   "repository": {
     "type": "git",

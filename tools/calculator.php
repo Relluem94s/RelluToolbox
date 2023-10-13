@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./assets/css/calculator.css">
+<link rel="stylesheet" href="./shared/assets/css/calculator.css">
 <script>
     function add(str) {
         var element = document.getElementById("val");
