@@ -12,25 +12,3 @@ body.dark-mode {
     -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
-
-.light{
-    display: none;
-}
-
-.toggleMode{
-    display: flex;
-    margin: 0 7px;
-    width: 40px;
-}
-
-.toggleMode .mode{
-    font-size: 35px;
-    transition: transform 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-.toggleMode .mode:hover{
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-}

@@ -6,7 +6,7 @@
 
 
 
-window.onload = (event) => {
+window.addEventListener('load', function(){
     var navBarColor = "#48b3b1"; //Default Rellu Teal Color
     var backgroundColor = "#fff"; //Default Background White
     var iconColor = null;
@@ -33,6 +33,7 @@ window.onload = (event) => {
         $(".info-box").removeClass(function (index, css) {
             return (css.match (/(^|\s)bg\S+/g) || []).join(' ');
          });
+
         $(".info-box").css("background-color", iconColor);
         $("#iconColor").attr("value", iconColor);
     }
@@ -64,9 +65,5 @@ window.onload = (event) => {
 
         $(".info-box").css("background-color", iconColor);
         Cookies.set("iconColor", iconColor);
-    });
-
-
-
-    
-};
+    });  
+});

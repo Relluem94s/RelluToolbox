@@ -3,7 +3,7 @@
  * @author: folivora97
  * @param {*} event 
  */
-window.onload = (event) => {
+window.addEventListener('load', function(){
   $("#searchBox").keyup(function () {
     let searchTerm = ($(this).val().toLowerCase());
 
@@ -40,4 +40,4 @@ window.onload = (event) => {
   $("#searchBox").on('search', function () {
     $(".info-box").removeClass("hideItems");
   });
-};
+});

@@ -1,4 +1,5 @@
 <script defer src="./shared/assets/scripts/themeEngine.js"></script>
+</script>
 <div class="container">
     <form>
         <div class="input-group mb-4">
