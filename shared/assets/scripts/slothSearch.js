@@ -4,7 +4,6 @@
  * @param {*} event 
  */
 window.onload = (event) => {
-  console.log("test");
   $("#searchBox").keyup(function () {
     let searchTerm = ($(this).val().toLowerCase());
 
