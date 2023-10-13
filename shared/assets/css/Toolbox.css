@@ -136,10 +136,21 @@ input.empty {
     padding-top: 2px;
     padding-bottom: 2px;
     padding-right: 10px;
+    opacity: 0.95;
   }  
 
   input.navSearch{
     width:250px;
     margin-left: -85px;
     text-align: center; 
+  }
+
+
+  .cookieBanner{
+    background-color: #212529;
+    color: white;
+    height: 45px;
+    text-align: center;
+    padding: 5px;
+    opacity: 0.95;
   }
