@@ -41,14 +41,14 @@ window.addEventListener('load', function(){
 
         $(".navbar").removeClass("bg-dark");
         $(".navbar").css("background-color", navBarColor);
-        Cookies.set("navBarColor", navBarColor);
+        Cookies.set("navBarColor", navBarColor, {sameSite: 'None', secure: true});
     });
 
     $("#backgroundColor").change(function () {
         backgroundColor = ($(this).val().toLowerCase());
 
         $("body").css("background-color", backgroundColor);
-        Cookies.set("backgroundColor", backgroundColor);
+        Cookies.set("backgroundColor", backgroundColor, {sameSite: 'None', secure: true});
     });
 
     $("#iconColor").change(function () {
@@ -59,7 +59,7 @@ window.addEventListener('load', function(){
          });
 
         $(".info-box").css("background-color", iconColor);
-        Cookies.set("iconColor", iconColor);
+        Cookies.set("iconColor", iconColor, {sameSite: 'None', secure: true});
     });  
 });
 
