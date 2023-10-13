@@ -17,7 +17,6 @@ use Shared\Tools;
     <script src="./shared/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./shared/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./shared/node_modules/js-cookie/dist/js.cookie.min.js"></script>
-    <script src="./shared/assets/js/rellu94.js"></script>
     <script defer src="./shared/assets/scripts/slothSearch.js"></script>
     <link rel="stylesheet" href="./shared/node_modules/admin-lte/dist/css/adminlte.min.css">
     <link rel="stylesheet" href="./shared/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
