@@ -222,5 +222,13 @@
         "description": "Shows the Weather",
         "bgclass": "bg-primary",
         "content": "./tools/getWeather.php"
+    },
+    {
+        "name": "calculateTimeBetweenDate",
+        "displayname": "Get Time Difference",
+        "icon": "fa-solid fa-calendar-days",
+        "description": " Calculates the time between given dates",
+        "bgclass": "bg-primary",
+        "content": "./tools/calculateTimeBetweenDate.php"
     }
 ]
