@@ -23,7 +23,7 @@ document.getElementById("roll-button").addEventListener("click", rollDice);
 
 </script>
 
-<link rel="stylesheet" href="assets/css/SjinDice.css">
+<link rel="stylesheet" href="./shared/assets/css/SjinDice.css">
 <div class="dice">
     <ol class="die-list even-roll" data-roll="1" id="die-1">
         <li class="face-side" data-side="1">

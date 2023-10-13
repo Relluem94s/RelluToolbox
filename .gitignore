@@ -2,3 +2,5 @@
 .env
 vendor/
 composer.lock
+shared/node_modules/*
+shared/vendor/*
