@@ -38,10 +38,10 @@ use Shared\Tools;
             <form class="d-flex" role="search">
                 <input class="form-control navSearch" id="searchBox" type="search" placeholder="Search" aria-label="Search">
             </form>
-            <div class="toggleMode">
+            <!-- <div class="toggleMode">
                 <span class="dark mode"><i class="fa-solid fa-moon"></i></span>
                 <span class="light mode"><i class="fa-solid fa-sun"></i></span>
-            </div>
+            </div> -->
         </nav>
         <div class="content-wrapper" style="min-height: 768px;">
             <div class="content">

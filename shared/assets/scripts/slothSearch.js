@@ -34,4 +34,10 @@ window.onload = (event) => {
       }
     );
   });
+
+
+    //Fallback for Clear Event with [x] Button
+  $("#searchBox").on('search', function () {
+    $(".info-box").removeClass("hideItems");
+  });
 };
