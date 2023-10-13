@@ -47,7 +47,6 @@ window.addEventListener('load', function(){
     $("#backgroundColor").change(function () {
         backgroundColor = ($(this).val().toLowerCase());
 
-        $("body").removeClass("dark-mode");
         $("body").css("background-color", backgroundColor);
         Cookies.set("backgroundColor", backgroundColor);
     });
@@ -63,3 +62,10 @@ window.addEventListener('load', function(){
         Cookies.set("iconColor", iconColor);
     });  
 });
+
+
+document.getElementById("resetStyles").addEventListener("click", function(event){
+    Cookies.remove("iconColor");
+    Cookies.remove("backgroundColor");
+    Cookies.remove("navBarColor");
+ });

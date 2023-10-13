@@ -1,7 +1,6 @@
 /**
  * SlothSearch v2023-09-12
  * @author: folivora97
- * @param {*} event 
  */
 window.addEventListener('load', function(){
   $("#searchBox").keyup(function () {

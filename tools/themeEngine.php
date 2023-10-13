@@ -20,6 +20,9 @@
                 <label for="iconColor">Icon Color</label>
             </div>
         </div>
+        <div>
+            <button type="button" class="btn btn-secondary" id="resetStyles"><i class="fa-solid fa-rotate-left"></i> Reset Styles</button>
+        </div>
     </form>
 
 </div>
