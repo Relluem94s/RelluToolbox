@@ -28,6 +28,6 @@ function toggleMode(){
 
 
 dismissCookieBanner = () =>{
-    Cookies.set("dismissedCookieBanner", true)
+    Cookies.set("dismissedCookieBanner", true, {sameSite: 'None', secure: true})
     $(".cookieBanner").hide();
 }
