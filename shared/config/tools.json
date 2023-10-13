@@ -169,7 +169,7 @@
     },
     {
         "name": "calculator",
-        "displayname": "Calculator",
+        "displayname": "Basic Calculator",
         "icon": "fa-solid fa-calculator",
         "description": "Opens a Calculator",
         "bgclass": "bg-primary",
