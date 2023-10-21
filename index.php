@@ -17,6 +17,8 @@ use Shared\Tools;
     <script src="./shared/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./shared/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./shared/node_modules/js-cookie/dist/js.cookie.min.js"></script>
+    <script src="./shared/assets/js/rellu94.js"></script>
+    <script src="./shared/assets/js/cookieHandling.js"></script>
     <script defer src="./shared/assets/scripts/slothSearch.js"></script>
     <link rel="stylesheet" href="./shared/node_modules/admin-lte/dist/css/adminlte.min.css">
     <link rel="stylesheet" href="./shared/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
@@ -37,6 +39,10 @@ use Shared\Tools;
             <form class="d-flex" role="search">
                 <input class="form-control navSearch" id="searchBox" type="search" placeholder="Search" aria-label="Search">
             </form>
+            <div class="toggleMode">
+                <span class="dark mode"><i class="fa-solid fa-moon"></i></span>
+                <span class="light mode"><i class="fa-solid fa-sun"></i></span>
+            </div>
         </nav>
         <div class="content-wrapper" style="min-height: 768px;">
             <div class="content">
@@ -63,6 +69,9 @@ use Shared\Tools;
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="cookieBanner fixed-bottom">
+            <h5><i style="color: rgb(67, 162, 160)" class="fa-solid fa-cookie"></i> This pages uses technical cookies. No tracking is done. <button type="button" class="btn btn-primary" onclick="dismissCookieBanner()"><i class="fa-solid fa-eye-slash"></i> Don't show again</button></h5>
         </div>
     </div>
 </body>
