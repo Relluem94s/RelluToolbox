@@ -120,6 +120,14 @@
         "content": "./tools/jsonMinifyPrint.php"
     },
     {
+        "name": "jsonValidate",
+        "displayname": "JSON Validator",
+        "icon": "fa-solid fa-check-double",
+        "description": "Validate JSON Strings",
+        "bgclass": "bg-secondary",
+        "content": "./tools/jsonValidate.php"
+    },
+    {
         "name": "randomColorGenerator",
         "displayname": "Color Generator",
         "icon": "fa-solid fa-palette",
