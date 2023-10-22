@@ -125,7 +125,7 @@
         "icon": "fa-solid fa-check-double",
         "description": "Validate JSON Strings",
         "bgclass": "bg-secondary",
-        "content": "./tools/jsonValidate.php"
+        "content": "./tools/jsonValidate/jsonValidate.php"
     },
     {
         "name": "randomColorGenerator",

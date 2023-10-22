@@ -6,6 +6,7 @@ id="original_pretty_json"
 rows="10"
 oninput="$('#mini_json_string')[0].value = JSON.stringify(JSON.parse($('#original_pretty_json')[0].value));">
 </textarea>
+<br>
 <input
 placeholder="Output"
 type="text"
