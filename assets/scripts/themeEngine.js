@@ -22,24 +22,4 @@ window.onload = (event) => {
         console.log("background", backgroundColor);
         Cookies.set("backgroundColor", backgroundColor);
     });
-
-
-
-
-
-    // if(Cookies.get("mode")){
-    //     $("body").addClass("dark-mode");
-    //     $(".dark").hide();
-    //     $(".light").show();
-    //     $(".light").css("color", "white");
-    // } else {
-    //     $("body").removeClass("dark-mode");
-    //     $(".dark").show();
-    //     $(".light").hide();
-    //     $(".dark").css("color", "gray");
-    // }
-
-
-
-
 };
