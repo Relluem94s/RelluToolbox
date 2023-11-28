@@ -51,9 +51,11 @@
 
     hours = endDateTimeArray[0] - startDateTimeArray[0];
     minutes = endDateTimeArray[1] - startDateTimeArray[1];
-
-    console.log("eD: " + endDate, "sT: " + startDate, "hS: " + hours, "miS: " + minutes,
-      "iF: " + isFuture, "eDA: " + endDateTimeArray, "sDA: " + startDateTimeArray);
+    
+    if(minutes < 0){
+        minutes = MINUTES_A_HOUR - Math.abs(minutes);
+        hours = hours -1;
+    }
 
     return { hours, minutes, isFuture };
   }
