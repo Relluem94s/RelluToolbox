@@ -31,3 +31,21 @@ dismissCookieBanner = () =>{
     Cookies.set("dismissedCookieBanner", true, {sameSite: ' None'})
     $(".cookieBanner").hide();
 }
+
+
+async function copyToClipboard(field_name, display_name){
+        
+    let field = document.getElementById(field_name);
+
+    if(field.value){
+        navigator.clipboard.writeText(field.value); 
+        foliSuccess(display_name + " copied successfully to clipboard!");
+
+        /* For security reasons clear Clipboard after 10sec */
+        await delay(10000);
+        navigator.clipboard.writeText("");
+    }
+    else{
+        foliWarn("No " + display_name + " generated yet!");
+    }
+}
