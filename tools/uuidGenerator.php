@@ -1,12 +1,9 @@
 <div class="container">
-    <form id="portfolioForm">
-        <div class="form-group">
-            <label for="symbol">UUID:</label>
-            <input type="text" class="form-control" name="uuid" id="uuid" required>
-        </div>
-        <br>
-        <button type="button" class="btn btn-primary" id="getUUIDButton">Get UUID</button>
-    </form>
+    <div class="input-group">
+        <input name="uuid" type="text" class="form-control" id="uuid" disabled>
+        <button id="getUUIDButton" class="btn btn-success" onclick="fetchUUIDData"><i class="fa-solid fa-gears"></i> Generate</button>
+        <button class="btn btn-primary" onclick="copyUUIDToClipboard()"><i class="fa-solid fa-clipboard"></i> Copy</button>
+    </div>
 </div>
 
 <script>
@@ -30,5 +27,23 @@
                 console.error(error);
                 foliError('Error retrieving the UUID. Please try again later.');
             });
+    }
+    
+    
+    async function copyUUIDToClipboard(){
+        
+        let uuid = document.getElementById("uuid");
+
+        if(uuid.value){
+            navigator.clipboard.writeText(uuid.value); 
+            foliSuccess("UUID copied successfully to clipboard!");
+
+            /* For security reasons clear Clipboard after 10sec */
+            await delay(10000);
+            navigator.clipboard.writeText("");
+        }
+        else{
+            foliWarn("No UUID generated yet!");
+        }
     }
 </script>
