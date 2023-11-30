@@ -1,0 +1,12 @@
+<input
+placeholder="Input"
+type="text"
+class="form-control"
+id="original_roman_string"
+oninput="$('#output_dec_from_roman_string')[0].value=fromRoman($('#original_roman_string')[0].value);">
+<input
+placeholder="Output"
+type="number"
+class="form-control"
+id="output_dec_from_roman_string"
+disabled>
