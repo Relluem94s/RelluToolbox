@@ -1,15 +1,8 @@
-jQuery(function(){
-    if(Cookies.get("dismissedCookieBanner")){
-        $(".cookieBanner").hide();
-    }
 
+
+$(".toggleMode span").on("click", function(){
+    (Cookies.get("mode")) ? Cookies.remove("mode") : Cookies.set("mode", "dark", {sameSite: ' None', secure: true})
     toggleMode();
-
-    $(".toggleMode span").on("click", function(){
-        (Cookies.get("mode")) ? Cookies.remove("mode") : Cookies.set("mode", "dark")
-        toggleMode();
-    });
-
 });
 
 function toggleMode(){
@@ -26,12 +19,20 @@ function toggleMode(){
     }
 }
 
+if(Cookies.get("dismissedCookieBanner")){
+    $(".cookieBanner").hide();
+}
+
+
+
+    
+toggleMode();
+
 
 dismissCookieBanner = () =>{
     Cookies.set("dismissedCookieBanner", true, {sameSite: ' None'})
     $(".cookieBanner").hide();
 }
-
 
 async function copyToClipboard(field_name, display_name){
         
