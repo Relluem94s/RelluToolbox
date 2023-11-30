@@ -1,0 +1,12 @@
+<input
+placeholder="Input"
+type="number"
+class="form-control"
+id="original_dec3_string"
+oninput="$('#output_roman_string')[0].value=toRoman(parseInt($('#original_dec3_string')[0].value));">
+<input
+placeholder="Output"
+type="text"
+class="form-control"
+id="output_roman_string"
+disabled>
