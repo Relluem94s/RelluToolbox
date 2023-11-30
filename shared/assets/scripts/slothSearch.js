@@ -8,10 +8,10 @@ window.onload = (event) => {
     let searchTerm = ($(this).val().toLowerCase());
 
     if (searchTerm == null || searchTerm == "" || searchTerm == " ") {
-      $(".info-box").removeClass("hideItems");
+      $(".info-box").removeClass("tool-item-hidden");
     }
     else {
-      $(".info-box").addClass("hideItems");
+      $(".info-box").addClass("tool-item-hidden");
     }
 
     let resultList = document.querySelectorAll('.info-box[id*="' + searchTerm + '" i]');
@@ -26,10 +26,10 @@ window.onload = (event) => {
         let elem = document.getElementById(foundItemID);
 
         if (elem.id.includes(searchTerm)) {
-          elem.classList.remove('hideItems');
+          elem.classList.remove('tool-item-hidden');
         }
         else {
-          $(".info-box").removeClass("hideItems");
+          $(".info-box").removeClass("tool-item-hidden");
         }
       }
     );
