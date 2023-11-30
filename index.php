@@ -43,7 +43,12 @@ use Shared\Tools;
                 <img src="./shared/assets/img/rellutoolbox.svg" alt="Logo" class="d-inline-block align-text-top">
             </a>
             <form class="d-flex" role="search">
-                <input class="form-control navSearch" id="searchBox" type="search" placeholder="Search" aria-label="Search">
+                <input
+                class="form-control navSearch"
+                id="searchBox"
+                type="search"
+                placeholder="Search"
+                aria-label="Search">
             </form>
             <div class="toggleMode">
                 <span class="dark mode"><i class="fa-solid fa-moon"></i></span>
