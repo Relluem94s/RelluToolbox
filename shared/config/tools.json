@@ -200,6 +200,22 @@
         "content": "./tools/minecraftCoordinatesToRegionFile.php"
     },
     {
+        "name": "decToRoman",
+        "displayname": "decToRoman",
+        "icon": "fa-solid fa-arrow-right-arrow-left",
+        "description": "Converts Decimal to Roman",
+        "bgclass": "bg-info",
+        "content": "./tools/decToRoman.php"
+    },
+    {
+        "name": "romanToDec",
+        "displayname": "romanToDec",
+        "icon": "fa-solid fa-arrow-right-arrow-left",
+        "description": "Converts Roman to Decimal",
+        "bgclass": "bg-info",
+        "content": "./tools/romanToDec.php"
+    },
+    {
         "name": "calculateTimeSinceDate",
         "displayname": "Get Time Since",
         "icon": "fa-solid fa-calendar-days",
@@ -224,11 +240,19 @@
         "content": "./tools/getWeather.php"
     },
     {
+    	"name": "calculateTimeBetween",
+        "displayname": "Get Time Difference",
+        "icon": "fa-solid fa-clock",
+        "description": " Calculates the Time between given Time",
+        "bgclass": "bg-primary",
+        "content": "./tools/calculateTimeBetween.php"
+    },
+    {
             "name": "themeEngine",
             "displayname": "Theme Engine",
             "icon": "fa-solid fa-palette",
             "description": " Create your own custom Theme!",
             "bgclass": "bg-secondary",
             "content": "./tools/themeEngine.php"
-    }        
+    }
 ]

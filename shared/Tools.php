@@ -16,10 +16,9 @@ class Tools
         $bgclass,
         $content
     ): string {
-        return ('
+        return '
             <div class="col col-sm-4">
-                <div style="cursor:pointer"
-                class="info-box ' . $bgclass . '"
+                <div class="tool-item info-box ' . $bgclass . '"
                 id="' . str_replace(' ', '', strtolower($displayname)) . '"
                 data-bs-toggle="modal"
                 data-bs-target="#' . $name . '">
@@ -53,6 +52,6 @@ class Tools
                         </div>
                     </div>
                 </div>
-            </div>');
+            </div>';
     }
 }

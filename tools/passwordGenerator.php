@@ -12,28 +12,10 @@ function generatePassword() {
     $("#password")[0].value = password;
 }
 
-
-async function copyToClipboard(){
-    
-    let password = document.getElementById("password");
-
-    if(password.value){
-        navigator.clipboard.writeText(password.value); 
-        foliSuccess("Password copied successfully to clipboard!");
-
-        /* For security reasons clear Clipboard after 10sec */
-        await delay(10000);
-        navigator.clipboard.writeText("");
-    }
-    else{
-        foliWarn("No password generated yet!");
-    }
-}
-
 </script>
 
 <div class="input-group">
     <input type="text" class="form-control" id="password" disabled>
     <button class="btn btn-success" onclick="generatePassword()"><i class="fa-solid fa-gears"></i> Generate</button>
-    <button class="btn btn-primary" onclick="copyToClipboard()"><i class="fa-solid fa-clipboard"></i> Copy</button>
+    <button class="btn btn-primary" onclick="copyToClipboard('password', 'Password')"><i class="fa-solid fa-clipboard"></i> Copy</button>
 </div>
