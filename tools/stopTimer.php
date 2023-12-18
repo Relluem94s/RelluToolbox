@@ -1,5 +1,8 @@
-<input id="stopTimerValue" type="number" min="1" max="120">
-<button onclick="startStopTimer()">Start</button>
+<div class="input-group mb-4">
+    <input class="form-control" id="stopTimerValue" type="number" min="1" max="120">
+    <button class="btn btn-primary" onclick="startStopTimer()">Start</button>
+</div>
+
 
 <p id="displayStopTime"></p>
 
