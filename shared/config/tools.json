@@ -129,7 +129,7 @@
     },
     {
         "name": "base64Encode",
-        "displayname": "base64 Encoder",
+        "displayname": "String to base64",
         "icon": "fa-solid fa-arrow-right-to-bracket",
         "description": "Encodes a String to Base64",
         "bgclass": "bg-info",
@@ -137,7 +137,7 @@
     },
     {
         "name": "base64Decode",
-        "displayname": "base64 Decodeder",
+        "displayname": "base64 to String",
         "icon": "fa-solid fa-arrow-right-from-bracket",
         "description": "Decodes Base64 to a String",
         "bgclass": "bg-info",
@@ -150,6 +150,30 @@
         "description": "Shows your Stock",
         "bgclass": "bg-primary",
         "content": "./tools/stockApp.php"
+    },
+    {
+        "name": "base64ImageEncode",
+        "displayname": "Image to base64",
+        "icon": "fa-solid fa-arrow-right-to-bracket",
+        "description": "Encodes a Image to Base64",
+        "bgclass": "bg-info",
+        "content": "./tools/base64ImageEncode.php"
+    },
+    {
+        "name": "base64ImageDecode",
+        "displayname": "base64 to Image",
+        "icon": "fa-solid fa-arrow-right-from-bracket",
+        "description": "Decodes Base64 to a Image",
+        "bgclass": "bg-info",
+        "content": "./tools/base64ImageDecode.php"
+    },
+    {
+        "name": "calculator",
+        "displayname": "Basic Calculator",
+        "icon": "fa-solid fa-calculator",
+        "description": "Opens a Calculator",
+        "bgclass": "bg-primary",
+        "content": "./tools/calculator.php"
     },
     {
         "name": "decToHex",
@@ -168,12 +192,12 @@
         "content": "./tools/hexToDec.php"
     },
     {
-        "name": "calculator",
-        "displayname": "Basic Calculator",
-        "icon": "fa-solid fa-calculator",
-        "description": "Opens a Calculator",
+        "name": "minecraftCoordinatesToRegionFile",
+        "displayname": "Minecraft Coordinate Calculator",
+        "icon": "fa-solid fa-cube",
+        "description": "Calculates the Region File",
         "bgclass": "bg-primary",
-        "content": "./tools/calculator.php"
+        "content": "./tools/minecraftCoordinatesToRegionFile.php"
     },
     {
         "name": "decToBin",
@@ -192,12 +216,12 @@
         "content": "./tools/binToDec.php"
     },
     {
-        "name": "minecraftCoordinatesToRegionFile",
-        "displayname": "Minecraft Coordinate Calculator",
-        "icon": "fa-solid fa-cube",
-        "description": "Calculates the Region File",
+        "name": "calculateTimeSinceDate",
+        "displayname": "Get Time Since",
+        "icon": "fa-solid fa-calendar-days",
+        "description": " Calculates the days since a given date",
         "bgclass": "bg-primary",
-        "content": "./tools/minecraftCoordinatesToRegionFile.php"
+        "content": "./tools/calculateTimeSinceDate.php"
     },
     {
         "name": "decToRoman",
@@ -214,31 +238,6 @@
         "description": "Converts Roman to Decimal",
         "bgclass": "bg-info",
         "content": "./tools/romanToDec.php"
-    },
-    {
-        "name": "calculateTimeSinceDate",
-        "displayname": "Get Time Since",
-        "icon": "fa-solid fa-calendar-days",
-        "description": " Calculates the days since a given date",
-        "bgclass": "bg-primary",
-        "content": "./tools/calculateTimeSinceDate.php"
-    },
-     
-    {
-        "name": "base64ImageEncode",
-        "displayname": "Image to base64",
-        "icon": "fa-solid fa-arrow-right-to-bracket",
-        "description": "Encodes a Image to Base64",
-        "bgclass": "bg-info",
-        "content": "./tools/base64ImageEncode.php"
-    },
-    {
-        "name": "base64ImageDecode",
-        "displayname": "base64 to Image",
-        "icon": "fa-solid fa-arrow-right-from-bracket",
-        "description": "Decodes Base64 to a Image",
-        "bgclass": "bg-info",
-        "content": "./tools/base64ImageDecode.php"
     },
     {
         "name": "getMetar",
