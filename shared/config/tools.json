@@ -126,21 +126,21 @@
         "description": "Generates a Random Color",
         "bgclass": "bg-warning",
         "content": "./tools/randomColorGenerator.php"
-    }, 
+    },
     {
         "name": "base64Encode",
         "displayname": "base64 Encoder",
         "icon": "fa-solid fa-arrow-right-to-bracket",
         "description": "Encodes a String to Base64",
-        "bgclass": "bg-success",
+        "bgclass": "bg-info",
         "content": "./tools/base64encode.php"
     },
     {
         "name": "base64Decode",
         "displayname": "base64 Decodeder",
         "icon": "fa-solid fa-arrow-right-from-bracket",
-        "description": "Decodes a String to Base64",
-        "bgclass": "bg-danger",
+        "description": "Decodes Base64 to a String",
+        "bgclass": "bg-info",
         "content": "./tools/base64decode.php"
     },
     {
@@ -222,6 +222,23 @@
         "description": " Calculates the days since a given date",
         "bgclass": "bg-primary",
         "content": "./tools/calculateTimeSinceDate.php"
+    },
+     
+    {
+        "name": "base64ImageEncode",
+        "displayname": "Image to base64",
+        "icon": "fa-solid fa-arrow-right-to-bracket",
+        "description": "Encodes a Image to Base64",
+        "bgclass": "bg-info",
+        "content": "./tools/base64ImageEncode.php"
+    },
+    {
+        "name": "base64ImageDecode",
+        "displayname": "base64 to Image",
+        "icon": "fa-solid fa-arrow-right-from-bracket",
+        "description": "Decodes Base64 to a Image",
+        "bgclass": "bg-info",
+        "content": "./tools/base64ImageDecode.php"
     },
     {
         "name": "getMetar",
