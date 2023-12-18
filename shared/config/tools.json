@@ -243,8 +243,16 @@
         "name": "calculateTimeBetween",
         "displayname": "Get Time Difference",
         "icon": "fa-solid fa-clock",
-        "description": " Calculates the Time between given Time",
+        "description": "Calculates the Time between given Time",
         "bgclass": "bg-primary",
         "content": "./tools/calculateTimeBetween.php"
+    },
+    {
+        "name": "timer",
+        "displayname": "Stop Timer",
+        "icon": "fa-solid fa-stopwatch",
+        "description": "Gives a Alert after Timer Ends",
+        "bgclass": "bg-primary",
+        "content": "./tools/stopTimer.php"
     }
 ]
