@@ -144,12 +144,12 @@
         "content": "./tools/base64decode.php"
     },
     {
-        "name": "stockApp",
-        "displayname": "Stock portfolio tracker",
-        "icon": "fa-solid fa-money-bill-trend-up",
-        "description": "Shows your Stock",
-        "bgclass": "bg-primary",
-        "content": "./tools/stockApp.php"
+        "name": "noteGenerator",
+        "displayname": "Note Generator",
+        "icon": "fa-solid fa-music",
+        "description": "Generates and plays a Note",
+        "bgclass": "bg-warning",
+        "content": "./tools/noteGenerator.php"
     },
     {
         "name": "base64ImageEncode",
@@ -192,12 +192,12 @@
         "content": "./tools/hexToDec.php"
     },
     {
-        "name": "minecraftCoordinatesToRegionFile",
-        "displayname": "Minecraft Coordinate Calculator",
-        "icon": "fa-solid fa-cube",
-        "description": "Calculates the Region File",
+        "name": "stockApp",
+        "displayname": "Stock portfolio tracker",
+        "icon": "fa-solid fa-money-bill-trend-up",
+        "description": "Shows your Stock",
         "bgclass": "bg-primary",
-        "content": "./tools/minecraftCoordinatesToRegionFile.php"
+        "content": "./tools/stockApp.php"
     },
     {
         "name": "decToBin",
@@ -216,12 +216,12 @@
         "content": "./tools/binToDec.php"
     },
     {
-        "name": "calculateTimeSinceDate",
-        "displayname": "Get Time Since",
-        "icon": "fa-solid fa-calendar-days",
-        "description": " Calculates the days since a given date",
+        "name": "minecraftCoordinatesToRegionFile",
+        "displayname": "Minecraft Coordinate Calculator",
+        "icon": "fa-solid fa-cube",
+        "description": "Calculates the Region File",
         "bgclass": "bg-primary",
-        "content": "./tools/calculateTimeSinceDate.php"
+        "content": "./tools/minecraftCoordinatesToRegionFile.php"
     },
     {
         "name": "decToRoman",
@@ -240,20 +240,12 @@
         "content": "./tools/romanToDec.php"
     },
     {
-        "name": "getMetar",
-        "displayname": "Get Metar Weather for ICAO Code",
-        "icon": "fa-solid fa-plane",
-        "description": " Current weather for ICAO Code",
+        "name": "calculateTimeSinceDate",
+        "displayname": "Get Time Since",
+        "icon": "fa-solid fa-calendar-days",
+        "description": " Calculates the days since a given date",
         "bgclass": "bg-primary",
-        "content": "./tools/metarApp.php"
-    },
-    {
-        "name": "getWeather",
-        "displayname": "Get Weather",
-        "icon": "fa-solid fa-cloud-sun",
-        "description": "Shows the Weather",
-        "bgclass": "bg-primary",
-        "content": "./tools/getWeather.php"
+        "content": "./tools/calculateTimeSinceDate.php"
     },
     {
         "name": "calculateTimeBetween",
@@ -270,5 +262,21 @@
         "description": "Gives a Alert after Timer Ends",
         "bgclass": "bg-primary",
         "content": "./tools/stopTimer.php"
+    },
+    {
+        "name": "getMetar",
+        "displayname": "Get Metar Weather for ICAO Code",
+        "icon": "fa-solid fa-plane",
+        "description": " Current weather for ICAO Code",
+        "bgclass": "bg-primary",
+        "content": "./tools/metarApp.php"
+    },
+    {
+        "name": "getWeather",
+        "displayname": "Get Weather",
+        "icon": "fa-solid fa-cloud-sun",
+        "description": "Shows the Weather",
+        "bgclass": "bg-primary",
+        "content": "./tools/getWeather.php"
     }
 ]
