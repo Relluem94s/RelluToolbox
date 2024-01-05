@@ -39,7 +39,7 @@ use Shared\Tools;
             </div>
         </div>
         <nav class="navbar fixed-top bg-dark">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" target="_blank" title="Check out the Sourcecode" href="https://github.com/Relluem94s/RelluToolbox">
                 <img src="./shared/assets/img/rellutoolbox.svg" alt="Logo" class="d-inline-block align-text-top">
             </a>
             <form class="d-flex" role="search">
