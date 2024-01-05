@@ -5,8 +5,7 @@ namespace Shared;
 /**
  * Class for Tools
  */
-class Tools
-{
+class Tools {
 
     public static function getTool(
         $name,

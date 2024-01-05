@@ -1,7 +1,9 @@
 <?php
 require "shared/Tools.php";
+require "shared/functions/Functions.php";
 
 use Shared\Tools;
+use Shared\Functions\Functions;
 
 ?>
 
@@ -41,8 +43,9 @@ use Shared\Tools;
         <nav class="navbar fixed-top bg-dark">
             <a class="navbar-brand" target="_blank" title="Check out the Sourcecode" href="https://github.com/Relluem94s/RelluToolbox">
                 <img src="./shared/assets/img/rellutoolbox.svg" alt="Logo" class="d-inline-block align-text-top">
+                <span class="ms-5 badge bg-secondary">v<?php echo Functions::getVersion(); ?></span>
             </a>
-            <form class="d-flex" role="search">
+            <form class="search-form d-flex" role="search">
                 <input
                 class="form-control navSearch"
                 id="searchBox"
