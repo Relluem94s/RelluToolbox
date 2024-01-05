@@ -5,6 +5,6 @@ namespace Shared\Functions;
 /**
  * Class for Helpers
  */
-class Helpers
-{
+class Helpers {
+
 }
