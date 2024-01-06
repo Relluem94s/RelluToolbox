@@ -7,6 +7,8 @@
 <div id="availableStations">
 </div>
 
+<div>This is using https://v6.db.transport.rest/api.html</div>
+
 
 <script>
     document.getElementById('getLocation').addEventListener('click', function() {
