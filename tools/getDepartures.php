@@ -23,7 +23,7 @@
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition);
         } else { 
-            alert("Geolocation is not supported by this browser.");
+            alert("Geolocation is not supported by this browser or you haven't given permissions for your location.");
         }
         
     }
@@ -32,12 +32,14 @@
     function showPosition(position) {
 
         var stationsDiv = document.createElement('div');
-        lat = position.coords.latitude;
-        lon = position.coords.longitude;
+        // lat = position.coords.latitude;
+        // lon = position.coords.longitude;
+        lat = 49.474498102; 
+        lon = 8.468498126;
         console.log(lat, lon);
 
         var call = {
-            "url": "https://v6.db.transport.rest/locations/nearby?latitude=49.5845376&longitude=8.3591168&distance=500&linesOfStops=true",
+            "url": "https://v6.db.transport.rest/locations/nearby?latitude="+lat+"&longitude="+lon+"&distance=500&linesOfStops=true",
             "method": "GET",
             "timeout": 0,
         };
@@ -95,9 +97,10 @@
 
     function getCurrentDepartures(stationId){
         console.log(stationId);
-        var stationsDepDiv = document.createElement('div');
+        var stationsDepDiv = document.createElement('td');
+        stationsDepDiv.colSpan = 3;
 
-        htmlString = `<br>
+        htmlString = `
                     <table class="table table-striped">
                         <tr>
                             <th>Line</th>
@@ -147,7 +150,7 @@
             stationsDepDiv.innerHTML = htmlString;
         }
         else{
-            alert("Keine Abfahrten mehr gefunden");
+            alert("Heute keine Abfahrten mehr gefunden!");
         }
 
         });
