@@ -32,10 +32,10 @@
     function showPosition(position) {
 
         var stationsDiv = document.createElement('div');
-        // lat = position.coords.latitude;
-        // lon = position.coords.longitude;
-        lat = 49.474498102; 
-        lon = 8.468498126;
+        lat = position.coords.latitude;
+        lon = position.coords.longitude;
+        // lat = 49.474498102; 
+        // lon = 8.468498126;
         console.log(lat, lon);
 
         var call = {
