@@ -22,8 +22,14 @@
         https://stackoverflow.com/questions/39366758/geolocation-without-ssl-connection for local development without SSL/HTTPS
     */
     function getNearbyStations() {
+        const options = {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0,
+        };
+
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition, alert("Couldn't get your Geolocation, is the site HTTPS?"));
+            navigator.geolocation.getCurrentPosition(showPosition, alert("Couldn't get your Geolocation, is the site HTTPS?"),options);
         } else { 
             alert("Geolocation is not supported by this browser or you haven't given permissions for your location.");
         }
