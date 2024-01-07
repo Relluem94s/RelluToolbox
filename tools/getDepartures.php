@@ -14,11 +14,11 @@
 
     const apiUrl = "https://v6.db.transport.rest/";
     document.getElementById('getLocation').addEventListener('click', function() {
-        getNearbyStations();
+        getCurrentLocation();
     });
 
 
-    function getNearbyStations() {
+    function getCurrentLocation() {
         const options = {
             enableHighAccuracy: true,
             timeout: 5000,
@@ -26,7 +26,7 @@
         };
 
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition, error,options);
+            navigator.geolocation.getCurrentPosition(getNearbyStations, error,options);
         } else { 
             alert("Geolocation is not supported by this browser or you haven't given permissions for your location.");
         }
@@ -38,7 +38,7 @@
         alert(`ERROR(${err.code}): ${err.message}`);
     }
 
-    function showPosition(position) {
+    function getNearbyStations(position) {
 
         var stationsDiv = document.createElement('div');
         lat = position.coords.latitude;
