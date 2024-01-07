@@ -11,6 +11,8 @@
 
 
 <script>
+
+    const apiUrl = "https://v6.db.transport.rest/";
     document.getElementById('getLocation').addEventListener('click', function() {
         getNearbyStations();
     });
@@ -34,64 +36,68 @@
         var stationsDiv = document.createElement('div');
         lat = position.coords.latitude;
         lon = position.coords.longitude;
+        //use those Positions for Debuggig purposes
         // lat = 49.474498102; 
         // lon = 8.468498126;
         console.log(lat, lon);
 
         var call = {
-            "url": "https://v6.db.transport.rest/locations/nearby?latitude="+lat+"&longitude="+lon+"&distance=500&linesOfStops=true",
+            "url": apiUrl + "locations/nearby?latitude="+lat+"&longitude="+lon+"&distance=1500&linesOfStops=true",
             "method": "GET",
             "timeout": 0,
         };
 
         $.ajax(call).done(function (response) {
             console.log(response);
+            if(response.length != 0){
+                document.getElementById("getLocation").disabled = true;
+            
+                htmlString = `
+                        <table class="table table-striped">
+                            <tr>
+                                <th>Station</th>
+                                <th>Available Lines</th>
+                                <th></th>
+                            </tr>`;
 
-            htmlString = `
-                    <table class="table table-striped">
-                        <tr>
-                            <th>Station</th>
-                            <th>Available Lines</th>
-                            <th></th>
-                        </tr>`;
+                for (let i = 0; i < response.length; i++) {
+                    var name = response[i]['name'];
 
-            for (let i = 0; i < response.length; i++) {
-                var name = response[i]['name'];
+                    var availableLinesArr = response[i]['lines'];
+                    var availableLinesStr = "";
 
-                var availableLinesArr = response[i]['lines'];
-                var availableLinesStr = "";
+                    for (let j = 0; j < availableLinesArr.length; j++) {
+                        var availableLine = availableLinesArr[j]['name'];
+                        console.log(availableLine);
+                        availableLinesStr += '<span>[' + availableLine + "]</span>";
+                    }
 
-                for (let j = 0; j < availableLinesArr.length; j++) {
-                    var availableLine = availableLinesArr[j]['name'];
-                    console.log(availableLine);
-                    availableLinesStr += '<span>[' + availableLine + "]</span>";
+
+                    var availableProducts = response[i]['products'];
+
+
+                    htmlString += `
+                            <tr>
+                                <td>` + name + `</td>
+                                <td>` + availableLinesStr + `</td>
+                                <td><button id="btnId_` + response[i]['id'] + `" type="button" class="btn btn-primary" onclick="getCurrentDepartures(` + response[i]['id'] + `)">Get Current Departues</button></td>
+                            </tr>
+                            <tr id="stationRow_` + response[i]['id'] + `">
+                            <tr>
+                    `;
+                    
                 }
-
-
-                var availableProducts = response[i]['products'];
-
-
-                htmlString += `
-                        <tr>
-                            <td>` + name + `</td>
-                            <td>` + availableLinesStr + `</td>
-                            <td><button id="btnId_` + response[i]['id'] + `" type="button" class="btn btn-primary" onclick="getCurrentDepartures(` + response[i]['id'] + `)">Get Current Departues</button></td>
-                        </tr>
-                        <tr id="stationRow_` + response[i]['id'] + `">
-                        <tr>
-                `;
                 
+                htmlString += `
+                        </table>`;
+
+
+                document.getElementById('availableStations').appendChild(stationsDiv);
+                stationsDiv.innerHTML = htmlString;
             }
-            
-            htmlString += `
-                    </table>`;
-
-
-            document.getElementById('availableStations').appendChild(stationsDiv);
-            stationsDiv.innerHTML = htmlString;
-
-
-            
+            else{
+                alert("No Stations found nearby.");
+            }    
         });
     }
 
@@ -109,7 +115,7 @@
                         </tr>`;
 
         var call = {
-            "url": "https://v6.db.transport.rest/stops/"+stationId+"/departures?results=15",
+            "url": apiUrl + "stops/"+stationId+"/departures?results=15&duration=60&remarks=true",
             "method": "GET",
             "timeout": 0,
             };
@@ -150,7 +156,7 @@
             stationsDepDiv.innerHTML = htmlString;
         }
         else{
-            alert("Heute keine Abfahrten mehr gefunden!");
+            alert("No Departues found for this station.");
         }
 
         });
