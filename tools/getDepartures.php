@@ -18,9 +18,6 @@
     });
 
 
-    /*
-        https://stackoverflow.com/questions/39366758/geolocation-without-ssl-connection for local development without SSL/HTTPS
-    */
     function getNearbyStations() {
         const options = {
             enableHighAccuracy: true,
@@ -29,11 +26,16 @@
         };
 
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition, alert("Couldn't get your Geolocation, is the site HTTPS?"),options);
+            navigator.geolocation.getCurrentPosition(showPosition, error,options);
         } else { 
             alert("Geolocation is not supported by this browser or you haven't given permissions for your location.");
         }
         
+    }
+
+    function error(err) {
+        //This will always trigger on localhost development, because it's not SSL see https://stackoverflow.com/questions/39366758/geolocation-without-ssl-connection for local development without SSL/HTTPS
+        alert(`ERROR(${err.code}): ${err.message}`);
     }
 
     function showPosition(position) {
