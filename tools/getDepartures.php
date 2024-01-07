@@ -7,7 +7,7 @@
 <div id="availableStations">
 </div>
 
-<div>This is using https://v6.db.transport.rest/api.html</div>
+<div>This is using <a href="https://v6.db.transport.rest/api.html">v6.db.transport.rest</a></div>
 
 
 <script>
@@ -23,23 +23,18 @@
     */
     function getNearbyStations() {
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
+            navigator.geolocation.getCurrentPosition(showPosition, alert("Couldn't get your Geolocation, is the site HTTPS?"));
         } else { 
             alert("Geolocation is not supported by this browser or you haven't given permissions for your location.");
         }
         
     }
 
-
     function showPosition(position) {
 
         var stationsDiv = document.createElement('div');
         lat = position.coords.latitude;
         lon = position.coords.longitude;
-        //use those Positions for Debuggig purposes
-        // lat = 49.474498102; 
-        // lon = 8.468498126;
-        console.log(lat, lon);
 
         var call = {
             "url": apiUrl + "locations/nearby?latitude="+lat+"&longitude="+lon+"&distance=1500&linesOfStops=true",
@@ -48,7 +43,6 @@
         };
 
         $.ajax(call).done(function (response) {
-            console.log(response);
             if(response.length != 0){
                 document.getElementById("getLocation").disabled = true;
             
@@ -68,7 +62,6 @@
 
                     for (let j = 0; j < availableLinesArr.length; j++) {
                         var availableLine = availableLinesArr[j]['name'];
-                        console.log(availableLine);
                         availableLinesStr += '<span>[' + availableLine + "]</span>";
                     }
 
@@ -85,12 +78,10 @@
                             <tr id="stationRow_` + response[i]['id'] + `">
                             <tr>
                     `;
-                    
                 }
                 
                 htmlString += `
                         </table>`;
-
 
                 document.getElementById('availableStations').appendChild(stationsDiv);
                 stationsDiv.innerHTML = htmlString;
@@ -102,7 +93,6 @@
     }
 
     function getCurrentDepartures(stationId){
-        console.log(stationId);
         var stationsDepDiv = document.createElement('td');
         stationsDepDiv.colSpan = 3;
 
@@ -121,7 +111,6 @@
             };
 
         $.ajax(call).done(function (response) {
-            console.log(response);
             response = response['departures'];
             if(response.length != 0){
                 document.getElementById("btnId_"+stationId).disabled = true;
@@ -133,10 +122,6 @@
                     if(delay == null){
                         delay = 0;
                     }
-                    var timeDelayed = response[i]['when'];
-
-                    console.log(response[i]);
-
 
                     htmlString += `
                             <tr>
@@ -145,19 +130,18 @@
                                 <td>+` + delay + `min</td>
                             </tr>
                     `;
-
                 }
 
-            htmlString += `
-                    </table>`;
+                htmlString += `
+                        </table>`;
 
 
-            document.getElementById('stationRow_'+stationId).appendChild(stationsDepDiv);
-            stationsDepDiv.innerHTML = htmlString;
-        }
-        else{
-            alert("No Departues found for this station.");
-        }
+                document.getElementById('stationRow_'+stationId).appendChild(stationsDepDiv);
+                stationsDepDiv.innerHTML = htmlString;
+            }
+            else{
+                alert("No Departues found for this station.");
+            }
 
         });
 
