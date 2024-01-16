@@ -284,7 +284,7 @@
         "displayname": "Public Transport Departures",
         "icon": "fa-solid fa-train",
         "description": "Shows current public transport Departures",
-        "bgclass": "bg-secondary",
+        "bgclass": "bg-primary",
         "content": "./tools/getDepartures.php"
     }
 ]
