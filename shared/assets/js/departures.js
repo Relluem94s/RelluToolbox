@@ -14,14 +14,14 @@ const apiUrl = "https://v6.db.transport.rest/";
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(getNearbyStations, error,options);
         } else { 
-            alert("Geolocation is not supported by this browser or you haven't given permissions for your location.");
+            foliError("Geolocation is not supported by this browser or you haven't given permissions for your location."); 
         }
         
     }
 
     function error(err) {
         //This will always trigger on localhost development, because it's not SSL see https://stackoverflow.com/questions/39366758/geolocation-without-ssl-connection for local development without SSL/HTTPS
-        alert(`ERROR(${err.code}): ${err.message}`);
+        foliError(`ERROR(${err.code}): ${err.message}`); 
     }
 
     function getNearbyStations(position) {
@@ -37,52 +37,53 @@ const apiUrl = "https://v6.db.transport.rest/";
         };
 
         $.ajax(call).done(function (response) {
-            if(response.length != 0){
-                document.getElementById("getLocation").disabled = true;
-            
-                htmlString = `
-                        <table class="table table-striped">
-                            <tr>
-                                <th>Station</th>
-                                <th>Available Lines</th>
-                                <th></th>
-                            </tr>`;
 
-                for (let i = 0; i < response.length; i++) {
-                    var name = response[i]['name'];
-
-                    var availableLinesArr = response[i]['lines'];
-                    var availableLinesStr = "";
-
-                    for (let j = 0; j < availableLinesArr.length; j++) {
-                        var availableLine = availableLinesArr[j]['name'];
-                        availableLinesStr += '<span>[' + availableLine + "]</span>";
-                    }
-
-
-                    var availableProducts = response[i]['products'];
-
-
-                    htmlString += `
-                            <tr>
-                                <td>` + name + `</td>
-                                <td>` + availableLinesStr + `</td>
-                                <td><button id="btnId_` + response[i]['id'] + `" type="button" class="btn btn-primary" onclick="getCurrentDepartures(` + response[i]['id'] + `)">Get Current Departues</button></td>
-                            </tr>
-                            <tr id="stationRow_` + response[i]['id'] + `">
-                            <tr>
-                    `;
-                }
-                
-                htmlString += `
-                        </table>`;
-
-                document.getElementById('availableStations').appendChild(stationsDiv);
-                stationsDiv.innerHTML = htmlString;
+            if(response.length == 0){
+                foliWarn("No Stations found nearby."); 
+                return;
             }
-            else{
-                alert("No Stations found nearby.");
-            }    
+            
+            document.getElementById("getLocation").disabled = true;
+        
+            htmlString = `
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Station</th>
+                            <th>Available Lines</th>
+                            <th></th>
+                        </tr>`;
+
+            for (let i = 0; i < response.length; i++) {
+                var name = response[i]['name'];
+
+                var availableLinesArr = response[i]['lines'];
+                var availableLinesStr = "";
+
+                for (let j = 0; j < availableLinesArr.length; j++) {
+                    var availableLine = availableLinesArr[j]['name'];
+                    availableLinesStr += '<span>[' + availableLine + "]</span>";
+                }
+
+
+                var availableProducts = response[i]['products'];
+
+
+                htmlString += `
+                        <tr>
+                            <td>` + name + `</td>
+                            <td>` + availableLinesStr + `</td>
+                            <td><button id="btnId_` + response[i]['id'] + `" type="button" class="btn btn-primary" onclick="getCurrentDepartures(` + response[i]['id'] + `)">Get Current Departues</button></td>
+                        </tr>
+                        <tr id="stationRow_` + response[i]['id'] + `">
+                        <tr>
+                `;
+            }
+            
+            htmlString += `
+                    </table>`;
+
+            document.getElementById('availableStations').appendChild(stationsDiv);
+            stationsDiv.innerHTML = htmlString;
         });
     }
 
@@ -106,40 +107,38 @@ const apiUrl = "https://v6.db.transport.rest/";
 
         $.ajax(call).done(function (response) {
             response = response['departures'];
-            if(response.length != 0){
-                document.getElementById("btnId_"+stationId).disabled = true;
-                for (let i = 0; i < response.length; i++) {
-                    var line = response[i]['line']['name'];
-                    var direction = response[i]['direction'];
-                    var timePlanned = response[i]['plannedWhen'];
-                    var delay = response[i]['delay'];
-                    if(delay == null){
-                        delay = 0;
-                    }
 
-                    htmlString += `
-                            <tr>
-                                <td>` + line + ` to ` + direction + `</td>
-                                <td>` + formatDate(timePlanned) + `</td>
-                                <td>+` + delay + `min</td>
-                            </tr>
-                    `;
+            if(response.length == 0){
+                foliWarn("No Departues found for this station."); 
+                return;
+            }
+            
+            document.getElementById("btnId_"+stationId).disabled = true;
+            for (let i = 0; i < response.length; i++) {
+                var line = response[i]['line']['name'];
+                var direction = response[i]['direction'];
+                var timePlanned = response[i]['plannedWhen'];
+                var delay = response[i]['delay'];
+                if(delay == null){
+                    delay = 0;
                 }
 
                 htmlString += `
-                        </table>`;
-
-
-                document.getElementById('stationRow_'+stationId).appendChild(stationsDepDiv);
-                stationsDepDiv.innerHTML = htmlString;
-            }
-            else{
-                alert("No Departues found for this station.");
+                        <tr>
+                            <td>` + line + ` to ` + direction + `</td>
+                            <td>` + formatDate(timePlanned) + `</td>
+                            <td>+` + delay + `min</td>
+                        </tr>
+                `;
             }
 
+            htmlString += `
+                    </table>`;
+
+
+            document.getElementById('stationRow_'+stationId).appendChild(stationsDepDiv);
+            stationsDepDiv.innerHTML = htmlString;
         });
-
-        
     }
 
 
