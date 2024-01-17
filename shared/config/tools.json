@@ -278,5 +278,13 @@
         "description": "Shows the Weather",
         "bgclass": "bg-primary",
         "content": "./tools/getWeather.php"
+    },
+    {
+        "name": "getDepartures",
+        "displayname": "Public Transport Departures",
+        "icon": "fa-solid fa-train",
+        "description": "Shows current public transport Departures",
+        "bgclass": "bg-primary",
+        "content": "./tools/getDepartures.php"
     }
 ]
