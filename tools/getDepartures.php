@@ -11,7 +11,7 @@
 <div id="availableStations">
 </div>
 
-<div>This is using <a target="_blank" href="https://v6.db.transport.rest/api.html">v6.db.transport.rest</a></div>
+<div>This is using <a target="_blank" href="https://v6.db.transport.rest/api.html">v6.db.transport.rest</a> and <a target="_blank" href="https://openstreetmap.org">OpenStreetMap</a> Data </div>
 
 
 <script src="../shared/assets/js/departures.js">
