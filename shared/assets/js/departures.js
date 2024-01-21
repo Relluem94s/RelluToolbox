@@ -111,7 +111,7 @@ const geoUrl = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q
                         <tr>
                             <td>` + name + `</td>
                             <td>` + availableLinesStr + `</td>
-                            <td><button id="btnId_` + response[i]['id'] + `" type="button" class="btn btn-primary" onclick="getCurrentDepartures(` + response[i]['id'] + `)">Get Current Departues</button></td>
+                            <td><button id="btnId_` + response[i]['id'] + `" type="button" class="btn btn-primary" onclick="getCurrentDepartures(` + response[i]['id'] + `)"><i id="expand_` + response[i]['id'] + `" class="fa-solid fa-chevron-down"></i></button></td>
                         </tr>
                         <tr id="stationRow_` + response[i]['id'] + `">
                         <tr>
@@ -127,11 +127,23 @@ const geoUrl = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q
     }
 
     function getCurrentDepartures(stationId){
+
+        if(document.getElementById('expand_'+stationId).classList.contains("fa-chevron-up")){
+            //collapse Table
+            document.getElementById('table_'+stationId).remove();
+            document.getElementById('td_'+stationId).remove();
+            document.getElementById('expand_'+stationId).classList.remove("fa-chevron-up");
+            document.getElementById('expand_'+stationId).classList.add("fa-chevron-down");
+            return;
+        }
+
+
         var stationsDepDiv = document.createElement('td');
+        stationsDepDiv.setAttribute("id", "td_" + stationId);
         stationsDepDiv.colSpan = 3;
 
         htmlString = `
-                    <table class="table table-striped">
+                    <table class="table table-striped" id="table_` + stationId + `">
                         <tr>
                             <th>Line</th>
                             <th>Planned</th>
@@ -152,8 +164,9 @@ const geoUrl = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q
                 foliWarn("No Departues found for this station."); 
                 return;
             }
-            
-            document.getElementById("btnId_"+stationId).disabled = true;
+
+            document.getElementById('expand_'+stationId).classList.remove("fa-chevron-down");
+            document.getElementById('expand_'+stationId).classList.add("fa-chevron-up");
             for (let i = 0; i < response.length; i++) {
                 var line = response[i]['line']['name'];
                 var direction = response[i]['direction'];
