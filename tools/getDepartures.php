@@ -1,6 +1,8 @@
 <form id="departuresForm">
     <div class="input-group">
-        <button type="button" class="btn btn-primary" id="getLocation"><i class="fa-solid fa-location-crosshairs"></i> Get Location</button>
+        <input id="manualAddress" class="form-control" type="text"></input>
+        <button title="Search Address" type="button" class="btn btn-primary" id="getAddress"><i class="fa-solid fa-search"></i> Search</button>
+        <button title="Use current Geo Location" type="button" class="btn btn-secondary" id="getLocation"><i class="fa-solid fa-location-crosshairs"></i></button>
     </div>
 </form>
 <br>

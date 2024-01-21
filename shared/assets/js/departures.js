@@ -1,6 +1,15 @@
 const apiUrl = "https://v6.db.transport.rest/";
+
+const geoUrl = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q=";
     document.getElementById('getLocation').addEventListener('click', function() {
         getCurrentLocation();
+    });
+
+
+    document.getElementById('getAddress').addEventListener('click', function() {
+        var address = document.getElementById('manualAddress').value
+
+        getAddressGeo(address, getNearbyStations);
     });
 
 
@@ -17,6 +26,37 @@ const apiUrl = "https://v6.db.transport.rest/";
             foliError("Geolocation is not supported by this browser or you haven't given permissions for your location."); 
         }
         
+    }
+
+
+    function getAddressGeo(address, callback){
+        var call = {
+            "url": geoUrl + address,
+            "method": "GET",
+            "timeout": 0,
+          };
+          
+          $.ajax(call).done(function (response) {
+            if(response.length == 0){
+                foliWarn("No Address found for your Query."); 
+                return;
+            }
+
+
+            const manualCoords = {
+                latitude: response[0]['lat'],
+                longitude: response[0]['lon']
+            };
+
+            const manualGeolocation = {
+                coords: manualCoords
+            }
+              
+            console.log(manualGeolocation);
+
+
+            callback(manualGeolocation);
+          });
     }
 
     function error(err) {
@@ -44,6 +84,8 @@ const apiUrl = "https://v6.db.transport.rest/";
             }
             
             document.getElementById("getLocation").disabled = true;
+            document.getElementById("getAddress").disabled = true;
+            document.getElementById("manualAddress").disabled = true;
         
             htmlString = `
                     <table class="table table-striped">
@@ -61,7 +103,7 @@ const apiUrl = "https://v6.db.transport.rest/";
 
                 for (let j = 0; j < availableLinesArr.length; j++) {
                     var availableLine = availableLinesArr[j]['name'];
-                    availableLinesStr += '<span>[' + availableLine + "]</span>";
+                    availableLinesStr += '<span class="badge bg-secondary">' + availableLine + "</span> ";
                 }
 
 
@@ -95,8 +137,9 @@ const apiUrl = "https://v6.db.transport.rest/";
                     <table class="table table-striped">
                         <tr>
                             <th>Line</th>
-                            <th>Time</th>
+                            <th>Planned</th>
                             <th>Delay</th>
+                            <th>Actual</th>
                         </tr>`;
 
         var call = {
@@ -118,16 +161,23 @@ const apiUrl = "https://v6.db.transport.rest/";
                 var line = response[i]['line']['name'];
                 var direction = response[i]['direction'];
                 var timePlanned = response[i]['plannedWhen'];
-                var delay = response[i]['delay'];
+                var actual = response[i]['when'];
+                var delay = response[i]['delay']/60;
+                var type = response[i]['line']['productName'];
                 if(delay == null){
                     delay = 0;
                 }
 
                 htmlString += `
                         <tr>
-                            <td>` + line + ` to ` + direction + `</td>
+                            <td>
+                                <span class="badge bg-primary">` + type + `</span> <span class="badge bg-secondary">` + line + `</span> <i class="fa-solid fa-arrow-right"></i> ` + direction + `
+                            </td>
                             <td>` + formatDate(timePlanned) + `</td>
-                            <td>+` + delay + `min</td>
+                            <td>
+                                +` + delay + `min
+                            </td>
+                            <td><b>` + formatDate(actual) + `</b></td>
                         </tr>
                 `;
             }
@@ -143,7 +193,7 @@ const apiUrl = "https://v6.db.transport.rest/";
 
 
     function formatDate(datetimeString) {
-        const options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'};
+        const options = {hour: '2-digit', minute: '2-digit'};
         const newDate = new Date(datetimeString).toLocaleString('de-DE', options);
         return newDate;
     }
