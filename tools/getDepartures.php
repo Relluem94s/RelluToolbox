@@ -6,7 +6,6 @@
     </div>
 </form>
 <br>
-<hr>
 
 <div id="availableStations">
 </div>

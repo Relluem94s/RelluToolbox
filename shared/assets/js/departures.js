@@ -63,7 +63,12 @@ const geoUrl = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q
 
     function getNearbyStations(position) {
 
+        if(document.getElementById('div_station')){
+            document.getElementById('div_station').remove();
+        }
+
         var stationsDiv = document.createElement('div');
+        stationsDiv.setAttribute("id", "div_station");
         lat = position.coords.latitude;
         lon = position.coords.longitude;
 
@@ -79,10 +84,6 @@ const geoUrl = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q
                 foliWarn("No Stations found nearby."); 
                 return;
             }
-            
-            document.getElementById("getLocation").disabled = true;
-            document.getElementById("getAddress").disabled = true;
-            document.getElementById("manualAddress").disabled = true;
         
             htmlString = `
                     <table class="table table-striped">
@@ -102,10 +103,6 @@ const geoUrl = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q
                     var availableLine = availableLinesArr[j]['name'];
                     availableLinesStr += '<span class="badge bg-secondary">' + availableLine + "</span> ";
                 }
-
-
-                var availableProducts = response[i]['products'];
-
 
                 htmlString += `
                         <tr>
@@ -178,6 +175,12 @@ const geoUrl = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q
                     delay = 0;
                 }
 
+                var color = "green";
+                var tertiaryColor = "black";
+                if(delay >= 5){
+                    color = tertiaryColor = "red";
+                    
+                }
                 htmlString += `
                         <tr>
                             <td>
@@ -185,9 +188,9 @@ const geoUrl = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q
                             </td>
                             <td>` + formatDate(timePlanned) + `</td>
                             <td>
-                                +` + delay + `min
+                                <i style="color:` + color + ` ">+` + delay + `min</i>
                             </td>
-                            <td><b>` + formatDate(actual) + `</b></td>
+                            <td><b style="color:` + tertiaryColor + ` ">` + formatDate(actual) + `</b></td>
                         </tr>
                 `;
             }
