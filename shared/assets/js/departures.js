@@ -270,6 +270,14 @@ const geoUrl = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q
                 var plannedDeparture = stops[i]['plannedDeparture'];
                 var delay = stops[i]['departureDelay']/60;
 
+                if(departure == null){
+                    departure = stops[i]['arrival'];
+                }
+
+                if(plannedDeparture == null){
+                    plannedDeparture = stops[i]['plannedArrival'];
+                }
+
                 var color = "black";
                 var icon = "fa-solid fa-ellipsis-vertical";
                 
