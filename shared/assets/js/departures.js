@@ -146,6 +146,7 @@ const geoUrl = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q
                             <th>Planned</th>
                             <th>Delay</th>
                             <th>Actual</th>
+                            <th></th>
                         </tr>`;
 
         var call = {
@@ -165,16 +166,19 @@ const geoUrl = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q
             document.getElementById('expand_'+stationId).classList.remove("fa-chevron-down");
             document.getElementById('expand_'+stationId).classList.add("fa-chevron-up");
             for (let i = 0; i < response.length; i++) {
+                var id = response[i]['tripId'];
                 var line = response[i]['line']['name'];
                 var direction = response[i]['direction'];
                 var timePlanned = response[i]['plannedWhen'];
                 var actual = response[i]['when'];
                 var delay = response[i]['delay']/60;
                 var type = response[i]['line']['productName'];
+                
                 if(delay == null){
                     delay = 0;
                 }
 
+                
                 var color = "green";
                 var tertiaryColor = "black";
                 if(delay >= 5){
@@ -191,7 +195,12 @@ const geoUrl = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q
                                 <i style="color:` + color + ` ">+` + delay + `min</i>
                             </td>
                             <td><b style="color:` + tertiaryColor + ` ">` + formatDate(actual) + `</b></td>
+                            <td>
+                                <button id="btntrip_` + id + `" type="button" class="btn btn-secondary" onclick="getTrip('` + id + `',` + stationId + ` )"><i id="trip` + id + `" class="fa-solid fa-chevron-down"></i></button>
+                            </td>
                         </tr>
+                        <tr id="rowTrip_` + id + `">
+                        <tr>
                 `;
             }
 
@@ -210,3 +219,130 @@ const geoUrl = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q
         const newDate = new Date(datetimeString).toLocaleString('de-DE', options);
         return newDate;
     }
+
+
+    function getTrip(tripId, stationId){
+
+        if(document.getElementById('trip'+tripId).classList.contains("fa-chevron-up")){
+            //collapse Table
+            document.getElementById('tableTrip_'+tripId).remove();
+            document.getElementById('td_'+tripId).remove();
+            document.getElementById('trip'+tripId).classList.remove("fa-chevron-up");
+            document.getElementById('trip'+tripId).classList.add("fa-chevron-down");
+            return;
+        }
+
+        var call = {
+            "url": apiUrl + "trips/" + tripId,
+            "method": "GET",
+            "timeout": 0,
+          };
+          
+          $.ajax(call).done(function (response) {
+            response = response['trip'];
+
+            if(response.length == 0){
+                foliWarn("No Information found for this trip."); 
+                return;
+            }
+
+            document.getElementById('trip'+tripId).classList.remove("fa-chevron-down");
+            document.getElementById('trip'+tripId).classList.add("fa-chevron-up");
+
+            var stops = response['stopovers'];
+            var tripRow = document.getElementById("rowTrip_"+tripId);
+
+            var tripDiv = document.createElement('td');
+            tripDiv.setAttribute("id", "td_" + tripId);
+            tripDiv.colSpan = 5;
+
+            htmlString = `
+                    <table class="table table-striped table-bordered" id="tableTrip_` + tripId + `">
+                        <tr>
+                            <th colspan="4">Stops</th>
+                        </tr>`;
+
+
+            for (let i = 0; i < stops.length; i++) {
+                var stopId = stops[i]['stop']['id'];
+                var stopName = stops[i]['stop']['name'];
+                var departure = stops[i]['departure'];
+                var plannedDeparture = stops[i]['plannedDeparture'];
+                var delay = stops[i]['departureDelay']/60;
+
+                var color = "black";
+                var icon = "fa-solid fa-ellipsis-vertical";
+                
+
+                if(delay == null){
+                    delay = 0;
+                }
+   
+                var delayColor = "green";
+                var tertiaryColor = "black";
+                if(delay >= 5){
+                    delayColor = tertiaryColor = "red";
+                    
+                }
+
+                var now = getCurrentTimestamp();
+                if(now > departure){
+                    color = "#676f77"
+                }
+
+                if(stationId == stopId){
+                    color = "#0c68f0";
+                    icon = "fa-solid fa-location-dot";
+                }
+
+                htmlString += `
+                        <tr id="entry_` + tripId + `">
+                            <td>
+                                <span style="color:` + color + `" >
+                                    <i class="fa-solid ` + icon + `"></i>
+                                    ` + stopName  + `
+                                </span>
+                            </td>
+                            <td>
+                            <span style="color:` + color + `" >
+                                ` + formatDate(plannedDeparture) + `
+                            </span>
+                            </td>
+                            <td>
+                                <i style="color:` + delayColor + ` ">+` + delay + `min</i>
+                            </td>
+                            <td>
+                                <span>
+                                    <b style="color:` + tertiaryColor + ` ">` +  formatDate(departure) + `</b>
+                                </span>
+                            </td>
+                        </tr>
+                `;
+            }
+
+            htmlString += `
+                    </table>`;
+
+
+            tripRow.appendChild(tripDiv);
+            tripDiv.innerHTML = htmlString;
+
+          });
+    }
+
+
+
+    function getCurrentTimestamp() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = (now.getMonth() + 1).toString().padStart(2, '0');
+        const day = now.getDate().toString().padStart(2, '0');
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+        const timezoneOffset = -now.getTimezoneOffset() / 60; // Timezone offset in hours
+      
+        const timestamp = `${year}-${month}-${day}T${hours}:${minutes}:${seconds}+${timezoneOffset >= 0 ? '+' : '-'}${Math.abs(timezoneOffset).toString().padStart(2, '0')}:00`;
+      
+        return timestamp;
+      }
