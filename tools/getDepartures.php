@@ -1,4 +1,4 @@
-<form id="departuresForm">
+<form id="departuresForm" action="javascript:setManualAddress();">
     <div class="input-group">
         <input id="manualAddress" class="form-control" type="text"></input>
         <button title="Search Address" type="button" class="btn btn-primary" id="getAddress"><i class="fa-solid fa-search"></i> Search</button>

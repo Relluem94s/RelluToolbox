@@ -5,11 +5,14 @@ const geoUrl = "https://nominatim.openstreetmap.org/search?format=json&limit=3&q
         getCurrentLocation();
     });
 
+    function setManualAddress(){
+        var address = document.getElementById('manualAddress').value
+        getAddressGeo(address, getNearbyStations);
+    }
+
 
     document.getElementById('getAddress').addEventListener('click', function() {
-        var address = document.getElementById('manualAddress').value
-
-        getAddressGeo(address, getNearbyStations);
+        setManualAddress();
     });
 
 
