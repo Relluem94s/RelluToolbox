@@ -1,0 +1,68 @@
+[
+    {
+        "Tuning": "Standard",
+        "Notes": [
+            "E",
+            "A",
+            "D",
+            "G",
+            "B",
+            "E"
+        ]
+    },
+    {
+        "Tuning": "B Standard",
+        "Notes": [
+            "B",
+            "F#",
+            "D",
+            "A",
+            "E",
+            "A"
+        ]
+    },
+    {
+        "Tuning": "C# Standard",
+        "Notes": [
+            "C#",
+            "F#",
+            "B",
+            "E",
+            "G#",
+            "C#"
+        ]
+    },
+    {
+        "Tuning": "C# Standard Rev.",
+        "Notes": [
+            "C#",
+            "G#",
+            "E",
+            "B",
+            "F#",
+            "C#"
+        ]
+    },
+    {
+        "Tuning": "D Standard",
+        "Notes": [
+            "D",
+            "G",
+            "C",
+            "F",
+            "A",
+            "D"
+        ]
+    },
+    {
+        "Tuning": "Drop D",
+        "Notes": [
+            "D",
+            "A",
+            "D",
+            "G",
+            "B",
+            "E"
+        ]
+    }
+]
