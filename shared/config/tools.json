@@ -125,7 +125,7 @@
         "icon": "fa-solid fa-palette",
         "description": "Generates a Random Color",
         "bgclass": "bg-warning",
-        "content": "./tools/randomColorGenerator.php"
+        "content": "./tools/colorInfoGenerator.php"
     },
     {
         "name": "base64Encode",
