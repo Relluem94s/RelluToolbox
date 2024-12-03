@@ -240,20 +240,12 @@
         "content": "./tools/romanToDec.php"
     },
     {
-        "name": "calculateTimeSinceDate",
-        "displayname": "Get Time Since",
+        "name": "dateCalculator",
+        "displayname": "Date & Time Calculators",
         "icon": "fa-solid fa-calendar-days",
-        "description": " Calculates the days since a given date",
+        "description": "Calculates Dates, Time and more",
         "bgclass": "bg-primary",
-        "content": "./tools/calculateTimeSinceDate.php"
-    },
-    {
-        "name": "calculateTimeBetween",
-        "displayname": "Get Time Difference",
-        "icon": "fa-solid fa-clock",
-        "description": "Calculates the Time between given Time",
-        "bgclass": "bg-primary",
-        "content": "./tools/calculateTimeBetween.php"
+        "content": "./tools/dateCalcs.php"
     },
     {
         "name": "timer",
