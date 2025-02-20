@@ -8,20 +8,20 @@
         "content": "./tools/uuidGenerator.php"
     },
     {
-        "name": "noteShifter",
-        "displayname": "Note Shifter",
-        "icon": "fa-solid fa-music",
-        "description": "Shifts a Note x Steps up or down",
-        "bgclass": "bg-secondary",
-        "content": "./tools/noteShifter.php"
+        "name": "textConverter",
+        "displayname": "Text Conversion",
+        "icon": "fa-solid fa-font",
+        "description": "Text Conversion",
+        "bgclass": "bg-info",
+        "content": "./tools/textConversion.php"
     },
     {
-        "name": "textReverse",
-        "displayname": "Text Reverse",
-        "icon": "fa-solid fa-text-width",
-        "description": "Reverse a Text Front to Back",
-        "bgclass": "bg-secondary",
-        "content": "./tools/textReverse.php"
+        "name": "numberConverter",
+        "displayname": "Number Conversion",
+        "icon": "fa-solid fa-arrow-right-arrow-left",
+        "description": "Converts Decimal to Binary",
+        "bgclass": "bg-info",
+        "content": "./tools/numberConverter.php"
     },
     {
         "name": "passwordGenerator",
@@ -32,20 +32,20 @@
         "content": "./tools/passwordGenerator.php"
     },
     {
-        "name": "textLowerCase",
-        "displayname": "Text Lowercase",
-        "icon": "fa-solid fa-text-height",
-        "description": "Reverse a Text Front to Back",
-        "bgclass": "bg-secondary",
-        "content": "./tools/textLowerCase.php"
+        "name": "jsonPrettyPrint",
+        "displayname": "JSON Prettify",
+        "icon": "fa-solid fa-indent",
+        "description": "Prettify JSON Strings",
+        "bgclass": "bg-info",
+        "content": "./tools/jsonPrettyPrint.php"
     },
     {
-        "name": "textUpperCase",
-        "displayname": "Text Uppercase",
-        "icon": "fa-solid fa-text-height",
-        "description": "Reverse a Text Front to Back",
-        "bgclass": "bg-secondary",
-        "content": "./tools/textUpperCase.php"
+        "name": "jsonMinifyPrint",
+        "displayname": "JSON Minify",
+        "icon": "fa-solid fa-outdent",
+        "description": "Minify JSON Strings",
+        "bgclass": "bg-info",
+        "content": "./tools/jsonMinifyPrint.php"
     },
     {
         "name": "rollTheDice",
@@ -54,78 +54,6 @@
         "description": "Generates Numbers between 1-6",
         "bgclass": "bg-warning",
         "content": "./tools/rollTheDice.php"
-    },
-    {
-        "name": "camelCaseToScreamingSnakeCase",
-        "displayname": "camelCase to SNAKE_CASE",
-        "icon": "fa-solid fa-arrow-down-up-across-line",
-        "description": "Converts camelCase to SNAKE_CASE",
-        "bgclass": "bg-secondary",
-        "content": "./tools/camelCaseToScreamingSnakeCase.php"
-    },
-    {
-        "name": "snakeCaseToCamelCase",
-        "displayname": "snake_CASE to camelCase",
-        "icon": "fa-solid fa-staff-snake", 
-        "description": "Converts snake_CASE to camelCase",
-        "bgclass": "bg-secondary",
-        "content": "./tools/snakeToCamelCase.php"
-    },
-    {
-        "name": "rollTheDice20",
-        "displayname": "Roll the Dice20",
-        "icon": "fa-solid fa-dice-d20",
-        "description": "Generates Numbers between 1-20",
-        "bgclass": "bg-warning",
-        "content": "./tools/rollTheDice20.php"
-    },
-    {
-        "name": "camelCaseToSnakeCase",
-        "displayname": "camelCase to snake_case",
-        "icon": "fa-solid fa-arrow-down-up-across-line",
-        "description": "Converts camelCase to snake_case",
-        "bgclass": "bg-secondary",
-        "content": "./tools/camelCaseToSnakeCase.php"
-    },
-    {
-        "name": "charCount",
-        "displayname": "Character Counter",
-        "icon": "fa-solid fa-arrow-up-1-9",
-        "description": "Counts every Character",
-        "bgclass": "bg-secondary",
-        "content": "./tools/charCounter.php"
-    },
-    {
-        "name": "rollTheDice100",
-        "displayname": "Roll the Dice100",
-        "icon": "fa-solid fa-shuffle",
-        "description": "Generates Numbers between 1-100",
-        "bgclass": "bg-warning",
-        "content": "./tools/rollTheDice100.php"
-    },
-    {
-        "name": "jsonPrettyPrint",
-        "displayname": "JSON Prettify",
-        "icon": "fa-solid fa-indent",
-        "description": "Prettify JSON Strings",
-        "bgclass": "bg-secondary",
-        "content": "./tools/jsonPrettyPrint.php"
-    },
-    {
-        "name": "jsonMinifyPrint",
-        "displayname": "JSON Minify",
-        "icon": "fa-solid fa-outdent",
-        "description": "Minify JSON Strings",
-        "bgclass": "bg-secondary",
-        "content": "./tools/jsonMinifyPrint.php"
-    },
-    {
-        "name": "randomColorGenerator",
-        "displayname": "Color Generator",
-        "icon": "fa-solid fa-palette",
-        "description": "Generates a Random Color",
-        "bgclass": "bg-warning",
-        "content": "./tools/colorInfoGenerator.php"
     },
     {
         "name": "base64Encode",
@@ -144,12 +72,12 @@
         "content": "./tools/base64decode.php"
     },
     {
-        "name": "noteGenerator",
-        "displayname": "Note Generator",
-        "icon": "fa-solid fa-music",
-        "description": "Generates and plays a Note",
+        "name": "rollTheDice20",
+        "displayname": "Roll the Dice20",
+        "icon": "fa-solid fa-dice-d20",
+        "description": "Generates Numbers between 1-20",
         "bgclass": "bg-warning",
-        "content": "./tools/noteGenerator.php"
+        "content": "./tools/rollTheDice20.php"
     },
     {
         "name": "base64ImageEncode",
@@ -168,20 +96,44 @@
         "content": "./tools/base64ImageDecode.php"
     },
     {
+        "name": "rollTheDice100",
+        "displayname": "Roll the Dice100",
+        "icon": "fa-solid fa-shuffle",
+        "description": "Generates Numbers between 1-100",
+        "bgclass": "bg-warning",
+        "content": "./tools/rollTheDice100.php"
+    },
+    {
+        "name": "noteShifter",
+        "displayname": "Note Shifter",
+        "icon": "fa-solid fa-music",
+        "description": "Shifts a Note x Steps up or down",
+        "bgclass": "bg-info",
+        "content": "./tools/noteShifter.php"
+    },
+    {
+        "name": "noteGenerator",
+        "displayname": "Note Generator",
+        "icon": "fa-solid fa-music",
+        "description": "Generates and plays a Note",
+        "bgclass": "bg-warning",
+        "content": "./tools/noteGenerator.php"
+    },
+    {
+        "name": "randomColorGenerator",
+        "displayname": "Color Generator",
+        "icon": "fa-solid fa-palette",
+        "description": "Generates a Random Color",
+        "bgclass": "bg-warning",
+        "content": "./tools/colorInfoGenerator.php"
+    },
+    {
         "name": "calculator",
         "displayname": "Basic Calculator",
         "icon": "fa-solid fa-calculator",
         "description": "Opens a Calculator",
         "bgclass": "bg-primary",
         "content": "./tools/calculator.php"
-    },
-    {
-        "name": "numberConverter",
-        "displayname": "Number Conversion",
-        "icon": "fa-solid fa-arrow-right-arrow-left",
-        "description": "Converts Decimal to Binary",
-        "bgclass": "bg-info",
-        "content": "./tools/numberConverter.php"
     },
     {
         "name": "stockApp",

@@ -54,7 +54,7 @@ like
 | ---------- | ------------ | ---------------------------------- |
 | Yellow     | bg-warning   | Generators                         |
 | Blue       | bg-primary   | Calculators & Tools with API Calls |
-| Gray       | bg-secondary | String Tools                       |
+| Gray       | bg-secondary | Free                               |
 | Light Blue | bg-info      | Converter                          |
 | Green      | bg-success   | Free                               |
 | Red        | bg-danger    | Free                               |
