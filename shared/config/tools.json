@@ -176,20 +176,12 @@
         "content": "./tools/calculator.php"
     },
     {
-        "name": "decToHex",
-        "displayname": "decToHex",
+        "name": "numberConverter",
+        "displayname": "Number Conversion",
         "icon": "fa-solid fa-arrow-right-arrow-left",
-        "description": "Converts Decimal to Hexadecimal",
+        "description": "Converts Decimal to Binary",
         "bgclass": "bg-info",
-        "content": "./tools/decToHex.php"
-    },
-    {
-        "name": "hexToDec",
-        "displayname": "hexToDec",
-        "icon": "fa-solid fa-arrow-right-arrow-left",
-        "description": "Converts Hexadecimal to Decimal",
-        "bgclass": "bg-info",
-        "content": "./tools/hexToDec.php"
+        "content": "./tools/numberConverter.php"
     },
     {
         "name": "stockApp",
@@ -200,44 +192,12 @@
         "content": "./tools/stockApp.php"
     },
     {
-        "name": "decToBin",
-        "displayname": "decToBin",
-        "icon": "fa-solid fa-arrow-right-arrow-left",
-        "description": "Converts Decimal to Binary",
-        "bgclass": "bg-info",
-        "content": "./tools/decToBin.php"
-    },
-    {
-        "name": "binToDec",
-        "displayname": "binToDec",
-        "icon": "fa-solid fa-arrow-right-arrow-left",
-        "description": "Converts Binary to Decimal",
-        "bgclass": "bg-info",
-        "content": "./tools/binToDec.php"
-    },
-    {
         "name": "minecraftCoordinatesToRegionFile",
         "displayname": "Minecraft Coordinate Calculator",
         "icon": "fa-solid fa-cube",
         "description": "Calculates the Region File",
         "bgclass": "bg-primary",
         "content": "./tools/minecraftCoordinatesToRegionFile.php"
-    },
-    {
-        "name": "decToRoman",
-        "displayname": "decToRoman",
-        "icon": "fa-solid fa-arrow-right-arrow-left",
-        "description": "Converts Decimal to Roman",
-        "bgclass": "bg-info",
-        "content": "./tools/decToRoman.php"
-    },
-    {
-        "name": "romanToDec",
-        "displayname": "romanToDec",
-        "icon": "fa-solid fa-arrow-right-arrow-left",
-        "description": "Converts Roman to Decimal",
-        "bgclass": "bg-info",
-        "content": "./tools/romanToDec.php"
     },
     {
         "name": "dateCalculator",
