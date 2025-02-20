@@ -32,6 +32,30 @@
         "content": "./tools/passwordGenerator.php"
     },
     {
+        "name": "dateConversion",
+        "displayname": "Date Conversion",
+        "icon": "fa-solid fa-calendar",
+        "description": "Converts Dates and Times",
+        "bgclass": "bg-info",
+        "content": "./tools/dateConversion.php"
+    },
+    {
+        "name": "noteShifter",
+        "displayname": "Note Shifter",
+        "icon": "fa-solid fa-music",
+        "description": "Shifts a Note x Steps up or down",
+        "bgclass": "bg-info",
+        "content": "./tools/noteShifter.php"
+    },
+    {
+        "name": "noteGenerator",
+        "displayname": "Note Generator",
+        "icon": "fa-solid fa-music",
+        "description": "Generates and plays a Note",
+        "bgclass": "bg-warning",
+        "content": "./tools/noteGenerator.php"
+    },
+    {
         "name": "jsonPrettyPrint",
         "displayname": "JSON Prettify",
         "icon": "fa-solid fa-indent",
@@ -48,12 +72,12 @@
         "content": "./tools/jsonMinifyPrint.php"
     },
     {
-        "name": "rollTheDice",
-        "displayname": "Roll the Dice",
-        "icon": "fa-solid fa-dice",
-        "description": "Generates Numbers between 1-6",
+        "name": "randomColorGenerator",
+        "displayname": "Color Generator",
+        "icon": "fa-solid fa-palette",
+        "description": "Generates a Random Color",
         "bgclass": "bg-warning",
-        "content": "./tools/rollTheDice.php"
+        "content": "./tools/colorInfoGenerator.php"
     },
     {
         "name": "base64ImageEncode",
@@ -72,6 +96,14 @@
         "content": "./tools/base64ImageDecode.php"
     },
     {
+        "name": "rollTheDice",
+        "displayname": "Roll the Dice",
+        "icon": "fa-solid fa-dice",
+        "description": "Generates Numbers between 1-6",
+        "bgclass": "bg-warning",
+        "content": "./tools/rollTheDice.php"
+    },
+    {
         "name": "rollTheDice20",
         "displayname": "Roll the Dice20",
         "icon": "fa-solid fa-dice-d20",
@@ -80,36 +112,12 @@
         "content": "./tools/rollTheDice20.php"
     },
     {
-        "name": "noteGenerator",
-        "displayname": "Note Generator",
-        "icon": "fa-solid fa-music",
-        "description": "Generates and plays a Note",
-        "bgclass": "bg-warning",
-        "content": "./tools/noteGenerator.php"
-    },
-    {
-        "name": "noteShifter",
-        "displayname": "Note Shifter",
-        "icon": "fa-solid fa-music",
-        "description": "Shifts a Note x Steps up or down",
-        "bgclass": "bg-info",
-        "content": "./tools/noteShifter.php"
-    },
-    {
         "name": "rollTheDice100",
         "displayname": "Roll the Dice100",
         "icon": "fa-solid fa-shuffle",
         "description": "Generates Numbers between 1-100",
         "bgclass": "bg-warning",
         "content": "./tools/rollTheDice100.php"
-    },
-    {
-        "name": "randomColorGenerator",
-        "displayname": "Color Generator",
-        "icon": "fa-solid fa-palette",
-        "description": "Generates a Random Color",
-        "bgclass": "bg-warning",
-        "content": "./tools/colorInfoGenerator.php"
     },
     {
         "name": "calculator",
