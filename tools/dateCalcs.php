@@ -1,51 +1,79 @@
-<fieldset>
-  <legend>Get Time Since:</legend>
-  <br>
-  <label for="inputDate">Enter a date (YYYY-MM-DD):</label>
-  <div class="input-group">
-    <input type="date" id="inputDate" class="form-control">
-    <button onclick="calculateTimeSince()" class="form-control btn btn-success">Calculate</button>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-2 g-3">
+    <div class="col">
+      <fieldset class="fieldset-card">
+        <legend class="fieldset-legend">Get Time Since:</legend>
+        <div class="input-group">
+          <input type="date" id="inputDate" class="form-control">
+          <button onclick="calculateTimeSince()" class="form-control btn btn-success">Calculate</button>
+        </div>
+
+        <p id="resultDateDiff" class="mt-3"></p>
+        <p id="totalDays"></p>
+
+      </fieldset>
+    </div>
+
+    <div class="col">
+      <fieldset class="fieldset-card">
+        <legend class="fieldset-legend">Get Time Difference:</legend>
+        <input type="time" id="startTime" class="form-control">
+        <input type="time" id="endTime" class="form-control">
+        <button onclick="calculateTimeBetween()" class="form-control btn btn-success">Calculate</button>
+
+        <p id="resultDateTimeDiff" class="mt-3"></p>
+        <p id="totalDaysTime"></p>
+      </fieldset>
+    </div>
+
+    <div class="col">
+      <fieldset class="fieldset-card">
+        <legend class="fieldset-legend">Number to Time:</legend>
+        <input type="text" id="inputTimeNumber" class="form-control" placeholder="Time in Decimal e.g. 0,6">
+        <button onclick="calculateTimeFromNumber()" class="form-control btn btn-success">Calculate</button>
+        <div class="input-group">
+          <input type="number" id="outputTimeHours" step="1" disabled class="form-control" placeholder="Hours">
+          <input type="number" id="outputTimeMinutes" step="1" disabled class="form-control" placeholder="Minutes">
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="col">
+      <fieldset class="fieldset-card">
+        <legend class="fieldset-legend">Time to Number:</legend>
+        <input type="number" id="inputHours" step="1" class="form-control" placeholder="Hours">
+        <input type="number" id="inputMinutes" step="1" class="form-control" placeholder="Minutes">
+
+        <button onclick="calculateNumberFromTime()" class="form-control btn btn-success">Calculate</button>
+
+        <input type="number" id="outputTimeNumber" step="0.1" disabled class="form-control"
+          placeholder="Time in Decimal e.g. 0.6">
+
+      </fieldset>
+    </div>
+
+    <div class="col">
+      <fieldset class="fieldset-card">
+        <legend class="fieldset-legend">Unix Time to Date:</legend>
+        <br>
+        <input type="number" id="inputUnixToDate" step="1" class="form-control"
+          placeholder="Unix Time (e.g. 1708459200)">
+        <button onclick="convertUnixToDate()" class="form-control btn btn-success mt-2">Calculate</button>
+        <input type="text" id="outputResultUnixToDate" disabled class="form-control" placeholder="Result">
+      </fieldset>
+    </div>
+
+    <div class="col">
+      <fieldset class="fieldset-card">
+        <legend class="fieldset-legend">Date to Unix Time:</legend>
+        <br>
+        <input type="date" id="inputDateToUnix" class="form-control" placeholder="Date (e.g. 2025-02-20)">
+        <button onclick="convertDateToUnix()" class="form-control btn btn-success mt-2">Calculate</button>
+        <input type="text" id="outputResultDateToUnix" disabled class="form-control" placeholder="Result">
+      </fieldset>
+    </div>
   </div>
-
-  <p id="resultDateDiff" class="mt-3"></p>
-  <p id="totalDays"></p>
-
-</fieldset>
-
-<fieldset>
-  <legend>Get Time Difference:</legend>
-  <br>
-  <input type="time" id="startTime" class="form-control">
-  <input type="time" id="endTime" class="form-control">
-  <button onclick="calculateTimeBetween()" class="form-control btn btn-success">Calculate</button>
-
-  <p id="resultDateTimeDiff" class="mt-3"></p>
-  <p id="totalDaysTime"></p>
-</fieldset>
-
-<fieldset>
-  <legend>Number to Time:</legend>
-  <br>
-  <input type="text" id="inputTimeNumber" class="form-control" placeholder="Time in Decimal e.g. 0,6">
-  <div class="input-group">
-    <input type="number" id="outputTimeHours" step="1" disabled class="form-control" placeholder="Hours">
-    <input type="number" id="outputTimeMinutes" step="1" disabled class="form-control" placeholder="Minutes">
-  </div>
-  <button onclick="calculateTimeFromNumber()" class="form-control btn btn-success">Calculate</button>
-</fieldset>
-
-<fieldset>
-  <legend>Time to Number:</legend>
-  <br>
-  <input type="number" id="inputHours" step="1" class="form-control" placeholder="Hours">
-  <input type="number" id="inputMinutes" step="1" class="form-control" placeholder="Minutes">
-
-  <input type="number" id="outputTimeNumber" step="0.1" disabled class="form-control"
-    placeholder="Time in Decimal e.g. 0.6">
-
-  <button onclick="calculateNumberFromTime()" class="form-control btn btn-success">Calculate</button>
-</fieldset>
-
+</div>
 
 <script>
   const DAYS_IN_YEAR = 365;
@@ -196,5 +224,41 @@
     }
 
     return { hours, minutes, isFuture };
+  }
+
+
+
+  function convertUnixToDate() {
+    const input = document.getElementById('inputUnixToDate').value.trim();
+    const output = document.getElementById('outputResultUnixToDate');
+
+    if (!input) {
+      output.value = "Please enter a Unix Timestamp!";
+      return;
+    }
+
+    const date = new Date(parseInt(input) * 1000);
+    if (isNaN(date.getTime())) {
+      output.value = "Invalid Unix Timestamp!";
+    } else {
+      output.value = date.toUTCString();
+    }
+  }
+
+  function convertDateToUnix() {
+    const input = document.getElementById('inputDateToUnix').value.trim();
+    const output = document.getElementById('outputResultDateToUnix');
+
+    if (!input) {
+      output.value = "Please enter a Date!";
+      return;
+    }
+
+    const date = new Date(input);
+    if (isNaN(date.getTime())) {
+      output.value = "Invalid Date Format!";
+    } else {
+      output.value = Math.floor(date.getTime() / 1000);
+    }
   }
 </script>

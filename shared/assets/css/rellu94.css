@@ -33,3 +33,26 @@ body.dark-mode {
     -ms-transform: scale(1.1);
     transform: scale(1.1);
 }
+
+.fieldset-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  min-height: 300px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fieldset-legend {
+  font-weight: bold;
+  padding: 0 10px;
+  border-radius: 3px;
+}
+
+.text-break {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
