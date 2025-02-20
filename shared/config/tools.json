@@ -56,30 +56,6 @@
         "content": "./tools/rollTheDice.php"
     },
     {
-        "name": "base64Encode",
-        "displayname": "String to base64",
-        "icon": "fa-solid fa-arrow-right-to-bracket",
-        "description": "Encodes a String to Base64",
-        "bgclass": "bg-info",
-        "content": "./tools/base64encode.php"
-    },
-    {
-        "name": "base64Decode",
-        "displayname": "base64 to String",
-        "icon": "fa-solid fa-arrow-right-from-bracket",
-        "description": "Decodes Base64 to a String",
-        "bgclass": "bg-info",
-        "content": "./tools/base64decode.php"
-    },
-    {
-        "name": "rollTheDice20",
-        "displayname": "Roll the Dice20",
-        "icon": "fa-solid fa-dice-d20",
-        "description": "Generates Numbers between 1-20",
-        "bgclass": "bg-warning",
-        "content": "./tools/rollTheDice20.php"
-    },
-    {
         "name": "base64ImageEncode",
         "displayname": "Image to base64",
         "icon": "fa-solid fa-arrow-right-to-bracket",
@@ -96,12 +72,20 @@
         "content": "./tools/base64ImageDecode.php"
     },
     {
-        "name": "rollTheDice100",
-        "displayname": "Roll the Dice100",
-        "icon": "fa-solid fa-shuffle",
-        "description": "Generates Numbers between 1-100",
+        "name": "rollTheDice20",
+        "displayname": "Roll the Dice20",
+        "icon": "fa-solid fa-dice-d20",
+        "description": "Generates Numbers between 1-20",
         "bgclass": "bg-warning",
-        "content": "./tools/rollTheDice100.php"
+        "content": "./tools/rollTheDice20.php"
+    },
+    {
+        "name": "noteGenerator",
+        "displayname": "Note Generator",
+        "icon": "fa-solid fa-music",
+        "description": "Generates and plays a Note",
+        "bgclass": "bg-warning",
+        "content": "./tools/noteGenerator.php"
     },
     {
         "name": "noteShifter",
@@ -112,12 +96,12 @@
         "content": "./tools/noteShifter.php"
     },
     {
-        "name": "noteGenerator",
-        "displayname": "Note Generator",
-        "icon": "fa-solid fa-music",
-        "description": "Generates and plays a Note",
+        "name": "rollTheDice100",
+        "displayname": "Roll the Dice100",
+        "icon": "fa-solid fa-shuffle",
+        "description": "Generates Numbers between 1-100",
         "bgclass": "bg-warning",
-        "content": "./tools/noteGenerator.php"
+        "content": "./tools/rollTheDice100.php"
     },
     {
         "name": "randomColorGenerator",
