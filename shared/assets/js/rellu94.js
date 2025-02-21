@@ -305,3 +305,17 @@ function generatePassword() {
   }
   $("#password")[0].value = password;
 }
+
+function asciiConverter() {
+  let asciiOutput = document.getElementById("asciiOutput");
+  let input = document.getElementById("asciiInput").value;
+  if (/^\d+$/.test(input)) {
+    asciiOutput.value = String.fromCharCode(parseInt(input));
+  }
+  else if (input.length === 1) {
+    asciiOutput.value = input.charCodeAt(0);
+  }
+  else {
+    asciiOutput.value = "Enter Char or Int";
+  }
+}

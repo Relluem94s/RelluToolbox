@@ -144,5 +144,19 @@
             </fieldset>
         </div>
 
+        <div class="col">
+            <fieldset class="fieldset-card-small">
+                <legend class="fieldset-legend">ASCII</legend>
+                <div class="mb-2">
+                    <div class="input-group">
+                        <input placeholder="65 or A" type="text" class="form-control" id="asciiInput" oninput="asciiConverter()">
+                    </div>
+                    <div class="mt-2">
+                        <input placeholder="Output" type="text" class="form-control" id="asciiOutput" disabled>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
     </div>
 </div>
