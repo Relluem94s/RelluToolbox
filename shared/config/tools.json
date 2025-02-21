@@ -96,28 +96,12 @@
         "content": "./tools/base64ImageDecode.php"
     },
     {
-        "name": "rollTheDice",
-        "displayname": "Roll the Dice",
-        "icon": "fa-solid fa-dice",
-        "description": "Generates Numbers between 1-6",
-        "bgclass": "bg-warning",
-        "content": "./tools/rollTheDice.php"
-    },
-    {
-        "name": "rollTheDice20",
-        "displayname": "Roll the Dice20",
-        "icon": "fa-solid fa-dice-d20",
-        "description": "Generates Numbers between 1-20",
-        "bgclass": "bg-warning",
-        "content": "./tools/rollTheDice20.php"
-    },
-    {
-        "name": "rollTheDice100",
-        "displayname": "Roll the Dice100",
+        "name": "numberGenerator",
+        "displayname": "Number Generator",
         "icon": "fa-solid fa-shuffle",
-        "description": "Generates Numbers between 1-100",
+        "description": "Generates Random Numbers",
         "bgclass": "bg-warning",
-        "content": "./tools/rollTheDice100.php"
+        "content": "./tools/numberGenerator.php"
     },
     {
         "name": "calculator",
