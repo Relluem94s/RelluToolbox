@@ -49,3 +49,8 @@
     </div>
   </div>
 </div>
+
+<script>
+  $("#inputHours").on("keypress", allowOnlyNumbers);
+  $("#inputMinutes").on("keypress", allowOnlyNumbers);
+</script>
