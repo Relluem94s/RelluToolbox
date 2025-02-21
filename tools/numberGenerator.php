@@ -50,10 +50,10 @@
             </div>
           </div>
           <div class="mt-2">
-            <div class="input-group">
-              <input type="text" class="form-control" disabled id="dice_output">
-              <button class="btn btn-warning" type="button" id="roll-button">Roll Dice</button>
-            </div>
+            <input type="text" class="form-control" disabled id="dice_output">
+          </div>
+          <div class="mt-2">
+            <button class="btn btn-warning" type="button" id="roll-button">Roll</button>
           </div>
         </div>
       </fieldset>
