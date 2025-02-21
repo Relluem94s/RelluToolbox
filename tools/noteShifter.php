@@ -44,18 +44,25 @@ for ($i = 0; $i < sizeof($tuning); $i++) {
 
   $data = json_decode(file_get_contents("../shared/assets/data/noteshifter_tunings.json"), true);
 
+  $html = "";
+
   foreach ($data as $key => $value) {
+    $html_inner = "";
 
-
-    echo '<tr>
-    <th>' . $value["Tuning"] . '</th>';
+    $notes = "'" . implode("', '", $value["Notes"]) . "'";
 
     foreach ($value["Notes"] as $noteKey => $note) {
-      echo '<td>' . $note . '</td>';
+      $html_inner .= '<td>' . $note . '</td>';
     }
 
-    echo '</tr>';
+    $html .= '<tr>
+    <th><button class="badge btn btn-info" onclick="setTuning('. $notes .')">' . $value["Tuning"] . '</button></th>';
+
+    $html .= $html_inner;
+    $html .= '</tr>';
   }
+
+  echo $html;
 
   ?>
 </table>
@@ -99,6 +106,22 @@ for ($i = 0; $i < sizeof($tuning); $i++) {
     }
 
     $('#note_output_' + val)[0].value = notes[shifting];
+  }
+
+  function setTuning(note0, note1, note2, note3, note4, note5){
+    let note_input_0 = document.getElementById("note_input_0");
+    let note_input_1 = document.getElementById("note_input_1");
+    let note_input_2 = document.getElementById("note_input_2");
+    let note_input_3 = document.getElementById("note_input_3");
+    let note_input_4 = document.getElementById("note_input_4");
+    let note_input_5 = document.getElementById("note_input_5");
+
+    note_input_0.value = note0;
+    note_input_1.value = note1;
+    note_input_2.value = note2;
+    note_input_3.value = note3;
+    note_input_4.value = note4;
+    note_input_5.value = note5;
   }
 
 </script>
