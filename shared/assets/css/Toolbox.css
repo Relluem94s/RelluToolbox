@@ -130,3 +130,23 @@ legend {
   padding: 0 10px;
   border-bottom: none;
 }
+
+input:disabled.bg-decimal, .bg-decimal{
+  background-color: #e6cfcf;
+}
+
+input:disabled.bg-octal, .bg-octal{
+  background-color: #ebe6b7;
+}
+
+input:disabled.bg-binary, .bg-binary{
+  background-color: #F0F8FF;
+}
+
+input:disabled.bg-hexadecimal, .bg-hexadecimal{
+  background-color: #F0FFF0;
+}
+
+input:disabled.bg-roman, .bg-roman{
+  background-color: #e1c6f3;
+}

@@ -8,7 +8,7 @@
         "content": "./tools/uuidGenerator.php"
     },
     {
-        "name": "textConverter",
+        "name": "textConversion",
         "displayname": "Text Conversion",
         "icon": "fa-solid fa-font",
         "description": "Text Conversion",
@@ -16,12 +16,12 @@
         "content": "./tools/textConversion.php"
     },
     {
-        "name": "numberConverter",
+        "name": "numberConversion",
         "displayname": "Number Conversion",
         "icon": "fa-solid fa-arrow-right-arrow-left",
         "description": "Converts Decimal to Binary",
         "bgclass": "bg-info",
-        "content": "./tools/numberConverter.php"
+        "content": "./tools/numberConversion.php"
     },
     {
         "name": "passwordGenerator",
