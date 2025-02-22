@@ -131,32 +131,45 @@
 
 </script>
 
-<div class="input-group">
-    <input type="color" class="form-control" onchange="getInfo()" id="color_pick">
-    <button class="btn btn-warning" onclick="generateColor()">Generate</button>
-</div>
+<div class="container">
+    <div class="row row-cols-1">
 
-<div class="input-group">
-    <input type="text" class="form-control" disabled value="Hex">
-    <input type="text" class="form-control" disabled id="hex">
-</div>
+        <div class="col">
+            <fieldset class="fieldset-card-small">
+                <legend class="fieldset-legend">Color Picker & Generator</legend>
+                <div class="mb-2">
+                <div class="input-group">
+                    <input type="color" class="form-control" onchange="getInfo()" id="color_pick">
+                    <button class="btn btn-warning" onclick="generateColor()">Generate</button>
+                </div>
+                    <div class="mt-2">
+                        <div class="input-group">
+                            <input type="text" class="form-control" disabled value="Hex">
+                            <input type="text" class="form-control" disabled id="hex">
+                        </div>
 
-<div class="input-group">
-    <input type="text" class="form-control" disabled value="RGB">
-    <input type="text" class="form-control" disabled id="rgb">
-</div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" disabled value="RGB">
+                            <input type="text" class="form-control" disabled id="rgb">
+                        </div>
 
-<div class="input-group">
-    <input type="text" class="form-control" disabled value="CMYK">
-    <input type="text" class="form-control" disabled id="cmyk">
-</div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" disabled value="CMYK">
+                            <input type="text" class="form-control" disabled id="cmyk">
+                        </div>
 
-<div class="input-group">
-    <input type="text" class="form-control" disabled value="HSV">
-    <input type="text" class="form-control" disabled id="hsv">
-</div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" disabled value="HSV">
+                            <input type="text" class="form-control" disabled id="hsv">
+                        </div>
 
-<div class="input-group">
-    <input type="text" class="form-control" disabled value="HSL">
-    <input type="text" class="form-control" disabled id="hsl">
+                        <div class="input-group">
+                            <input type="text" class="form-control" disabled value="HSL">
+                            <input type="text" class="form-control" disabled id="hsl">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
 </div>
