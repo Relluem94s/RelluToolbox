@@ -6,8 +6,7 @@
                 <legend class="fieldset-legend">Minify JSON</legend>
                 <div class="mb-2">
                     <textarea placeholder="Input" type="text" class="form-control" id="original_pretty_json" rows="10"
-                        oninput="$('#mini_json_string')[0].value = JSON.stringify(JSON.parse($('#original_pretty_json')[0].value));">
-                    </textarea>
+                        oninput="$('#mini_json_string')[0].value = JSON.stringify(JSON.parse($('#original_pretty_json')[0].value));"></textarea>
                     <div class="mt-2">
                         <input placeholder="Output" type="text" class="form-control" id="mini_json_string" disabled>
                     </div>
@@ -23,8 +22,7 @@
                         oninput="$('#pretty_json_string')[0].value = JSON.stringify(JSON.parse($('#original_json_string')[0].value), null, 2);">
                     <div class="mt-2">
                         <textarea placeholder="Output" type="text" class="form-control" id="pretty_json_string"
-                            rows="10" disabled>
-                        </textarea>
+                            rows="10" disabled></textarea>
                     </div>
                 </div>
             </fieldset>
