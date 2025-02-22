@@ -2,6 +2,7 @@
     <div class="row row-cols-1">
         <div class="col">
             <fieldset class="fieldset-card-small">
+                <legend class="fieldset-legend">Password</legend>
                 <div class="mb-2">
                     <br>
                     <div class="input-group">

@@ -1,10 +1,25 @@
+
 <div class="container">
-    <div class="input-group">
-        <input name="uuid" type="text" class="form-control" id="uuid" disabled>
-        <button id="getUUIDButton" class="btn btn-success" onclick="fetchUUIDData"><i class="fa-solid fa-gears"></i> Generate</button>
-        <button class="btn btn-primary" onclick="copyToClipboard('uuid', 'UUID')"><i class="fa-solid fa-clipboard"></i> Copy</button>
+    <div class="row row-cols-1">
+
+        <div class="col">
+            <fieldset class="fieldset-card-small">
+                <legend class="fieldset-legend">UUID</legend>
+                <div class="mb-2">
+                    <div class="input-group">
+                        <button id="getUUIDButton" class="btn btn-success" onclick="fetchUUIDData"><i class="fa-solid fa-gears"></i> Generate</button>
+                        <button class="btn btn-primary" onclick="copyToClipboard('uuid', 'UUID')"><i class="fa-solid fa-clipboard"></i> Copy</button>
+                    </div>
+                    <div class="mt-2">
+                        <input name="uuid" type="text" class="form-control" id="uuid" disabled>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
     </div>
 </div>
+
+
 
 <script>
     document.getElementById('getUUIDButton').addEventListener('click', function () {
