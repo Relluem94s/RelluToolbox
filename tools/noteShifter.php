@@ -8,8 +8,8 @@
 
           <?php
 
-          $notes = array("C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B");
-          $tuning = array("E", "A", "D", "G", "B", "E");
+          $notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+          $tuning = ["E", "A", "D", "G", "B", "E"];
 
           for ($i = 0; $i < sizeof($tuning); $i++) {
             $notes_select = '<select class="form-control" id="note_input_' . $i . '" oninput="shift(' . $i . ')">';
