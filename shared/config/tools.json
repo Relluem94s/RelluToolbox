@@ -48,14 +48,6 @@
         "content": "./tools/base64Conversion.php"
     },
     {
-        "name": "noteShifter",
-        "displayname": "Note Shifter",
-        "icon": "fa-solid fa-music",
-        "description": "Shifts a Note x Steps up or down",
-        "bgclass": "bg-info",
-        "content": "./tools/noteShifter.php"
-    },
-    {
         "name": "noteGenerator",
         "displayname": "Note Generator",
         "icon": "fa-solid fa-music",
@@ -64,20 +56,20 @@
         "content": "./tools/noteGenerator.php"
     },
     {
-        "name": "jsonPrettyPrint",
-        "displayname": "JSON Prettify",
-        "icon": "fa-solid fa-indent",
-        "description": "Prettify JSON Strings",
+        "name": "noteShifter",
+        "displayname": "Note Shifter",
+        "icon": "fa-solid fa-music",
+        "description": "Shifts a Note x Steps up or down",
         "bgclass": "bg-info",
-        "content": "./tools/jsonPrettyPrint.php"
+        "content": "./tools/noteShifter.php"
     },
     {
-        "name": "jsonMinifyPrint",
-        "displayname": "JSON Minify",
-        "icon": "fa-solid fa-outdent",
-        "description": "Minify JSON Strings",
+        "name": "jsonConversion",
+        "displayname": "JSON Tools",
+        "icon": "fa-solid fa-bars-staggered",
+        "description": "JSON Tools Collection",
         "bgclass": "bg-info",
-        "content": "./tools/jsonMinifyPrint.php"
+        "content": "./tools/jsonConversion.php"
     },
     {
         "name": "randomColorGenerator",
@@ -86,14 +78,6 @@
         "description": "Generates a Random Color",
         "bgclass": "bg-warning",
         "content": "./tools/colorInfoGenerator.php"
-    },
-    {
-        "name": "numberGenerator",
-        "displayname": "Number Generator",
-        "icon": "fa-solid fa-shuffle",
-        "description": "Generates Random Numbers",
-        "bgclass": "bg-warning",
-        "content": "./tools/numberGenerator.php"
     },
     {
         "name": "calculator",
@@ -110,6 +94,14 @@
         "description": "Shows your Stock",
         "bgclass": "bg-primary",
         "content": "./tools/stockApp.php"
+    },
+    {
+        "name": "numberGenerator",
+        "displayname": "Number Generator",
+        "icon": "fa-solid fa-shuffle",
+        "description": "Generates Random Numbers",
+        "bgclass": "bg-warning",
+        "content": "./tools/numberGenerator.php"
     },
     {
         "name": "minecraftCoordinatesToRegionFile",
