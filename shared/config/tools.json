@@ -88,12 +88,12 @@
         "content": "./tools/calculator.php"
     },
     {
-        "name": "stockApp",
-        "displayname": "Stock portfolio tracker",
-        "icon": "fa-solid fa-money-bill-trend-up",
-        "description": "Shows your Stock",
+        "name": "minecraftTools",
+        "displayname": "Minecraft Tools",
+        "icon": "fa-solid fa-cube",
+        "description": "Minecraft Tools Collection",
         "bgclass": "bg-primary",
-        "content": "./tools/stockApp.php"
+        "content": "./tools/minecraft.php"
     },
     {
         "name": "numberGenerator",
@@ -104,12 +104,12 @@
         "content": "./tools/numberGenerator.php"
     },
     {
-        "name": "minecraftCoordinatesToRegionFile",
-        "displayname": "Minecraft Coordinate Calculator",
-        "icon": "fa-solid fa-cube",
-        "description": "Calculates the Region File",
+        "name": "stockApp",
+        "displayname": "Stock portfolio tracker",
+        "icon": "fa-solid fa-money-bill-trend-up",
+        "description": "Shows your Stock",
         "bgclass": "bg-primary",
-        "content": "./tools/minecraftCoordinatesToRegionFile.php"
+        "content": "./tools/stockApp.php"
     },
     {
         "name": "dateCalculator",
