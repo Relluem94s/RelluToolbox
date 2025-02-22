@@ -1,75 +1,79 @@
-<?php
+<div class="container">
+  <div class="row row-cols-1">
 
-$notes = array("C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B");
-$tuning = array("E", "A", "D", "G", "B", "E");
+    <div class="col">
+      <fieldset class="fieldset-card-small">
+        <legend class="fieldset-legend">Note Shifter</legend>
+        <div class="mb-2">
 
-for ($i = 0; $i < sizeof($tuning); $i++) {
-  $notes_select = '<select class="form-control" id="note_input_' . $i . '" oninput="shift(' . $i . ')">';
+          <?php
 
-  for ($o = 0; $o < sizeof($notes); $o++) {
-    $isSelected = "";
-    if ($tuning[$i] == $notes[$o]) {
-      $isSelected = " selected";
-    }
+          $notes = array("C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B");
+          $tuning = array("E", "A", "D", "G", "B", "E");
 
-    $notes_select .= '<option' . $isSelected . '>' . $notes[$o] . '</option>';
-  }
+          for ($i = 0; $i < sizeof($tuning); $i++) {
+            $notes_select = '<select class="form-control" id="note_input_' . $i . '" oninput="shift(' . $i . ')">';
 
-  $notes_select .= '</select>';
-  $shift_select = '<input class="form-control"
-    id="note_shift_' . $i . '"
-    min="-24"
-    max="24"
-    type="number"
-    value="0"
-    oninput="shift(' . $i . ')">';
-  $shift_out = '<input
-    class="form-control"
-    type="text"
-    id="note_output_' . $i . '"
-    disabled value="">';
+            for ($o = 0; $o < sizeof($notes); $o++) {
+              $isSelected = "";
+              if ($tuning[$i] == $notes[$o]) {
+                $isSelected = " selected";
+              }
 
-  echo '<div class="input-group">' . $notes_select . $shift_select . $shift_out . '</div>';
-}
+              $notes_select .= '<option' . $isSelected . '>' . $notes[$o] . '</option>';
+            }
+
+            $notes_select .= '</select>';
+            $shift_select = '<input class="form-control" id="note_shift_' . $i . '" min="-24" max="24" type="number" value="0" oninput="shift(' . $i . ')">';
+            $shift_out = '<input class="form-control" type="text" id="note_output_' . $i . '" disabled value="">';
+
+            echo '<div class="input-group">' . $notes_select . $shift_select . $shift_out . '</div>';
+          }
+
+          ?>
+
+          <div class="mt-2">
+            <table class="table table-striped table-hover table-bordered mt-5">
+              <caption></caption>
+              <tr>
+                <th colspan="7" class="text-center">Tunings</th>
+              </tr>
+              <?php
+
+              $data = json_decode(file_get_contents("../shared/assets/data/noteshifter_tunings.json"), true);
+
+              $html = "";
+
+              foreach ($data as $key => $value) {
+                $html_inner = "";
+
+                $notes = "'" . implode("', '", $value["Notes"]) . "'";
+
+                foreach ($value["Notes"] as $noteKey => $note) {
+                  $html_inner .= '<td>' . $note . '</td>';
+                }
+
+                $html .= '<tr><th><button class="badge btn btn-info" onclick="setTuning(' . $notes . ')">' . $value["Tuning"] . '</button></th>';
+
+                $html .= $html_inner;
+                $html .= '</tr>';
+              }
+
+              echo $html;
+
+              ?>
+            </table>
 
 
-?>
+          </div>
+        </div>
+      </fieldset>
+    </div>
 
-<table class="table table-striped table-hover table-bordered mt-5">
-  <caption></caption>
-  <tr>
-    <th colspan="7" class="text-center">Tunings</th>
-  </tr>
-  <?php
-
-  $data = json_decode(file_get_contents("../shared/assets/data/noteshifter_tunings.json"), true);
-
-  $html = "";
-
-  foreach ($data as $key => $value) {
-    $html_inner = "";
-
-    $notes = "'" . implode("', '", $value["Notes"]) . "'";
-
-    foreach ($value["Notes"] as $noteKey => $note) {
-      $html_inner .= '<td>' . $note . '</td>';
-    }
-
-    $html .= '<tr>
-    <th><button class="badge btn btn-info" onclick="setTuning('. $notes .')">' . $value["Tuning"] . '</button></th>';
-
-    $html .= $html_inner;
-    $html .= '</tr>';
-  }
-
-  echo $html;
-
-  ?>
-</table>
-
+  </div>
+</div>
 
 <script>
-
   function shift(val) {
 
     if (val === undefined) {
