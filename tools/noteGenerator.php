@@ -1,10 +1,6 @@
 <?php
 
-
-$notes = array("C","C#","D","D#","E","F","F#","G","G#","A","A#","B");
-
-
-
+$notes = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"];
 $notes_select = '<select class="form-control" id="note_select">';
 
 for($i = 0; $i < sizeof($notes); $i++){
@@ -13,15 +9,25 @@ for($i = 0; $i < sizeof($notes); $i++){
 
 $notes_select .= '</select>';
 
-
-
-
-echo '<div class="input-group">' . $notes_select .
-'<button class="btn btn-warning" onclick="playNote()"><i class="fa-solid fa-play"></i></button></div>';
-
 ?>
 
-
+<div class="container">
+    <div class="row row-cols-1">
+        <div class="col">
+            <fieldset class="fieldset-card-small">
+                <legend class="fieldset-legend">Note Generator</legend>
+                <div class="mb-2">
+                <div class="input-group">
+                    <?php echo $notes_select; ?>
+                </div>
+                    <div class="mt-2">
+                        <button class="btn btn-warning" onclick="playNote()"><i class="fa-solid fa-play"></i></button></div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
 
 <script>
 
