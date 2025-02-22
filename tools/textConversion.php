@@ -97,40 +97,6 @@
 
         <div class="col">
             <fieldset class="fieldset-card-small">
-                <legend class="fieldset-legend">String to Base64</legend>
-                <div class="mb-2">
-                    <div class="input-group">
-                        <input placeholder="String" type="text" class="form-control" id="original_decoded_string"
-                            oninput="$('#encoded_output_string')[0].value=btoa($('#original_decoded_string')[0].value);">
-                    </div>
-                    <div class="mt-2">
-                        <input placeholder="Base64 Encoded" type="text" class="form-control" id="encoded_output_string"
-                            disabled>
-                    </div>
-                </div>
-            </fieldset>
-        </div>
-
-        <div class="col">
-            <fieldset class="fieldset-card-small">
-                <legend class="fieldset-legend">Base64 to String</legend>
-                <div class="mb-2">
-                    <div class="input-group">
-                        <input placeholder="Base64 Encoded" type="text" class="form-control"
-                            id="original_encoded_string"
-                            oninput="$('#decoded_output_string')[0].value=atob($('#original_encoded_string')[0].value);">
-                    </div>
-                    <div class="mt-2">
-
-                        <input placeholder="String" type="text" class="form-control" id="decoded_output_string"
-                            disabled>
-                    </div>
-                </div>
-            </fieldset>
-        </div>
-
-        <div class="col">
-            <fieldset class="fieldset-card-small">
                 <legend class="fieldset-legend">Char Count</legend>
                 <div class="mb-2">
                     <div class="input-group">

@@ -40,6 +40,14 @@
         "content": "./tools/dateConversion.php"
     },
     {
+        "name": "base64Conversion",
+        "displayname": "Base64 Conversion",
+        "icon": "fa-solid fa-rotate",
+        "description": "Converts From and to Base64",
+        "bgclass": "bg-info",
+        "content": "./tools/base64Conversion.php"
+    },
+    {
         "name": "noteShifter",
         "displayname": "Note Shifter",
         "icon": "fa-solid fa-music",
@@ -78,22 +86,6 @@
         "description": "Generates a Random Color",
         "bgclass": "bg-warning",
         "content": "./tools/colorInfoGenerator.php"
-    },
-    {
-        "name": "base64ImageEncode",
-        "displayname": "Image to base64",
-        "icon": "fa-solid fa-arrow-right-to-bracket",
-        "description": "Encodes a Image to Base64",
-        "bgclass": "bg-info",
-        "content": "./tools/base64ImageEncode.php"
-    },
-    {
-        "name": "base64ImageDecode",
-        "displayname": "base64 to Image",
-        "icon": "fa-solid fa-arrow-right-from-bracket",
-        "description": "Decodes Base64 to a Image",
-        "bgclass": "bg-info",
-        "content": "./tools/base64ImageDecode.php"
     },
     {
         "name": "numberGenerator",
