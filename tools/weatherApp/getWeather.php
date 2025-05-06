@@ -2,7 +2,7 @@
 
 $loader = require '../../shared/vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__) . "/../../shared/config/");
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__) . "/../shared/config/");
 $dotenv->load();
 
 $dotenv->required('WEATHER_API_KEY');
