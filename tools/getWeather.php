@@ -10,6 +10,12 @@
 
 <script>
     document.getElementById('getWeatherButton').addEventListener('click', function() {
+        event.preventDefault();
+        fetchWeatherData();
+    });
+    
+    document.getElementById('weatherForm').addEventListener('submit', function(event) {
+        event.preventDefault();
         fetchWeatherData();
     });
 
