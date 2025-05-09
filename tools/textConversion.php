@@ -83,7 +83,7 @@
                 <legend class="fieldset-legend">camel2Screaming</legend>
                 <div class="mb-2">
                     <div class="input-group">
-                        <input placeholder="Input" type="camelCase" class="form-control" id="original_camelCase_string"
+                        <input placeholder="camelCase" type="text" class="form-control" id="original_camelCase_string"
                             oninput="$('#screaming_snake_string')[0].value = $('#original_camelCase_string')[0].value.replace( /([A-Z])/g, ' $1' ).split(' ').join('_').toUpperCase();">
 
                     </div>
