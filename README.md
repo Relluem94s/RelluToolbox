@@ -1,4 +1,4 @@
-![Rellu Toolbox](https://img.relluem94.de/logos/web/rellutoolbox.png)
+![Rellu Toolbox](https://static.relluem94.de/logos/web/rellutoolbox.png)
 
 ### a collection of useful tools [Toolbox](https://toolbox.rellu.de)
 
