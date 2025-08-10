@@ -306,6 +306,43 @@ function generatePassword() {
   $("#password")[0].value = password;
 }
 
+function checkPasswordStrength() {
+  const password = $("#password")[0].value;
+  const hasLength = password.length >= 16;
+  const hasUpper = /[A-Z]/.test(password);
+  const hasLower = /[a-z]/.test(password);
+  const hasNumber = /\d/.test(password);
+  const hasSpecial = /[!@#$%^&*]/.test(password);
+
+  let strength = [hasLength, hasUpper, hasLower, hasNumber, hasSpecial].filter(Boolean).length;
+
+  if (password.length < 6) {
+    strength = 0;
+  }
+  else if (password.length < 8) {
+    strength = Math.min(strength, 1);
+  } else if (password.length < 12) {
+    strength = Math.min(strength, 2);
+  }
+  if (hasLength) {
+    strength += 1;
+  }
+
+  const colors = {
+    0: '#E33B2E',
+    1: '#f37D00',
+    2: '#F6ED18',
+    3: '#D4FF00',
+    4: '#98D801',
+    5: '#32CD32',
+    6: '#008000'
+  };
+
+  $("#password_strength")[0].value = strength;
+  $("#password_strength_color")[0].value = colors[strength];
+}
+
+
 function asciiConverter() {
   let asciiOutput = document.getElementById("asciiOutput");
   let input = document.getElementById("asciiInput").value;
