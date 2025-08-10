@@ -45,11 +45,42 @@
                 </div>
             </fieldset>
         </div>
+
+        <div class="col">
+            <fieldset class="fieldset-card-small">
+                <legend class="fieldset-legend">Convert Coords Overworld/Nether </legend>
+                <div class="mb-2">
+                    <div class="input-group">
+                        <input type="number" id="mc_coord_x" placeholder="X" class="form-control">
+                        <input type="number" id="mc_coord_z" placeholder="Z" class="form-control">
+                        <button class="btn btn-info" onclick="convertCoordinates(false)">Overworld</button>
+                        <button class="btn btn-info" onclick="convertCoordinates(true)">Nether</button>
+                    </div>
+                    <div class="mt-2">
+                        <div class="input-group">
+                            <input type="text" id="mc_output_coords_convert_x" class="form-control" disabled>
+                            <input type="text" id="mc_output_coords_convert_z" class="form-control" disabled>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
     </div>
 </div>
 
 
 <script>
+
+    function convertCoordinates(toNether = true) {
+        var x = $("#mc_coord_x")[0].value;
+        var z = $("#mc_coord_z")[0].value;
+
+        var result =  toNether ? { x: Math.floor(x / 8), z: Math.floor(z / 8) } : { x: x * 8, z: z * 8 };
+
+        $("#mc_output_coords_convert_x")[0].value = result.x;
+        $("#mc_output_coords_convert_z")[0].value = result.z;
+    }
+
     function calcCoords(){
         var chunkX = $("#chunkX")[0].value;
         var chunkZ = $("#chunkZ")[0].value;
