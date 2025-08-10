@@ -23,8 +23,8 @@ class Tools {
                 data-bs-target="#' . $name . '">
                     <span class="info-box-icon"><i class="' . $icon . '"></i></span>
                     <div class="info-box-content">
-                        <span class="info-box-number">' . $displayname . '</span>
-                        <span class="info-box-text">' . $description . '</span>
+                        <span title="' . $displayname . '" class="info-box-number">' . $displayname . '</span>
+                        <span title="' . $description . '" class="info-box-text">' . $description . '</span>
                     </div>
                 </div>
                 <div

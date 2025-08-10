@@ -3,58 +3,58 @@ body.dark-mode {
     background: linear-gradient(109.6deg, rgb(16 16 16) 11.2%, rgb(21 23 24) 51.2%, rgb(28 26 26) 98.6%);
 }
 
-.info-box{
+.info-box {
     transition: transform 0.2s ease-in-out;
 }
 
-.info-box:hover{
+.info-box:hover {
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
 
-.light{
+.light {
     display: none;
 }
 
-.toggleMode{
+.toggleMode {
     display: flex;
     margin: 0 7px;
 }
 
-.toggleMode .mode{
+.toggleMode .mode {
     font-size: 35px;
     transition: transform 0.2s ease-in-out;
     cursor: pointer;
 }
 
-.toggleMode .mode:hover{
+.toggleMode .mode:hover {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
 }
 
 .fieldset-card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 15px;
-  min-height: 300px;
-  min-width: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    min-height: 300px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .fieldset-legend {
-  font-weight: bold;
-  padding: 0 10px;
-  border-radius: 3px;
+    font-weight: bold;
+    padding: 0 10px;
+    border-radius: 3px;
 }
 
 .text-break {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 .fieldset-card-small {
@@ -66,5 +66,20 @@ body.dark-mode {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
-  
+}
+
+.info-box-content {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.info-box-number,
+.info-box-text {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+}
