@@ -463,20 +463,18 @@ async function getMetarData() {
 var ctxClass = window.audioContext || window.AudioContext || window.AudioContext || window.webkitAudioContext
 var ctx = new ctxClass();
 
-var beep = (function () {
+const beep = (function () {
 
   return function (finishedCallback) {
 
-    duration = 500;
-
-    type = 1
+    let duration = 500;
 
     if (typeof finishedCallback != "function") {
       finishedCallback = function () { };
     }
 
-    var osc = ctx.createOscillator();
-    var gainNode = ctx.createGain();
+    let osc = ctx.createOscillator();
+    let gainNode = ctx.createGain();
 
     gainNode.connect(ctx.destination);
 
@@ -501,8 +499,8 @@ var beep = (function () {
 
 
 function startStopTimer() {
-  var countDownDate = new Date();
-  var offset = parseInt($('#stopTimerValue')[0].value);
+  let countDownDate = new Date();
+  let offset = parseInt($('#stopTimerValue')[0].value);
 
   if (offset < 1) {
     document.getElementById("displayStopTime").innerHTML = "Invalid Number";
@@ -511,14 +509,14 @@ function startStopTimer() {
 
   countDownDate.setMinutes(countDownDate.getMinutes() + offset);
 
-  var x = setInterval(function () {
-    var now = new Date().getTime();
+  let x = setInterval(function () {
+    let now = new Date().getTime();
 
-    var distance = countDownDate - now;
+    let distance = countDownDate - now;
 
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     document.getElementById("displayStopTime").innerHTML = hours + "h "
       + minutes + "m " + seconds + "s ";

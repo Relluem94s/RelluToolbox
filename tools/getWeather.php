@@ -27,7 +27,7 @@
                 <div class="mb-2">
                     <br>
 
-                    <form>
+                    <form id="weatherFormICAO">
                         <div class="input-group mb-4">
                             <input type="text" class="form-control" name="icao" id="icao" required maxlength="4"
                                 placeholder="Enter ICAO Code here...">
@@ -69,5 +69,10 @@
     document.getElementById('weatherForm').addEventListener('submit', function (event) {
         event.preventDefault();
         fetchWeatherData();
+    });
+
+    document.getElementById('weatherFormICAO').addEventListener('submit', function (event) {
+        event.preventDefault();
+        getMetarData()
     });
 </script>
