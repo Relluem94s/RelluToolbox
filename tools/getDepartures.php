@@ -30,4 +30,3 @@
 </div>
 
 <script src="../shared/assets/js/departures.js">
-  
