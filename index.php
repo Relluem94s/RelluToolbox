@@ -22,7 +22,7 @@ use Shared\Functions\Functions;
     <script src="./shared/assets/js/rellu94.js"></script>
     <script src="./shared/assets/js/loader.js"></script>
     <script src="./shared/assets/js/cookieHandling.js"></script>
-    <script defer src="./shared/assets/scripts/slothSearch.js"></script>
+    <script defer src="./shared/assets/js/slothSearch.js"></script>
     <script src="./shared/assets/folitoast/folitoast.js"></script>
     <link rel="stylesheet" href="./shared/node_modules/admin-lte/dist/css/adminlte.min.css">
     <link rel="stylesheet" href="./shared/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
