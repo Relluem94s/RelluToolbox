@@ -128,18 +128,10 @@
         "content": "./tools/stopTimer.php"
     },
     {
-        "name": "getMetar",
-        "displayname": "Get Metar Weather for ICAO Code",
-        "icon": "fa-solid fa-plane",
-        "description": " Current weather for ICAO Code",
-        "bgclass": "bg-primary",
-        "content": "./tools/metarApp.php"
-    },
-    {
         "name": "getWeather",
         "displayname": "Get Weather",
         "icon": "fa-solid fa-cloud-sun",
-        "description": "Shows the Weather",
+        "description": "Shows the Weather (City / ICAO Code)",
         "bgclass": "bg-primary",
         "content": "./tools/getWeather.php"
     },
