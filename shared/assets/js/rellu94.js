@@ -355,6 +355,8 @@ function asciiConverter() {
   }
 }
 
+/* STOCK DATA APP */
+
 function fetchStockData() {
   const symbol = document.getElementById('symbol').value;
   const quantity = parseInt(document.getElementById('quantity').value);
@@ -386,38 +388,73 @@ function fetchStockData() {
 }
 
 
+/* WEATHER APP */
+
 function fetchWeatherData() {
-    const city = document.getElementById('city').value;
-    fetch(`tools//weatherApp/getWeather.php?city=${city}`)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('weatherInfo').innerHTML = "<br><br>" + data;
-            updateTemperatureColor();
-        })
-        .catch(error => {
-            console.error('Fehler beim Abrufen der Wetterdaten:', error);
-        });
+  const city = document.getElementById('city').value;
+  fetch(`tools//weatherApp/getWeather.php?city=${city}`)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('weatherInfo').innerHTML = "<br><br>" + data;
+      updateTemperatureColor();
+    })
+    .catch(error => {
+      console.error('Fehler beim Abrufen der Wetterdaten:', error);
+    });
 }
 
 function updateTemperatureColor() {
-    const temperatureElement = document.querySelector('p.temperature');
-    temperatureElement.style.fontWeight = "750";
+  const temperatureElement = document.querySelector('p.temperature');
+  temperatureElement.style.fontWeight = "750";
 
-    const temperatureText = temperatureElement.textContent;
+  const temperatureText = temperatureElement.textContent;
 
-    const normalizedTemperatureText = temperatureText.replace(/[^\d.,-]/g, '').replace(',', '.');
+  const normalizedTemperatureText = temperatureText.replace(/[^\d.,-]/g, '').replace(',', '.');
 
-    const temperature = parseFloat(normalizedTemperatureText);
+  const temperature = parseFloat(normalizedTemperatureText);
 
-    if (temperature < 0) {
-        temperatureElement.style.color = 'turquoise';
-    } else if (temperature < 10) {
-        temperatureElement.style.color = 'blue';
-    } else if (temperature < 20) {
-        temperatureElement.style.color = 'orange';
-    }else {
-        temperatureElement.style.color = 'red';
-    }
+  if (temperature < 0) {
+    temperatureElement.style.color = 'turquoise';
+  } else if (temperature < 10) {
+    temperatureElement.style.color = 'blue';
+  } else if (temperature < 20) {
+    temperatureElement.style.color = 'orange';
+  } else {
+    temperatureElement.style.color = 'red';
+  }
+}
+
+async function getMetarData() {
+
+  let icao = document.getElementById("icao").value
+
+  const response = await fetch("https://api.aviationapi.com/v1/weather/metar?apt=" + icao.toUpperCase(), { mode: 'no-cors' });
+  const data = await response.json();
+
+  let object = Object.values(data);
+
+  let altitude = object[0]['alt_hg'];
+  let dewpoint = object[0]['dewpoint'];
+  let raw = object[0]['raw'];
+  let temperature = object[0]['temp'];
+  let updated = object[0]['time_of_obs'];
+  let visibility = object[0]['visibility'];
+  let wind = object[0]['wind'];
+  let windVel = object[0]['wind_vel'];
+  let skyConditions = object[0]['sky_conditions'][0]['coverage'];
+
+
+  const metarData = document.getElementById("metarData");
+
+  metarData.innerHTML = `<p>
+            <h4><b>Raw:</b> ${raw} </h4></br>
+            <b>Report Time:</b> ${updated} </br>
+            <b>Altimeter:</b> ${altitude} </br>
+            <b>Temperature/Dewpoint</b> ${temperature}°C / ${dewpoint}°C</br>
+            <b>Visibility:</b> ${visibility} statue miles </br>
+            <b>Wind:</b> ${wind} degrees @ ${windVel} knots</br>
+            <b>Sky Conditions:</b> ${skyConditions} </br>
+            </p>`;
 }
 
 
