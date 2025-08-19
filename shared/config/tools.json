@@ -5,7 +5,8 @@
         "icon": "fa-solid fa-fingerprint",
         "description": "Generates a UUID v4",
         "bgclass": "bg-warning",
-        "content": "./tools/uuidGenerator.php"
+        "content": "./tools/uuidGenerator.php",
+        "modal-lg": false
     },
     {
         "name": "textConversion",
@@ -13,7 +14,8 @@
         "icon": "fa-solid fa-font",
         "description": "Text Conversion",
         "bgclass": "bg-info",
-        "content": "./tools/textConversion.php"
+        "content": "./tools/textConversion.php",
+        "modal-lg": false
     },
     {
         "name": "numberConversion",
@@ -21,7 +23,8 @@
         "icon": "fa-solid fa-arrow-right-arrow-left",
         "description": "Converts Decimal to Binary",
         "bgclass": "bg-info",
-        "content": "./tools/numberConversion.php"
+        "content": "./tools/numberConversion.php",
+        "modal-lg": false
     },
     {
         "name": "passwordGenerator",
@@ -29,7 +32,8 @@
         "icon": "fa-solid fa-key",
         "description": "Generates Passwords",
         "bgclass": "bg-warning",
-        "content": "./tools/passwordGenerator.php"
+        "content": "./tools/passwordGenerator.php",
+        "modal-lg": false
     },
     {
         "name": "dateConversion",
@@ -37,7 +41,8 @@
         "icon": "fa-solid fa-calendar",
         "description": "Converts Dates and Times",
         "bgclass": "bg-info",
-        "content": "./tools/dateConversion.php"
+        "content": "./tools/dateConversion.php",
+        "modal-lg": false
     },
     {
         "name": "base64Conversion",
@@ -45,7 +50,8 @@
         "icon": "fa-solid fa-rotate",
         "description": "Converts From and to Base64",
         "bgclass": "bg-info",
-        "content": "./tools/base64Conversion.php"
+        "content": "./tools/base64Conversion.php",
+        "modal-lg": false
     },
     {
         "name": "noteGenerator",
@@ -53,7 +59,8 @@
         "icon": "fa-solid fa-music",
         "description": "Generates and plays a Note",
         "bgclass": "bg-warning",
-        "content": "./tools/noteGenerator.php"
+        "content": "./tools/noteGenerator.php",
+        "modal-lg": false
     },
     {
         "name": "noteShifter",
@@ -61,7 +68,8 @@
         "icon": "fa-solid fa-music",
         "description": "Shifts a Note x Steps up or down",
         "bgclass": "bg-info",
-        "content": "./tools/noteShifter.php"
+        "content": "./tools/noteShifter.php",
+        "modal-lg": false
     },
     {
         "name": "jsonConversion",
@@ -69,7 +77,8 @@
         "icon": "fa-solid fa-bars-staggered",
         "description": "JSON Tools Collection",
         "bgclass": "bg-info",
-        "content": "./tools/jsonConversion.php"
+        "content": "./tools/jsonConversion.php",
+        "modal-lg": false
     },
     {
         "name": "randomColorGenerator",
@@ -77,7 +86,8 @@
         "icon": "fa-solid fa-palette",
         "description": "Generates a Random Color",
         "bgclass": "bg-warning",
-        "content": "./tools/colorInfoGenerator.php"
+        "content": "./tools/colorInfoGenerator.php",
+        "modal-lg": false
     },
     {
         "name": "calculator",
@@ -85,7 +95,8 @@
         "icon": "fa-solid fa-calculator",
         "description": "Opens a Calculator",
         "bgclass": "bg-primary",
-        "content": "./tools/calculator.php"
+        "content": "./tools/calculator.php",
+        "modal-lg": false
     },
     {
         "name": "minecraftTools",
@@ -93,7 +104,8 @@
         "icon": "fa-solid fa-cube",
         "description": "Minecraft Tools Collection",
         "bgclass": "bg-primary",
-        "content": "./tools/minecraft.php"
+        "content": "./tools/minecraft.php",
+        "modal-lg": false
     },
     {
         "name": "numberGenerator",
@@ -101,7 +113,8 @@
         "icon": "fa-solid fa-shuffle",
         "description": "Generates Random Numbers",
         "bgclass": "bg-warning",
-        "content": "./tools/numberGenerator.php"
+        "content": "./tools/numberGenerator.php",
+        "modal-lg": false
     },
     {
         "name": "stockApp",
@@ -109,7 +122,8 @@
         "icon": "fa-solid fa-money-bill-trend-up",
         "description": "Shows your Stock",
         "bgclass": "bg-primary",
-        "content": "./tools/stockApp.php"
+        "content": "./tools/stockApp.php",
+        "modal-lg": false
     },
     {
         "name": "dateCalculator",
@@ -117,7 +131,8 @@
         "icon": "fa-solid fa-calendar-days",
         "description": "Calculates Dates, Time and more",
         "bgclass": "bg-primary",
-        "content": "./tools/dateCalcs.php"
+        "content": "./tools/dateCalcs.php",
+        "modal-lg": false
     },
     {
         "name": "timer",
@@ -125,7 +140,8 @@
         "icon": "fa-solid fa-stopwatch",
         "description": "Gives a Alert after Timer Ends",
         "bgclass": "bg-primary",
-        "content": "./tools/stopTimer.php"
+        "content": "./tools/stopTimer.php",
+        "modal-lg": false
     },
     {
         "name": "getWeather",
@@ -133,7 +149,8 @@
         "icon": "fa-solid fa-cloud-sun",
         "description": "Shows the Weather (City / ICAO Code)",
         "bgclass": "bg-primary",
-        "content": "./tools/getWeather.php"
+        "content": "./tools/getWeather.php",
+        "modal-lg": false
     },
     {
         "name": "getDepartures",
@@ -141,6 +158,7 @@
         "icon": "fa-solid fa-train",
         "description": "Shows current public transport Departures",
         "bgclass": "bg-primary",
-        "content": "./tools/getDepartures.php"
+        "content": "./tools/getDepartures.php",
+        "modal-lg": false
     }
 ]

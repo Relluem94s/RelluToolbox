@@ -7,13 +7,18 @@ namespace Shared;
  */
 class Tools {
 
+    private static function getModalSize($modalSize){
+        return $modalSize ? "modal-lg":"";
+    }
+
     public static function getTool(
         $name,
         $displayname,
         $icon,
         $description,
         $bgclass,
-        $content
+        $content,
+        $modalSize
     ): string {
         return '
             <div class="col col-sm-4">
@@ -28,7 +33,7 @@ class Tools {
                     </div>
                 </div>
                 <div
-                    class="modal fade"
+                    class="modal fade ' . self::getModalSize($modalSize) . '"
                     id="' . $name . '"
                     tabindex="-1"
                     aria-labelledby="' . $name . 'Label"

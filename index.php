@@ -70,12 +70,13 @@ use Shared\Functions\Functions;
 
                         foreach ($tools as $key => $value) {
                             echo Tools::getTool(
-                                $value["name"],
-                                $value["displayname"],
-                                $value["icon"],
-                                $value["description"],
-                                $value["bgclass"],
-                                $value["content"]
+                                name: $value["name"],
+                                displayname: $value["displayname"],
+                                icon: $value["icon"],
+                                description: $value["description"],
+                                bgclass: $value["bgclass"],
+                                content: $value["content"],
+                                modalSize: $value["modal-lg"]
                             );
                         }
 
