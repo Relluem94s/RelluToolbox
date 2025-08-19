@@ -96,66 +96,77 @@
 
 </script>
 
-<form>
-    <table class="calc">
-    <caption></caption>
-        <tr>
-            <th colspan="3">
-                <input class="calculator" type="text" id="val" value="" disabled></input>
-                <br>
-                <input class="calculator" type="text" id="erg" value="" disabled></input>
-            </th>
-        </tr>
-        <tr>
-            <td><input class="btnf" type="reset" value="C"></input></td>
-            <td><input class="btnf" onclick="remove('')" type="button" value="CE"></input></td>
-            <td>
-                <input class="btns calc_button" onclick="mwstf()" type="button" value="MwSt"></input>
-                <input class="btns mwst_button" onclick="calcf()" type="button" value="Calc"></input>
-            </td>
-        </tr>
-        <tr class="mwst_button">
-            <td><input class="btno" onclick="brutto()" type="button" value="Brutto"></input></td>
-            <td><input class="btno" onclick="netto()" type="button" value="Netto"></input></td>
-            <td><input class="btno" onclick="mwst()" type="button" value="MwSt"></input></td>
-        </tr>
-        <tr class="calc_button">
-            <td><input class="btno" onclick="add('<')" type="button" value="<"></input></td>
-            <td><input class="btno" onclick="add('>')" type="button" value=">"></input></td>
-            <td><input class="btno" onclick="swap()" type="button" value="SWAP"></input></td>
-        </tr>
-        <tr class="calc_button">
-            <td><input class="btno" onclick="add('(')" type="button" value="("></input></td>
-            <td><input class="btno" onclick="add(')')" type="button" value=")"></input></td>
-            <td><input class="btno" onclick="add('/')" type="button" value="/"></input></td>
-        </tr>
-        <tr class="calc_button">
-            <td><input class="btno" onclick="add('+')" type="button" value="+"></input></td>
-            <td><input class="btno" onclick="add('-')" type="button" value="-"></input></td>
-            <td><input class="btno" onclick="add('*')" type="button" value="*"></input></td>
-        </tr>
-        <tr>
-            <td><input class="btn" onclick="add('7')" type="button" value="7"></input></td>
-            <td><input class="btn" onclick="add('8')" type="button" value="8"></input></td>
-            <td><input class="btn" onclick="add('9')" type="button" value="9"></input></td>
-        </tr>
-        <tr>
-            <td><input class="btn" onclick="add('4')" type="button" value="4"></input></td>
-            <td><input class="btn" onclick="add('5')" type="button" value="5"></input></td>
-            <td><input class="btn" onclick="add('6')" type="button" value="6"></input></td>
-        </tr>
-        <tr>
-            <td><input class="btn" onclick="add('1')" type="button" value="1"></input></td>
-            <td><input class="btn" onclick="add('2')" type="button" value="2"></input></td>
-            <td><input class="btn" onclick="add('3')" type="button" value="3"></input></td>
-        </tr>
-        <tr>
-            <td><input class="btn" onclick="add('0')" type="button" value="0"></input></td>
-            <td><input class="btn" onclick="add('.')" type="button" value=","></input></td>
-            <td>
-                <input class="btnc calc_button" onclick="calc()" type="button" value="="></input>
-                <input class="btno mwst_button" onclick="swap()" type="button" value="SWAP"></input>
-            </td>
-        </tr>
-    </table>
-</form>
+<div class="container">
+  <div class="row row-cols-1">
+    <div class="col">
+      <fieldset class="fieldset-card">
+        <legend class="fieldset-legend">Calculator:</legend>
+            <form>
+                <table class="calc">
+                <caption></caption>
+                    <tr>
+                        <th colspan="3">
+                            <input class="calculator" type="text" id="val" value="" disabled></input>
+                            <br>
+                            <input class="calculator" type="text" id="erg" value="" disabled></input>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td><input class="btnf" type="reset" value="C"></input></td>
+                        <td><input class="btnf" onclick="remove('')" type="button" value="CE"></input></td>
+                        <td>
+                            <input class="btns calc_button" onclick="mwstf()" type="button" value="MwSt"></input>
+                            <input class="btns mwst_button" onclick="calcf()" type="button" value="Calc"></input>
+                        </td>
+                    </tr>
+                    <tr class="mwst_button">
+                        <td><input class="btno" onclick="brutto()" type="button" value="Brutto"></input></td>
+                        <td><input class="btno" onclick="netto()" type="button" value="Netto"></input></td>
+                        <td><input class="btno" onclick="mwst()" type="button" value="MwSt"></input></td>
+                    </tr>
+                    <tr class="calc_button">
+                        <td><input class="btno" onclick="add('<')" type="button" value="<"></input></td>
+                        <td><input class="btno" onclick="add('>')" type="button" value=">"></input></td>
+                        <td><input class="btno" onclick="swap()" type="button" value="SWAP"></input></td>
+                    </tr>
+                    <tr class="calc_button">
+                        <td><input class="btno" onclick="add('(')" type="button" value="("></input></td>
+                        <td><input class="btno" onclick="add(')')" type="button" value=")"></input></td>
+                        <td><input class="btno" onclick="add('/')" type="button" value="/"></input></td>
+                    </tr>
+                    <tr class="calc_button">
+                        <td><input class="btno" onclick="add('+')" type="button" value="+"></input></td>
+                        <td><input class="btno" onclick="add('-')" type="button" value="-"></input></td>
+                        <td><input class="btno" onclick="add('*')" type="button" value="*"></input></td>
+                    </tr>
+                    <tr>
+                        <td><input class="btn" onclick="add('7')" type="button" value="7"></input></td>
+                        <td><input class="btn" onclick="add('8')" type="button" value="8"></input></td>
+                        <td><input class="btn" onclick="add('9')" type="button" value="9"></input></td>
+                    </tr>
+                    <tr>
+                        <td><input class="btn" onclick="add('4')" type="button" value="4"></input></td>
+                        <td><input class="btn" onclick="add('5')" type="button" value="5"></input></td>
+                        <td><input class="btn" onclick="add('6')" type="button" value="6"></input></td>
+                    </tr>
+                    <tr>
+                        <td><input class="btn" onclick="add('1')" type="button" value="1"></input></td>
+                        <td><input class="btn" onclick="add('2')" type="button" value="2"></input></td>
+                        <td><input class="btn" onclick="add('3')" type="button" value="3"></input></td>
+                    </tr>
+                    <tr>
+                        <td><input class="btn" onclick="add('0')" type="button" value="0"></input></td>
+                        <td><input class="btn" onclick="add('.')" type="button" value=","></input></td>
+                        <td>
+                            <input class="btnc calc_button" onclick="calc()" type="button" value="="></input>
+                            <input class="btno mwst_button" onclick="swap()" type="button" value="SWAP"></input>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+      </fieldset>
+    </div>
+  </div>
+</div>
+
+
