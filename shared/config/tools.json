@@ -159,6 +159,6 @@
         "description": "Shows current public transport Departures",
         "bgclass": "bg-primary",
         "content": "./tools/getDepartures.php",
-        "modal-lg": false
+        "modal-lg": true
     }
 ]
