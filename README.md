@@ -5,6 +5,7 @@
 # How to add a new Tool?
 
 ## Add JSON into shared/config/tools.json with Configuration
+### Copy the JSON Template below and modify it to your Values
 
 ```json
 {
@@ -13,7 +14,8 @@
   "icon": "template",
   "description": "template",
   "bgclass": "template",
-  "content": "./tools/template.php"
+  "content": "./tools/template.php",
+  "modal-lg": false
 }
 ```
 
@@ -26,7 +28,8 @@ like
   "icon": "fa-solid fa-dice-d20",
   "description": "Generates Numbers between 1-20",
   "bgclass": "bg-warning",
-  "content": "./tools/rollTheDice20.php"
+  "content": "./tools/rollTheDice20.php",
+  "modal-lg": false
 }
 ```
 
