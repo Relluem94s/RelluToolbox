@@ -399,7 +399,8 @@ function fetchWeatherData() {
       updateTemperatureColor();
     })
     .catch(error => {
-      console.error('Fehler beim Abrufen der Wetterdaten:', error);
+      foliError('Error retrieving the Weather data. Please try again later.');
+      console.error(error);
     });
 }
 
