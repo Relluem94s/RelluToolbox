@@ -1,7 +1,7 @@
 <?php
 if (!isset($_GET['username'])) {
     http_response_code(400);
-    echo json_encode(["error" => "Kein Benutzername angegeben"]);
+    echo json_encode(["error" => "No Username set"]);
     exit;
 }
 
@@ -19,7 +19,7 @@ $response = @file_get_contents($url, false, $context);
 
 if ($response === false) {
     http_response_code(404);
-    echo json_encode(["error" => "Benutzer nicht gefunden"]);
+    echo json_encode(["error" => "User not Found"]);
 } else {
     header("Content-Type: application/json");
     echo $response;

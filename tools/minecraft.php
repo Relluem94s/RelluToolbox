@@ -105,10 +105,10 @@
                 method: "GET",
                 dataType: "json",
                 success: function (response) {
-                    $("#mc_output_uuid").val(response.id || "Fehler: Keine UUID gefunden");
+                    $("#mc_output_uuid").val(response.id || "Error: No UUID set");
                 },
                 error: function () {
-                    $("#mc_output_uuid").val("Fehler: Benutzer nicht gefunden");
+                    $("#mc_output_uuid").val("Error: User not found");
                 }
             });
         }
@@ -123,10 +123,10 @@
                 method: "GET",
                 dataType: "json",
                 success: function (response) {
-                    $("#mc_output_username").val(response.name || "Fehler: Kein Name gefunden");
+                    $("#mc_output_username").val(response.name || "Error: No Username found");
                 },
                 error: function () {
-                    $("#mc_output_username").val("Fehler: UUID nicht gefunden");
+                    $("#mc_output_username").val("Error: UUID not found");
                 }
             });
         }

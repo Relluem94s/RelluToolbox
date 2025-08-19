@@ -1,7 +1,7 @@
 <?php
 if (!isset($_GET['uuid'])) {
     http_response_code(400);
-    echo json_encode(["error" => "Keine UUID angegeben"]);
+    echo json_encode(["error" => "No UUID set"]);
     exit;
 }
 
@@ -21,7 +21,7 @@ $response = @file_get_contents($url, false, $context);
 
 if ($response === false) {
     http_response_code(404);
-    echo json_encode(["error" => "Benutzer nicht gefunden"]);
+    echo json_encode(["error" => "User not Found"]);
 } else {
     header("Content-Type: application/json");
     echo $response;
