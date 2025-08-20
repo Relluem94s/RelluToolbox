@@ -9,7 +9,7 @@
                         <div class="input-group">
                             <input type="text" class="form-control" name="city" id="city" placeholder="Enter the City"
                                 required>
-                            <button type="button" class="btn btn-primary" id="getWeatherButton">Wetter</button>
+                            <button type="button" class="btn btn-primary" id="getWeatherButton">Get Weather</button>
                         </div>
                     </form>
 
