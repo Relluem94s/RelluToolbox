@@ -546,3 +546,51 @@ function startStopTimer() {
 
 
 }
+
+function getTypeSchema(value) {
+  if (value === null || value === undefined) return { type: "null" };
+  
+  const type = typeof value;
+  if (type !== "object") return { type };
+  
+  if (Array.isArray(value)) {
+    return { 
+      type: "array", 
+      items: value.length > 0 ? getTypeSchema(value[0]) : {}
+    };
+  }
+  
+  const nestedSchema = { type: "object", properties: {}, required: [] };
+  for (const [key, val] of Object.entries(value)) {
+    nestedSchema.properties[key] = getTypeSchema(val);
+    if (val !== null && val !== undefined) nestedSchema.required.push(key);
+  }
+  return nestedSchema;
+}
+
+function generateJsonSchema(json = null) {
+  let inputJson = json;
+  let jsonSchema = document.getElementById('jsonSchemaGenOutput');
+  
+  if (inputJson === null) {
+    const jsonElement = document.getElementById('jsonSchemaGenInput');
+    let inputStr = jsonElement.value.trim();
+    if (!inputStr) {
+      jsonSchema.value = '';
+      return { type: "object", properties: {}, required: [] };
+    }
+    
+    inputStr = inputStr.replace(/(\w+):/g, '"$1":');
+    
+    try {
+      inputJson = JSON.parse(inputStr);
+    } catch (e) {
+      jsonSchema.value = 'Error: Invalid JSON input - ' + e.message;
+      return { type: "object", properties: {}, required: [] };
+    }
+  }
+
+  const schema = getTypeSchema(inputJson);
+  jsonSchema.value = JSON.stringify(schema, null, 2);
+  return schema;
+}
