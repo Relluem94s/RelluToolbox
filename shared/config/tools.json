@@ -78,7 +78,7 @@
         "description": "JSON Tools Collection",
         "bgclass": "bg-info",
         "content": "./tools/jsonConversion.php",
-        "modal-lg": false
+        "modal-lg": true
     },
     {
         "name": "randomColorGenerator",

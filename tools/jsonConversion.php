@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row row-cols-1">
+    <div class="row row-cols-1 row-cols-md-2 g-3">
 
         <div class="col">
             <fieldset class="fieldset-card-small">
