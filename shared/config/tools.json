@@ -15,7 +15,7 @@
         "description": "Text Conversion",
         "bgclass": "bg-info",
         "content": "./tools/textConversion.php",
-        "modal-lg": false
+        "modal-lg": true
     },
     {
         "name": "numberConversion",
