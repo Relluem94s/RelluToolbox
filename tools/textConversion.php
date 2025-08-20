@@ -124,5 +124,34 @@
             </fieldset>
         </div>
 
+
+        <div class="col">
+            <fieldset class="fieldset-card-small">
+                <legend class="fieldset-legend">URL Encode</legend>
+                <div class="mb-2">
+                    <div class="input-group">
+                        <input placeholder="test string" type="text" class="form-control" id="urlEncodeInput" oninput="urlEncode()">
+                    </div>
+                    <div class="mt-2">
+                        <input placeholder="Output" type="text" class="form-control" id="urlEncodeOutput" disabled>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="col">
+            <fieldset class="fieldset-card-small">
+                <legend class="fieldset-legend">URL Decode</legend>
+                <div class="mb-2">
+                    <div class="input-group">
+                        <input placeholder="test%20string" type="text" class="form-control" id="urlDecodeInput" oninput="urlDecode()">
+                    </div>
+                    <div class="mt-2">
+                        <input placeholder="Output" type="text" class="form-control" id="urlDecodeOutput" disabled>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
     </div>
 </div>

@@ -355,6 +355,21 @@ function asciiConverter() {
   }
 }
 
+
+function urlEncode() {
+  let urlEncodeOutput = document.getElementById("urlEncodeOutput");
+  let urlEncodeInput = document.getElementById("urlEncodeInput").value;
+
+  urlEncodeOutput.value = encodeURIComponent(urlEncodeInput)
+}
+
+function urlDecode() {
+  let urlDecodeOutput = document.getElementById("urlDecodeOutput");
+  let urlDecodeInput = document.getElementById("urlDecodeInput").value;
+
+  urlDecodeOutput.value = decodeURIComponent(urlDecodeInput)
+}
+
 /* STOCK DATA APP */
 
 function fetchStockData() {
